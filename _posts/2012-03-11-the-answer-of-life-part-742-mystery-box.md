@@ -3,7 +3,7 @@ layout: post
 title: The Answer of Life Part 7/42 - Mystery box
 date: 2012-03-11 18:53
 author: harvy
-comments: true
+comments: false
 categories: [Life]
 ---
 This idea of the mystery box was from J.J.Abrams talk from TED. Now I don't mean to say I just ripped off his idea. It is more like his idea just provided the framework for me to place my latest thoughts.

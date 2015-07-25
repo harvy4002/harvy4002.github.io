@@ -3,7 +3,7 @@ layout: post
 title: The Budding Entrepreneur
 date: 2011-12-12 22:07
 author: harvy
-comments: true
+comments: false
 categories: [Technology]
 ---
 Another person asked "You work on the weekends? Why do they make you do that?"

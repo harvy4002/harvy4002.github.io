@@ -3,7 +3,7 @@ layout: post
 title: TiMeR film
 date: 2009-07-14 11:44
 author: harvy
-comments: true
+comments: false
 categories: [Technology]
 ---
 <iframe width="560" height="315" src="https://www.youtube.com/embed/9x4DpyDCa_8?rel=0" frameborder="0" allowfullscreen></iframe>

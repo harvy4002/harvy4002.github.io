@@ -3,7 +3,7 @@ layout: post
 title: Sikh for a week
 date: 2010-03-08 22:47
 author: admin
-comments: true
+comments: false
 categories: [Religion]
 ---
 So I decided to participate in 'Sikh for a week':
@@ -19,20 +19,18 @@ Well here I will be sourcing from the SikhSoc email, as they have set the rules 
 Well first is to recite the Nitnem (daily prayers), well I can't really do that due to my lack of Punjabi reading skill. So I decided to listen to them on Youtube, with translations... So there are 3 prayers (sets). I'm not going to even consider doing all of them as it seems a bi too much, so I have decided to stick to the first one and maybe the second (about 40 minutes).
 
 > Although traditionally a Gursikh rises at __“Amrit Vela”__ and engages in __morning nitnem__ after shower (between 03:00 – 06:00 am), for this week, if that is not possible, you are encouraged to rise earlier than your usual timings and engage in at least the first paath (Japji Sahib) followed by 5-10 minutes of Naam Simran. The five morning banis are given below. If unable to recite them, you can read the English translation or listen to them.
-* __Japji Sahib__ (Recitation of Name, composed by Guru Nanak Dev  Ji)
-* __Jaap Sahib__ (Recitation of the Name composed by the The 10th Guru)
-* __Tav Prasaad Sawaiye__ (By Your Grace, Name of the Bani “Sawaiye”
-* __Kabiyo Baach Benti Chaupai__ (Request For Support)
-* __Anand Sahib__ (Expression of Bliss)
-* __Naam Simran __(Reciting the Name of God)
+
+> * __Japji Sahib__ (Recitation of Name, composed by Guru Nanak Dev  Ji)
+> * __Jaap Sahib__ (Recitation of the Name composed by the The 10th Guru)
+> * __Tav Prasaad Sawaiye__ (By Your Grace, Name of the Bani “Sawaiye”
+> * __Kabiyo Baach Benti Chaupai__ (Request For Support)
+> * __Anand Sahib__ (Expression of Bliss)
+> * __Naam Simran __(Reciting the Name of God)
 
 Next is to honour the code of conduct: Now I can't really recite the name of our Lord (basically I think it is a bit pointless when you don't really believe in him) and I know it can take away from the full experience but I guess I am just not comfortable with it. But the rest seems fine.
 > Always honour the __code of conduct__ set by __Guru Nanak Dev Ji Maharaj:__
-
 > * __Kirat Karo:__ Live and earn honestly – (An example of this would be to make a commitment to yourself not to miss any lectures this week and obviously pay attention)
-
 > * __Vand Chako:__ Share your earnings with those in need – (Possibly make it a point to give change to a homeless person everyday of the week or donate to charity)
-
 > * __Naam Japo:__ Recite the name of your Lord
 
 Next up we have a few simple humanitarian rules and a health one as well(which I try to follow anyway, but I guess I will try extra hard this time.) :-?

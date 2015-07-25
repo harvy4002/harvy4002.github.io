@@ -3,7 +3,7 @@ layout: post
 title: A year in review and looking forward - part 1
 date: 2012-12-30 15:58
 author: harvy
-comments: true
+comments: false
 categories: [Technology]
 ---
 __I remember the look on the girl's face as I swore at pretty much every person__ who was trying to get a taxi from a taxi rank outside Leeds' train station. I couldn't tell if she was disgusted or shocked, either way I considered that my New Years resolution was now complete.

@@ -3,7 +3,7 @@ layout: post
 title: My fringe fest
 date: 2012-09-07 16:05
 author: harvy
-comments: true
+comments: false
 categories: [Random]
 ---
 I'm surprised at how many people don't know what Fringe fest is. So a quick run down:

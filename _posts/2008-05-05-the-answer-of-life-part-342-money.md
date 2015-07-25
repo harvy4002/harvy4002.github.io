@@ -2,8 +2,8 @@
 layout: post
 title: The Answer of Life Part 3/42 - Money
 date: 2008-05-05 16:36
-author: admin
-comments: true
+author: harvy
+comments: false
 categories: [Philosophy]
 ---
 So from my last 2 posts it is inherent that my life has to include the idea that it has to include more then me in my quest and it has nothing to do with religion. So we go to the next great thing, money. The aim in life was to just earn lots of money and then help people and stuff.

@@ -3,7 +3,7 @@ layout: post
 title: What I know from Sept 09
 date: 2009-02-20 12:52
 author: harvy
-comments: true
+comments: false
 categories: [Random]
 ---
 So this is basically I list of what I have learned since I have started working for KMP and how my lifestyle has changed to reflect that.

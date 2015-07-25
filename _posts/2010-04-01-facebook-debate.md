@@ -3,7 +3,7 @@ layout: post
 title: Facebook debate
 date: 2010-04-01 15:10
 author: harvy
-comments: true
+comments: false
 categories: [Atheism]
 ---
 So this started innocently enough with a posting on facebook to a Richard Dawkins video. So rule number one: Never post controversial religious topics on facebook.
