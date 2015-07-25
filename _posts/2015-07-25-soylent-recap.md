@@ -27,7 +27,7 @@ People around the world started recreating the recipe and Rob himself released t
 Joylent
 -------
 
-![joylent unpacking](../assets/joylent_unpack.jpg)
+![joylent unpacking](/assets/joylent_unpack.jpg)
 
 I moved jobs, locations, friends. I was temporarily placed on a job and I got talking to the people who worked there. On a chance encounter I saw a guy emptying a protein shake bottle in the kitchen: 
 
