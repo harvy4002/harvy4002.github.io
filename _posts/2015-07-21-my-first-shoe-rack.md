@@ -1,6 +1,7 @@
 ---
 layout: post
 title: My First Shoe Rack
+categories: [diy]
 ---
 
 This may sound trivial but I am assured it's not.

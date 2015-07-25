@@ -2,7 +2,7 @@
 layout: post
 title: The Budding Entrepreneur
 date: 2011-12-12 22:07
-author: admin
+author: harvy
 comments: true
 categories: [Technology]
 ---

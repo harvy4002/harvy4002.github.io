@@ -1,0 +1,19 @@
+---
+layout: post
+title: The Answer of Life Part 1/42 - Religion
+date: 2008-04-14 00:38
+author: harvy
+comments: true
+categories: [Philosophy]
+---
+After a stimulating talk, I may have had to reconsider my evaluation on what I believe my life should be about.
+I will do in the prose of some chronological(yes I have thought about this for many years) bullet point - style text (just for the hell of it and it makes me amused when I read it back).
+I am going to try and recap what my previous though process were upto now (this first post can be considered my first thought process.
+I contemplated the meaning of life for many years, I battled with myself, current economic models(yes they can help), current scientific data and if there is any point finding out.
+The title of each post will indicate the relevant aim of each thought process for archive purposes.
+1. I believe I need to find a meaning of life, that way I feel sense of purpose and I can try and allocate tasks/make order of the things in life.
+2. The whole religion thing won't do... Why? Well because most religions preach the fact that by doing all these good deeds that you will become one with god or in fact get as close to god as you will ever get. Or an alternative to that is you get to heaven or some kind of paradise. I don't want to get close to god, I feel I can do more work here. As for paradise, I don't want that either.
+3. On this heaven and hell thing, do humans really want eternal happiness? If that were possible, there would still be a need for humans to be satisfied on their other emotions as well. So humans want to experience greed or jealousy (insert all the other sins here). In fact I will go as far to say the sins are needed as recognition of what a human is and of they need to experience.
+4. The other side of religion is the moral, ethical and codes of conduct. but if we get rid of the equation of god and the idea of reward, then do these ideals still stand? It seems so as your average religious human does things that are rewarding to other people but doesn't always attribute it to god or their religion. It is possible that a human can put something (effort, time, money) where it may not reward him but they will get the satisfaction that it reward many other people.
+5. The one advantage of this is that religion already gives you the answers, it gives you meaning of life, some kind of justification for it, as well as the rules needed to get there. The only problem for this is that the justification lies outside of human thought, so in effect we are just following rules in the hope that we get to god.
+So rule one on my goal of life: Religious ideas of the meaning of life that linked with the idea of a rewarding afterlife or somehow merging with god can easily be discarded for me.
