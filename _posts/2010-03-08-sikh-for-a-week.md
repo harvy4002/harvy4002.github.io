@@ -2,7 +2,7 @@
 layout: post
 title: Sikh for a week
 date: 2010-03-08 22:47
-author: admin
+author: harvy
 comments: false
 categories: [Religion]
 ---

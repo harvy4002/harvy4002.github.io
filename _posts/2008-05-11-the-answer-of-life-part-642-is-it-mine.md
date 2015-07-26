@@ -3,7 +3,7 @@ layout: post
 title: The Answer of Life Part 6/42 - Is it mine?
 date: 2008-05-11 03:31
 author: harvy
-comments: true
+comments: false
 categories: [Philosophy]
 ---
 > Life may have no meaning.  Or even worse, it may have a meaning   of which I disapprove. -- Ashleigh Brilliant

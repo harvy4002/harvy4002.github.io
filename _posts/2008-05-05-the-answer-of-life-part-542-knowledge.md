@@ -3,7 +3,7 @@ layout: post
 title: The Answer of Life Part 5/42 - Knowledge
 date: 2008-05-05 17:13
 author: harvy
-comments: true
+comments: false
 categories: [Philosophy]
 ---
 The most current idea, I have is the one of knowledge, it seems to defy most other concepts of how the world runs, as it can not be destroyed but created quite easily and it is quite easily added upon. It is the most powerful idea known to man, which can be protected by many systems including politics and economics.

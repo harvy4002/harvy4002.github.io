@@ -3,7 +3,7 @@ layout: post
 title: The Answer of Life Part 2/42 - Oneself
 date: 2008-05-05 15:55
 author: harvy
-comments: true
+comments: false
 categories: [Philosophy]
 ---
 Ok, so religion is out for now but I'm sure I will revisit it later. Next up I went with the idea of oneself.

@@ -3,7 +3,7 @@ layout: post
 title: The Answer of Life Part 1/42 - Religion
 date: 2008-04-14 00:38
 author: harvy
-comments: true
+comments: false
 categories: [Philosophy]
 ---
 After a stimulating talk, I may have had to reconsider my evaluation on what I believe my life should be about.

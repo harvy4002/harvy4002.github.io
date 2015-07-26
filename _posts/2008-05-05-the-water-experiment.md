@@ -3,7 +3,7 @@ layout: post
 title: The water experiment
 date: 2008-05-05 18:00
 author: harvy
-comments: true
+comments: false
 categories: [Random]
 ---
 1. Drink 1 glass (0.25 litres) of water every half an hour

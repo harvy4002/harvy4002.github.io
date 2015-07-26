@@ -2,13 +2,13 @@
 layout: post
 title: Short update
 date: 2010-03-03 13:29
-author: admin
+author: harvy
 comments: true
 categories: [Random]
 ---
 Well, it has been a long time since I have posted anything new (my last one was at the start of Dec!!!). So I thought instead of continuing on my main thread of thoughts, I would just do an update on my situation.
 
-<span style="text-decoration: underline;">3rd Year Project</span>
+__3rd Year Project__
 
 So as you know (or you will do now) I have been working on my 3rd year project, I am amazed at how much I have done in such a small amount of time but still so much has to be done (even now I feel guilty as I am writing this instead of working on it).
 
