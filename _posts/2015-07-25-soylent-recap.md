@@ -12,7 +12,7 @@ It actually started with this (I loved this show):
 
 <iframe width="420" height="315" src="https://www.youtube.com/embed/3i0VKR6dNbI?rel=0&start=723" frameborder="0" allowfullscreen></iframe>
 
-The idea was you have a meal in a pill. They just sounded quite interesting to me as a child (I was about *years old) as it was at the time when I wanted to know how does everything work? I didn't know food could be a thing that you could work out. As far as I knew a meal was announced, my mom would disappear for while then it appeared on a plate, it made me full. That little clip showed me that it can just be a few things that you bought and consumed. Someone worked out another, more efficient way.
+The idea was you have a meal in a pill. They just sounded quite interesting to me as a child (I was about 12 years old) as it was at the time when I wanted to know how does everything work? I didn't know food could be a thing that you could work out. As far as I knew a meal was announced, my mom would disappear for while then it appeared on a plate, it made me full. That little clip showed me that it can just be a few things that you bought and consumed. Someone worked out another, more efficient way.
 
 A few years ago I stumbled up on a blog by Californian engineer Rob Rhinehart. He came up with a simple idea, can I give the body what it needs in the easiest way possible?
 
