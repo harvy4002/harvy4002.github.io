@@ -24,11 +24,11 @@ His friend tried to console him. I couldn't hear the response but the actions of
 
 I paid for my pint and sat down. I was determined to finish it at a leisurely pace and enjoy my book.
 
-Various events happened during those 40 minutes afterwards. I'm not sure if they warranted anymore scrutiny. 
+Various events happened during those 40 minutes afterwards. I'm not sure if they warranted anymore scrutiny but I will list them for brevity. 
 
 One was some of my rowdy neighbours ended up having a conversation about religion, specifically Christianity. This led to loud music being played by either the bar staff or other patrons, not sure which. There goes my quiet reading. At one point that stood out was when the bartender came around and collected the glasses and made a comment saying that "all religions are bad and cause wars", "they should just be get rid off".
 
-Next was the two men at the end of the bar were eventually joined by two women, which I assume are their spouses. Which then leads me back to enforcing a previous point. The head shaking man actually wanted to leave because I came in? As it now seemed they were going to meet these women here anyway.
+Next was the two men at the end of the bar were eventually joined by two women, which I assume where their spouses. Which then leads me back to enforcing a previous point. The head shaking man actually wanted to leave because I came in? As it now seemed they were going to meet these women here anyway.
 
 I called this post __Racism in the city__ I'm not sure if that is too strong a word for what I experienced that evening. In this case one word was said and some discriminating looks were cast. Is that enough to address what could still be an underlying race issue in Manchester?
 
