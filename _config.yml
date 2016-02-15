@@ -6,8 +6,7 @@ relative_permalinks: true
 title:            Harvy
 tagline:          The Cookie monster
 url:              http://harvinderatwal.com
-paginate:         1
-baseurl:          /
+paginate:         3
 author:
   name:           Harvinder Atwal
   url:            https://twitter.com/harvy2004
