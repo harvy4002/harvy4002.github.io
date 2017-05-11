@@ -14,7 +14,9 @@ After the phone call with the estate agents, something seemed a bit off. I had o
 Surprise! The next day an offer came in from a potential buyer for the asking price but they didn't give it away, instead I was offered to do.... something?
 
 "So what can I do here?"
+
 "Well it's up to you." I could sense some smirking in the voice but maybe it was me.
+
 "I'll get back to you."
 
 We decided it put in the asking price, still dubious but we could accept the cost over a long mortgage.
