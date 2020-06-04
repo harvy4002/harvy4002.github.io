@@ -1,5 +1,9 @@
-# Harvy's Blog
+# pwnjack
+Personal blog.
 
-A simple blog format using Jekyll strapped by Poole running the Hyde theme. Phew!
 
------
+
+Start env:
+
+    bundle install
+    bundle exec jekyll serve
