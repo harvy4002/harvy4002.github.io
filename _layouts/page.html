@@ -1,24 +1,23 @@
 ---
-layout: default
+layout: compress
 ---
 
-<section class="intro">
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: " en " }}">
 
-	<div class="wrap">
+{% include header.html %}
 
-		<h1>{{ page.title }}</h1>
-		<p>{{ page.subtitle }}</p>
+<body>
+  {% include navbar.html %}
+  <div class="wrapper">
+    <header class="header">
+      <h1 class="header-title center" itemprop="headline">{{ page.title | escape }}.</h1>
+    </header>
+    <main class="page-content" aria-label="Content">
+      {% include anchor_headings.html html=content anchorClass="anchor-head" beforeHeading=true h_min=4 h_max=4 %}
+    </main>
+    {% include footer.html %}
+  </div>
+</body>
 
-	</div>
-
-</section>
-
-<section class="single">
-
-	<div class="wrap">
-
-		{{ page.content }}
-
-	</div>
-
-</section>
+</html>
