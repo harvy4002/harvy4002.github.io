@@ -22,7 +22,7 @@ author:
 url: "https://harvinderatwal.com"
 baseurl:
 permalink: /:title/
-google_analytics:
+google_analytics: UA-41983641-3
 fb_appid:
 
 # Collection setting
