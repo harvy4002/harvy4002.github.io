@@ -6,7 +6,7 @@ tags: food
 
 The June Box arrived and was looking good at first sight. 
 
-<insert image here />
+<img src="yummy-yummy-june-spread.jpg" />
 
 Tina
 -----
