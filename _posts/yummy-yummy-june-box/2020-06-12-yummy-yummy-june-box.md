@@ -24,5 +24,8 @@ I'm looking forward to Baru (?) because who doesn't like chocolate marshmellow i
 ##### Superfruit Jellies
 Overwhelming smell to the point of artificial. The choice of flavours was :shaky hands but not trump: It just seemed to break up in your mouth but not really melt.
 
-#### Baru Chocolate Marshmallow Bar
+##### Baru Chocolate Marshmallow Bar
 Looks like expected for a Marshmellow chocolate bar, nice and soft. A little too sweet for the generous size, but marshmellow lovers will probably like it. It was supposed to be Chai Latte flavour, but there wasn't much of it, which I actually preferred. 
+
+##### Le Joli
+Basically flavoured sparkling water. Which has never tasted nice... ever.
