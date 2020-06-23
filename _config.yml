@@ -5,7 +5,7 @@ description: >-
   for documentation things that he learned, meet him <a href="https://github.com/piharpi" target="_blank" rel="noopener">@github</a>.
 lang: en-GB
 timezone: Asia/Jakarta
-image: assets/img/ogp.png # This image used for Open Graph more info https://ogp.me/
+image: assets/img/avatar.png # This image used for Open Graph more info https://ogp.me/
 repo: https://github.com/piharpi/mahendrata.now.sh
 mode: dark # default theme "dark" | "light"
 
@@ -29,6 +29,8 @@ fb_appid:
 collections:
   posts:
     output: true
+  pages:
+    output: true  
 
 # Markdown settings
 markdown: kramdown

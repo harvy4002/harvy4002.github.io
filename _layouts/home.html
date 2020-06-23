@@ -3,6 +3,12 @@ layout: default
 home: true
 ---
 
+<h4>Hobbies</h4>
+{% for page in site.pages %}
+<span class="page-item-date"><a href="{{ page.url }}">{{ page.title | escape }}</a></span>
+</article>
+{% endfor %}
+
 <h4 class="posts-item-note">Posts</h4>
 {% for post in site.posts %}
 <article class="post-item">
