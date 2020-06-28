@@ -38,3 +38,20 @@ Heavily flavoured corn, works pretty well actually. Good little snack but I feel
 
 ##### Olly's Olives
 Not sure what the product is supposed be here. It's just olives with garlic and basil. I mean the olives were good but you can find this in different variation from stock supermarket food in the deli section. Snack sized which worked in its favour.
+
+##### Lizi's Granola High Protein (40g)
+The miniture package is a harsh reminder of how small a "recommended portion" really is. However, the stuff in my bowl looked promising, nicely brown coloured, suggesting a good roast or the grains. But once you add the milk everthing starts to float. Turns out, most is puffed grains, not much to chew on. Taste was plesant but the overall impression falls behind the high expectantions I got from their cover picture. 
+
+Harvy thought it needed more sugar.
+
+##### Nine Bar
+Good meal replacement options for a hectic day or after exercise. Good flavour and the full stomach feeling you get from dense energy bars like this. A bit too much for a light snack.
+
+##### Gregory's Tree
+Essentially the healthier version of fruit twists? I'm not sure why these exist to be honest. I'm sure the standard full fat version costs less and I think they are supposed to bad for you.
+
+### Overall
+
+Harvy
+-----
+Really liked the marshmellow bar (of course who wouldn't), I think the unexpected winner here was the noisy corn snack.
