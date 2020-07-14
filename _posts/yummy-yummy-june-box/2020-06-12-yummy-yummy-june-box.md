@@ -50,6 +50,9 @@ Good meal replacement options for a hectic day or after exercise. Good flavour a
 ##### Gregory's Tree
 Essentially the healthier version of fruit twists? I'm not sure why these exist to be honest. I'm sure the standard full fat version costs less and I think they are supposed to bad for you.
 
+##### Hippeas
+Liking the big crunchy pieces. It was vinegar flavour but it wasn't as overpowering as your normal salt and vinegar snack but would look forward to other flavours. Kinda reminded me of wotsits but less chessy, and I assume it's more healthy.
+
 ### Overall
 
 Harvy
