@@ -38,3 +38,7 @@ Harvy - Great little sugar box but just too much of the watermelon sweet, maybe 
 ##### Plant pops (popped Lotus seeds)
 
 Tina - I heard about lotus seeds and was very excited about this. But once they are popped like sweetcorn kernels and flavoured with peanut, it’s hard to find an original taste. Definitely a fun snack and good alternative for popcorn. 
+
+##### Pravha
+
+Surpisingly refreshing pilsner, fairly light as well and filled up my 1 litre jug quite nicely. I could be seen drinking the bigger bottles for a nice summer beer.

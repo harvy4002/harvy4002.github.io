@@ -1,18 +1,11 @@
 ---
-title: Colophon
+title: Space
 permalink: /about/
 layout: page
-excerpt: Hello peeps, I'm student of computer science from Banyuwangi, living in Jogjakarta. This blog for documentation about my programming journey, running on jekyll, hosting on netlify and using my own simple theme.
+excerpt: I like space
 comments: false
 ---
 
-He's a student from Banyuwangi, living in Jogjakarta. the blog for documentation about his programming 🎒 journey, running on jekyll, hosting on [now.sh](http://now.sh) and using his own theme, he name it <a href="https://github.com/piharpi/jekyll-klise" target="_blank" rel="noopener">klisé</a>, he also loves to learning web technology; but he often forgot, that a reason why him doing the writing.
+I'm a big fan of space. I'm a founder of Manchester Space Programme, which aims to increase awareness of space for the local community but doing cool stuff. Recently we have launched high altitude balloons and rockets with varying payloads. We also want to get into schools with custom kits to launch your own ballons.
 
-If you have a question about him or else, just send a letter to him.
-
-You can [report](http://github.com/piharpi/jekyll-klise/issues/new) if there is an broken link(s) or somethings else.
-
-##### may u needs ✨
-
-- <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
-- <a href="https://github.com/{{ site.author.username }}">github.com/{{ site.author.username }}</a>
+Recently been following spacex and their forays to orbit and back. I have presented to different groups around manchester and attended the national space conference.
