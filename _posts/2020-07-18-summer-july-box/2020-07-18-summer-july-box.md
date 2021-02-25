@@ -8,13 +8,20 @@ The June Box arrived.
 
 <img src="summer-july-spread.jpg" />
 
-Tina
------
+##### Nesquik
+
+Tina - 5 stars for effort, as it doesn’t have artificial sweetener, less sugar and even the package is paper based and can be recycled. We compared it with a chocolate powder we already had at home, and it unfortunately didn’t do well in comparison. Not bad, but not great either. 
+
+##### Nativa
+
+Tina - Tested this in a drink for sweetening. I just wished the package would have a warning, that it is more potent than sugar. Would have used less than a full teaspoon. So sparsely dosed it does the job with sweetening your drinks and foods. They say you can use it for baking as well. While that is great news, it seems very experimental without a conversion ratio. Wouldn’t mind a sweet cake without sugar, but could end up with way too much or not enough. 
 
 
-Harvy
-----
+##### Skinny food sauces
 
+Tina - We got 4 sachets of sauces and sirups from this company. I tried the sirup for a Latte but it was hardly detectable in sweetness or flavour. Great that is has hardly any calories, but without any flavour not the best trade.
+
+Harvy - It’s all horrible, don’t buy it.
 
 ##### Golden Creek (Maple syrup)
 
