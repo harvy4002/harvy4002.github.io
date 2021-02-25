@@ -6,7 +6,7 @@ tags: food
 
 September is here.
 
-<img src="2020-09-18-simmering-september-box.jpg" />
+<img src="simmering-september-box.jpg" />
 
 ##### Hartley’s Jelly Pot
 Tina - “There is always room for Jello” and Bill Muray was right. Nice jello, like all jello. 
@@ -38,5 +38,5 @@ Harvy - Really like the mix of different but complimentary snacks. Just shove a 
 
 ##### Thatchers Cloudy Lemon Cider
 
-Harvy - Surprisingly a refreshing drink good for the summer days/nights. Reminds me of a bottled [radler from germany](https://germanfoods.org/recipes/radler/)
+Harvy - Surprisingly a refreshing drink that's good for the summer days/nights. Reminds me of a bottled [radler from germany](https://germanfoods.org/recipes/radler/)
 
