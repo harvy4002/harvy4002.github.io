@@ -4,7 +4,7 @@ title: Summer July box
 tags: food
 ---
 
-The June Box arrived. 
+The July Box arrived. 
 
 <img src="summer-july-spread.jpg" />
 
@@ -25,7 +25,9 @@ Harvy - It’s all horrible, don’t buy it.
 
 ##### Golden Creek (Maple syrup)
 
-For people who can’t live without syrup on their pancakes definitely a good option. Sticky and sweet as advertised. The non-maple part is dominating, making it a bit too sweet for my taste. 
+Tina - For people who can’t live without syrup on their pancakes definitely a good option. Sticky and sweet as advertised. The non-maple part is dominating, making it a bit too sweet for my taste. 
+
+Harvy - I don't normally buy syrup but was pretty nice on pancake, which I think is the only thing they can be used for? I can't remember what normal syrup tastes like, so can't compare.
 
 ##### Premier Protein (chocolate brownie flavoured protein bar)
 
@@ -48,4 +50,12 @@ Tina - I heard about lotus seeds and was very excited about this. But once they 
 
 ##### Pravha
 
-Surpisingly refreshing pilsner, fairly light as well and filled up my 1 litre jug quite nicely. I could be seen drinking the bigger bottles for a nice summer beer.
+Harvy - Surpisingly refreshing pilsner, fairly light as well and filled up my 1 litre jug quite nicely. I could be seen drinking the bigger bottles for a nice summer beer.
+
+#### Chai Latte
+
+Harvy - Finally got around to this a few months later. Tasted pretty much like most chai lattes. I'm used to the starbucks supermarket versions and it was pretty much it.
+
+#### Manilife
+
+Harvy - It's just peanut butter but barely enough to cover toast. What was the USP here?

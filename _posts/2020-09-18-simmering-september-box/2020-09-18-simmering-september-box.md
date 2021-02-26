@@ -11,7 +11,7 @@ September is here.
 ##### Hartley’s Jelly Pot
 Tina - “There is always room for Jello” and Bill Murray was right. Nice jello, like all jello. 
 
-Harvey - I don’t think I had these
+Harvey - I don’t think I had this
 
 ##### Mc Vities’s 
 Normally not a fan of orange flavoured cookies but these were nice. Good mix of crunchiness, gooiness and chocolate taste. 
@@ -39,4 +39,12 @@ Harvy - Really like the mix of different but complimentary snacks. Just shove a 
 ##### Thatchers Cloudy Lemon Cider
 
 Harvy - Surprisingly a refreshing drink that's good for the summer days/nights. Reminds me of a bottled [radler from germany](https://germanfoods.org/recipes/radler/)
+
+##### Chicken Yakisoba
+
+##### More Maple syrup, this time mini
+
+##### Vegetable Barley soup
+
+##### Lucozade
 

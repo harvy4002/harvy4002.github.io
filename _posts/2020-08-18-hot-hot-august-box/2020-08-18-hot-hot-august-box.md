@@ -39,3 +39,15 @@ No comments, I guess it was just meh then.
 ##### Pickup
 
 Tina - I know them from other countries, and they are a nice snack. Had the hazelnut one which had soft chocolate in the middle. Looking forward to the white and milk chocolate versions too. 
+
+##### Iced Coffee
+
+##### Cold Infused "Tea"
+
+##### Yet another Chai Latte
+
+##### Protein Bar
+
+##### Porridge
+
+##### Start me Chia
