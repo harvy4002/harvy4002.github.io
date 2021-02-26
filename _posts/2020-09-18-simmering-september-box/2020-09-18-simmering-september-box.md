@@ -9,14 +9,14 @@ September is here.
 <img src="simmering-september-box.jpg" />
 
 ##### Hartley’s Jelly Pot
-Tina - “There is always room for Jello” and Bill Muray was right. Nice jello, like all jello. 
+Tina - “There is always room for Jello” and Bill Murray was right. Nice jello, like all jello. 
 
 Harvey - I don’t think I had these
 
 ##### Mc Vities’s 
 Normally not a fan of orange flavoured cookies but these were nice. Good mix of crunchiness, gooiness and chocolate taste. 
 
-Harvey - Tina have you been eating all these? Pretty sure I didn’t have this either. /whipsers I did it was great. Slightly chewy but the tast and texture made up for that.
+Harvey - Tina have you been eating all these? Pretty sure I didn’t have this either. /whispers I did it was great. Slightly chewy but the taste and texture made up for that.
 
 ##### Emily Veg Thins
 Interesting alternatives for crisps, crunchy and nice tastes. 
