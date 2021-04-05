@@ -43,6 +43,7 @@ Harvy - Surprisingly a refreshing drink that's good for the summer days/nights. 
 ##### Chicken Yakisoba
 
 ##### More Maple syrup, this time mini
+Did we even use this? It's probably just disappeared
 
 ##### Vegetable Barley soup
 

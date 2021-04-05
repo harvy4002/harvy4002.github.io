@@ -49,5 +49,6 @@ Tina - I know them from other countries, and they are a nice snack. Had the haze
 ##### Protein Bar
 
 ##### Porridge
+Tina - Good but how bad can porridge be?
 
 ##### Start me Chia
