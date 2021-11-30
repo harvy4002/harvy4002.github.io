@@ -39,7 +39,7 @@ Tina - the Sourdough taste was good but a bit too much on the salty side.
 
 
 ##### Nexba Pineapple soft
-
+Harvy - Was alright. Could have it again, would be a good summer drink.
 
 ##### Capsicana cooking paste
 Tina - We made it with chicken and it was juicy, fruity and spicy at the same time. Would recommend.
