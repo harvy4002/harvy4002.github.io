@@ -1,11 +1,9 @@
 ---
-title: Space
+title: About
 permalink: /about/
 layout: page
-excerpt: I like space
+excerpt: About me
 comments: false
 ---
 
-I'm a big fan of space. I'm a founder of Manchester Space Programme, which aims to increase awareness of space for the local community but doing cool stuff. Recently we have launched high altitude balloons and rockets with varying payloads. We also want to get into schools with custom kits to launch your own ballons.
-
-Recently been following spacex and their forays to orbit and back. I have presented to different groups around manchester and attended the national space conference.
+I am a programmer by day and I have many hobbies for the evening, mainly around electronics, hackspaces, sailing and space. I have a keen interest in AI and have been to a few conferences. I have a few projects on the go and I am always looking for new things to learn.
