@@ -1,6 +1,6 @@
 ---
 layout: post
-title: AIUK Conf
+title: AI UK Conf - Day 1
 tags: ai
 ---
 
@@ -170,4 +170,55 @@ Algorithmic management needs to be able to be questioned.
 **What does solidarity look like across the global south?**
 Unions in the south are connecting with each other. 
 
+# Keynote
+`16:00`
+Angela McLean, Government Chief Scientific advisor.
 
+![keynote.png](keynote.png)
+
+We need a scientific and systems approach to AI.
+Systems approach: AI superpower in 2030
+
+5 critical technologies
+AI,
+Semiconductors,
+Quantum,
+Something something
+
+This framework is a way to go across government departments and unify.
+
+**R&D investment update UK**  
+UK in a good place to be a science superpower.  
+£100 million into the Turing institute from UKGov.  
+We know we need more compute to bring AI into UK funded research programmes.
+
+70 experts in government to invest in building AI.  
+Understand the benefits of AI and the harms.
+
+**Scientific approach to AI**  
+Transparent, Rigour, Reproducibility. Seems obvious but people don’t do it.
+
+Her department has consulted a lot of people.  
+Pretty optimistic view on AI with a plan.
+
+Questions:
+**What were the takeaways from the AI safety summit?**  
+Current set of architectures is not safe. Building a framework to make it safe.
+
+**Where does the public voice fit here?**  
+Looking at a consulting opp but they don’t know. Missing value in number polls, analysis of free text answers is now possible.
+
+**How are you advising the higher ups?**  
+Believe their role is to amplify other scientific advisors. Be optimistic about science
+
+**Are you confident we have the talent to be an AI superpower?**  
+Yes. We are building capability already. Big investments in compute to attract talent. There are visa systems in place.
+
+**How do we study the environmental impact?**  
+Gather data of our energy use and how it is made. While big it could pale in comparison.
+
+**How much is bias on your radar in AI (and in government)?**  
+We know it’s a massive issue. Talked a lot about what you can and can’t do around bias. Make it visible.
+
+**Final message**  
+Be hopeful and it’s exciting. It’s about information on people’s lives and it will help. It’s a once in a generation opportunity.
