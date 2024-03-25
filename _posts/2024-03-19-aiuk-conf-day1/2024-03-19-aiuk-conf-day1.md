@@ -8,14 +8,14 @@ tags: ai
 
 Good morning everyone and welcome to AIUK 2024.
 
-![entrance.png](entrance.png)
-![westminister.png](westminister.png)
+[![entrance.png](entrance.png)](entrance.png)
+[![westminister.png](westminister.png)](westminister.png)
 
 # A Sneak Peek Inside Isambard-AI
 `19th March 09:20`
 
 First talk is up on one of the most powerful supercomputers built in the UK
-![isambard1.png](isambard1.png)
+[![isambard1.png](isambard1.png)](isambard1.png)
 
 Outline - How did it start?  
 Part of the Uk’s national AI research resource  
@@ -24,22 +24,22 @@ UX is a key measure of success
 Sustainable, accessible,
 It is part of [£300 million to launch first phase of new AI Research Resource – UKRI](https://www.ukri.org/news/300-million-to-launch-first-phase-of-new-ai-research-resource/)
 
-![isambard2.png](isambard2.png)
+[![isambard2.png](isambard2.png)](isambard2.png)
 
 Building work is still underway.  
 Very optimised for Power usage effectiveness  
 
 **What is this supercomputer for?**
 
-![isambard3.png](isambard3.png)
+[![isambard3.png](isambard3.png)](isambard3.png)
 
 Each blade has 900GBs+ of high bandwidth memory 🤯
 
-![isambard4.png](isambard4.png)
+[![isambard4.png](isambard4.png)](isambard4.png)
 
 All these layers will be available to use 
 
-![isambard5.png](isambard5.png)
+[![isambard5.png](isambard5.png)](isambard5.png)
 
 It will have guardrails for LLMs to stay within boundaries, eliminate bias and lower toxicity.
 
@@ -58,7 +58,7 @@ Requirements came from a report and it will be iterated on.
 # Is AGI imminent?
 `11:05`  
 No. Thanks for coming to my Ted talk.
-![agi1.png](agi1.png)
+[![agi1.png](agi1.png)](agi1.png)
 
 **What is AGI?**
 Ai is a mirror on ourselves.
@@ -109,14 +109,14 @@ Audience questions:
 # Stalls
 `13:00`
 
-![stalls.png](stalls.png)
-![stalls1.png](stalls1.png)
-![stalls2.png](stalls2.png)
+[![stalls.png](stalls.png)](stalls.png)
+[![stalls1.png](stalls1.png)](stalls1.png)
+[![stalls2.png](stalls2.png)](stalls2.png)
 
 # AI Culture Long table
 `13:30`
 
-![longtable.png](longtable.png)
+[![longtable.png](longtable.png)](longtable.png)
 
 Can AI generate something new?  
 Can AI be good for art? Turning memories into a poem. Opening up access to an experience that wouldn’t normally be available.  
@@ -134,7 +134,7 @@ Drag performances get a rise in economic downturns
 # Data, Labour and AI
 `14:40`  
 Strong start: it seems to be about the abuse of labour and knowledge for AI.  
-![labour.png](labour.png)
+[![labour.png](labour.png)](labour.png)
 
 First-hand experience for detoxifying GPT during its training stages.  
 Knowledge was stolen from sites (we knew that).  
@@ -174,7 +174,7 @@ Unions in the south are connecting with each other.
 `16:00`
 Angela McLean, Government Chief Scientific advisor.
 
-![keynote.png](keynote.png)
+[![keynote.png](keynote.png)](keynote.png)
 
 We need a scientific and systems approach to AI.
 Systems approach: AI superpower in 2030

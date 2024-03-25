@@ -8,14 +8,14 @@ tags: ai
 
 Back again for Day 2, right next to the glorious Westminster Abbey
 
-![westminister.png](westminister.png)
+[![westminister.png](westminister.png)](westminister.png)
 
 # PitchFest
 `20th March 10:00`  
-![img.png](img.png)
-![img_1.png](img_1.png)
-![img_2.png](img_2.png)
-![img_3.png](img_3.png)
+[![img.png](img.png)](img.png)
+[![img_1.png](img_1.png)](img_1.png)
+[![img_2.png](img_2.png)](img_2.png)
+[![img_3.png](img_3.png)](img_3.png)
 
 Researchers (enrichment students) have 90 seconds to pitch their projects and highlighting its real-world impacts, creativity and innovation. They will be judged.  
 We are really trying to get the crowd excited but it’s a tough morning  
@@ -31,14 +31,14 @@ We are really trying to get the crowd excited but it’s a tough morning
 # Stalls
 `11:00`  
 
-![img_4.png](img_4.png)
-![img_5.png](img_5.png)
-![img_6.png](img_6.png)
+[![img_4.png](img_4.png)](img_4.png)
+[![img_5.png](img_5.png)](img_5.png)
+[![img_6.png](img_6.png)](img_6.png)
 
 # Autonomous Cyber Defense
 `14:35`  
 
-![img_7.png](img_7.png)
+[![img_7.png](img_7.png)](img_7.png)
 
 What happens when cyberattacks exceed the capacity for humans to respond?
 Deep Reinforcement Learning is the major tool for cyber security.  
@@ -50,12 +50,12 @@ Using AI to find vulnerabilities in systems before humans do.
 [Purple Llama](https://llama.meta.com/purple-llama/)  
 [AIxCC](https://aicyberchallenge.com/)
 
-![img_8.png](img_8.png)
+[![img_8.png](img_8.png)](img_8.png)
 How do humans oversee a system that runs faster than them?  
 How can we stop them being used against us?
 
 Lots of questions around policy issues
-![img_9.png](img_9.png)
+[![img_9.png](img_9.png)](img_9.png)
 
 Questions:
 **How do you counteract bad actors?**
@@ -68,7 +68,7 @@ Less concerned about reward and more on real world systems as opposed to simulat
 
 # AI and the battlefield of the future
 `15:00`  
-![img_10.png](img_10.png)
+[![img_10.png](img_10.png)](img_10.png)
 Military is looking at AI and it crosses every aspect.  
 Only 40% of mil are available for deployment at any one time.  
 Lots of mil assets ready to be deployed but just waiting and need lot’s of maintenance. Could be an AI problem  
@@ -77,7 +77,7 @@ Weapons review process for new weapons on the ethics of use.
 
 # Digital Twins for the Environment
 `15:30`
-![img_11.png](img_11.png)
+[![img_11.png](img_11.png)](img_11.png)
 
 Digital replica of a system for forecasting. Difference between that and a simulator? Digital twin can be used by many users and can be continuously updated.  
 Most people believe that you need AI to create a digital twin. It needs real time infusion of data, be accessible to all types of users, highly complex.  
