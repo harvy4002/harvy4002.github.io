@@ -24,30 +24,37 @@ It follows a certain trope of a genuine mistake but trying to make a fruitful op
 Ok sure lets see what happens. Some nice plesentaties are exchanged. Also they send a photo of "themselves", an attractive young asian woman.
 
 [![1_business.png](1_business.png){: width="500"}](1_business.png)
-She expalins she is an owner of a business and clearly even more inviting.
+
+She explains she is an owner of a business and clearly even more inviting.
 The aim here seems to be just introduce casual conversation and work out their target.
 
 [![2_collecting_the_mark.png](2_collecting_the_mark.png){: width="500"}](2_collecting_the_mark.png)
+
 At this point they are working out if they can try a romance scam, again this may seem normal for someone to ask these questions. They also check my age, I guess to see how much money I could have or maybe they have some morals around the young or elderly.
 
 ### The handoff
 
 [![3_switch_up.png](3_switch_up.png){: width="500"}](3_switch_up.png)
+
 Then seemingly they need to switch up phones as they have business phone.
 This seems like a triage system where they hand over to another person to carry on with the scam.
 
 [![4_injury.png](4_injury.png){: width="500"}](4_injury.png)
+
 On the new number and immediately get a sad story of abuse and even some disturbing images. At this point I know something is up and try to look for the name in the x-rays and research who this woman is. I find a facebook page and instagram, so some backstory but the facebook page was created a month before and then soon after it was made private.
 
 [![5_france.png](5_france.png){: width="500"}](5_france.png)
+
 I then follow up to see what they can say with their trip to France. They post a picture which doesn't appear in search engines. Some conversation here but the continuity is lacking. No mention of the tourist attraction I recommended ever again.
 
 [![6_meeting.png](6_meeting.png){: width="500"}](6_meeting.png)
+
 I then surprisingly get a video of a meeting, which seems pretty strange but fits the narrative where this person was learning some financial training as part of being a franchisee? or something. 
 
 ### The turning point
 
 [![7_app.png](7_app.png){: width="500"}](7_app.png)
+
 I then ask about that training but then get a screenshot of some app or website that doesn't seem to be real. There are no images that match the app and the screenshot doesn't look like it's taken on a phone screen. I ignore it as it just meant nothing to me.
 
 [![8_chatgpt.png](8_chatgpt.png){: width="500"}](8_chatgpt.png)
