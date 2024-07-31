@@ -85,7 +85,7 @@ Then I talk to a friend about this and learn about the pig butcher scam.
 Jackpot!
 
 Now I know what it is and how it works, what to do next? Well make money of course ;-)
-Can I just reiterate? DO NOT ATTEMPT TO DO THIS.
+Can I just reiterate? DO NOT ATTEMPT TO DO THIS. DO NOT ATTEMPT TO SCAM A SCAMMER.
 
 So they need to show that people can invest and even get money out to gain trust, so with that in mind how much can I get out of them? More on that later.
 
