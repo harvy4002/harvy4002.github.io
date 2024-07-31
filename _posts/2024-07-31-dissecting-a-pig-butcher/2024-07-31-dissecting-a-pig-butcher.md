@@ -10,23 +10,23 @@ First up: DO NOT ATTEMPT TO DO THIS.
 
 but it was good fun though. 😈
 
-This post seems to contain sensitive information, but it's all false and looks like PII.
+This post seems to contain sensitive information or PII, but it's all false.
 
 There are also a few images of a medical injuries.
 
 ### Let's begin
 
-It started innocently enough. A kind lady named Nathalie accidently texted the wrong number. I get these all the time and treat then like a scam, so I just run along with it and see what happens. Generally just try to waste their time but as you see I could potentially do a lot more damage.
+It started innocently enough. A kind lady named Nathalie accidently texted the wrong number. I get these all the time and treat them like a scam, so I just run along with it and see what happens. Generally just try to waste their time but as you see I could potentially do a lot more damage.
 
 [![initial_content.png](initial_content.png){: width="500"}](initial_content.png)
 
 It follows a certain trope of a genuine mistake but trying to make a fruitful opportunity out of it.
-Ok sure lets see what happens. Some nice plesentaties are exchanged. Also they send a photo of "themselves", an attractive young asian woman.
+Ok sure lets see what happens. Some nice pleasantries are exchanged. Also they send a photo of "themselves", an attractive young asian woman.
 
 [![1_business.png](1_business.png){: width="500"}](1_business.png)
 
-She explains she is an owner of a business and clearly even more inviting.
-The aim here seems to be just introduce casual conversation and work out their target.
+She explains she is an owner of a business and tries to be even more inviting.
+The aim here is just introduce casual conversation and work out their target.
 
 [![2_collecting_the_mark.png](2_collecting_the_mark.png){: width="500"}](2_collecting_the_mark.png)
 
@@ -45,7 +45,7 @@ On the new number and immediately get a sad story of abuse and even some disturb
 
 [![5_france.png](5_france.png){: width="500"}](5_france.png)
 
-I then follow up to see what they can say with their trip to France. They post a picture which doesn't appear in search engines. Some conversation here but the continuity is lacking. No mention of the tourist attraction I recommended ever again.
+I then follow up to see what they can say about their trip to France. They post a picture which doesn't appear in search engines. Some conversation here but the continuity is lacking. No mention of the tourist attraction I recommended ever comes up again.
 
 [![6_meeting.png](6_meeting.png){: width="500"}](6_meeting.png)
 
@@ -55,16 +55,16 @@ I then surprisingly get a video of a meeting, which seems pretty strange but fit
 
 [![7_app.png](7_app.png){: width="500"}](7_app.png)
 
-I then ask about that training but then get a screenshot of some app or website that doesn't seem to be real. There are no images that match the app and the screenshot doesn't look like it's taken on a phone screen. I ignore it as it just meant nothing to me.
+I then ask about that training but then get a screenshot of some app or website that doesn't seem to be real. There are no images that match the app and the screenshot doesn't look like it's taken on a phone screen.
 
 [![8_chatgpt.png](8_chatgpt.png){: width="500"}](8_chatgpt.png)
 [![8a_actual_chatgpt.png](8a_actual_chatgpt.png){: width="500"}](8a_actual_chatgpt.png)
 
-This was another big flag. The language seems to switch between a person giving responses and then a chatgpt response. I do a comparison between the two and they are eerily similiar.
+This was another red flag. The language seems to switch between a person giving responses and then a chatgpt response. I do a comparison between the two and they are eerily similiar.
 
 [![9_altruistic.png](9_altruistic.png){: width="500"}](9_altruistic.png)
 
-So I explore more on their motives and surprise! They are an altruistic rich lady. They even go to villages and just give away money, I'm sure that imagery really don't fill me with colonialist overtones.
+So I explore more on their motives and surprise, they are an altruistic rich lady. They even go to villages and just give away money, I'm sure that imagery won't portray colonialist overtones.
 
 I never got the pictures by the way.
 
