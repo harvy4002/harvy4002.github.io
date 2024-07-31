@@ -18,7 +18,7 @@ There are also a few images of a medical injuries.
 
 It started innocently enough. A kind lady named Nathalie accidently texted the wrong number. I get these all the time and treat then like a scam, so I just run along with it and see what happens. Generally just try to waste their time but as you see I could potentially do a lot more damage.
 
-[![initial_content.png](initial_content.png)](initial_content.png){: width="500"}
+[![initial_content.png](initial_content.png){: width="500"}](initial_content.png)
 
 It follows a certain trope of a genuine mistake but trying to make a fruitful opportunity out of it.
 Ok sure lets see what happens. Some nice plesentaties are exchanged. Also they send a photo of "themselves", an attractive young asian woman.
