@@ -20,28 +20,28 @@ It started innocently enough. A kind lady named Nathalie accidently texted the w
 
 [![initial_content.png](initial_content.png){: width="500"}](initial_content.png)
 
-It follows a certain trope of a genuine mistake but trying to make a fruitful opportunity out of it.
+It follows a certain trope of a genuine mistake but trying to make an opportunity out of it.
 Ok sure lets see what happens. Some nice pleasantries are exchanged. Also they send a photo of "themselves", an attractive young asian woman.
 
 [![1_business.png](1_business.png){: width="500"}](1_business.png)
 
-She explains she is an owner of a business and tries to be even more inviting.
+She explains she is an owner of a heytea franchise (chinese milk tea chain) and tries to be even more inviting.
 The aim here is just introduce casual conversation and work out their target.
 
 [![2_collecting_the_mark.png](2_collecting_the_mark.png){: width="500"}](2_collecting_the_mark.png)
 
-At this point they are working out if they can try a romance scam, again this may seem normal for someone to ask these questions. They also check my age, I guess to see how much money I could have or maybe they have some morals around the young or elderly.
+At this point they are working out if they can try a romance scam. I shut that angle down. They also check my age, I guess to see how much money I could have or maybe they have some morals around the young or elderly.
 
 ### The handoff
 
 [![3_switch_up.png](3_switch_up.png){: width="500"}](3_switch_up.png)
 
-Then seemingly they need to switch up phones as they have business phone.
-This seems like a triage system where they hand over to another person to carry on with the scam.
+Then they need to switch up as this is a business phone.
+This seems to be a triage system where they hand over to another person to carry on with the scam.
 
 [![4_injury.png](4_injury.png){: width="500"}](4_injury.png)
 
-On the new number and immediately get a sad story of abuse and even some disturbing images. At this point I know something is up and try to look for the name in the x-rays and research who this woman is. I find a facebook page and instagram, so some backstory but the facebook page was created a month before and then soon after it was made private.
+On the new number and immediately get a sad story of abuse and even some disturbing images. At this point I know something is up and try to look for the name in the x-rays and research who this woman is. I find a facebook page and instagram, so there is some credibility but the facebook page was created a month before and then soon after it was made private.
 
 [![5_france.png](5_france.png){: width="500"}](5_france.png)
 
@@ -110,3 +110,9 @@ So just to see if they would take the bait of turning it into a love scam, I cla
 [![13_ghost.png](13_ghost.png){: width="500"}](13_ghost.png)
 
 I ghost them for a bit to see how they respond, they try a bit of passive-aggressive and I agree to buy some USDT (Tether coin). They want me to buy $100 but I say I'm only going to buy $10.
+
+Data for search engines
+
+Nathalie Chen
++44 7367 443253 - triage scammer
++44 7453 486329 - pig butcher
