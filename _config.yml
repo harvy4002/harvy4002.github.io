@@ -1,11 +1,11 @@
 # Site settings
 title: Harvinder Atwal
 description: >-
-  A man after a dream, after mystery but ultimately just after fun.
+  Developer by day, hacker by night
 lang: en-GB
 timezone: Europe/London
 image: assets/img/avatar.png # This image used for Open Graph more info https://ogp.me/
-repo: https://github.com/piharpi/mahendrata.now.sh
+repo: 
 mode: dark # default theme "dark" | "light"
 
 # Profile settings
@@ -13,7 +13,7 @@ author:
   name: Harvinder Atwal
   bio: >-
     Developer by day, hacker by night
-  username: harvy2004
+  username: harvy4002
   email: blog@harvinderatwal.com
   avatar: /assets/img/avatar.png
 

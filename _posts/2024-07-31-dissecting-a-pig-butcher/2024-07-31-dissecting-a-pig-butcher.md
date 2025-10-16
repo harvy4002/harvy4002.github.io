@@ -94,7 +94,7 @@ Then I talk to a friend about this and learn about the pig butcher scam.
 
 Jackpot! So [The pig butcher scam](https://www.investopedia.com/pig-butchering-scams-8605501) works with the analogy that you fatten the target up by using a combination of the romance and investment scam. The target gains trust by seeing the returns on their investment until you do a rug pull. At this point the target could've "invested" £10,000+
 
-There's a [great podcast on this](https://darknetdiaries.com/episode/141/). 
+There's a [great podcast on this](https://darknetdiaries.com/episode/141/) and a [youtube video](https://www.youtube.com/watch?v=vu-Y1h9rTUs)
 
 Now I know what it is and how it works, what to do next? Well make money of course ;-)
 Can I just reiterate? DO NOT ATTEMPT TO DO THIS. DO NOT ATTEMPT TO SCAM A SCAMMER.
