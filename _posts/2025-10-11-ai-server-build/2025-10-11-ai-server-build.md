@@ -303,7 +303,7 @@ This is definitely a topic I'll revisit in a future blog post. The ethical consi
 * Local AI is incredibly satisfying when it works
 
 Here's a closer look at those 180° power adapters that saved the day:
-[![surgery_build.jpg](surgery_build.jpg){: width="700"}](surgery_build.jpg)
+[![gpu_win.jpg](gpu_win.jpg){: width="700"}](gpu_win.jpg)
 
 # Cost Analysis
 
