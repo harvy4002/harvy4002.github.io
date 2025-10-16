@@ -13,6 +13,18 @@ So I decided to build my own AI server. Why? Well, a few reasons.
 2. Cost-wise you can't beat the price for the larger models in the cloud (at the moment). But strangely you can do some things that are quite expensive for their cloud versions (see more below)
 3. Plus, who doesn't love a good hardware project? 🤖
 
+## Table of Contents
+- [Hardware Selection](#-hardware-selection)
+- [The Build Process](#the-build-process)
+- [Operating System & Software Stack](#-operating-system--software-stack)
+- [AI Software Stack](#ai-software-stack)
+- [The Reality Check](#the-reality-check)
+- [What I've Built So Far](#what-ive-built-so-far)
+- [Lessons Learned](#-lessons-learned)
+- [Cost Analysis](#cost-analysis)
+- [Future Plans](#future-plans)
+- [Final Thoughts](#final-thoughts)
+
 The goal was simple: build a powerful AI inference server that could handle local LLM serving, fine-tuning experiments, and general ML workloads without breaking the bank.
 
 [![server_parts.jpg](server_parts.jpg){: width="500"}](server_parts.jpg)
