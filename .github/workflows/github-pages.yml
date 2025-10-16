@@ -5,6 +5,12 @@ on:
     branches:
       - publish  # or main/master, whichever is your default branch
 
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -41,10 +47,11 @@ jobs:
           find _site -type f | sort
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v3.9.3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
           publish_branch: gh-pages
           enable_jekyll: false  # Important: Don't process with Jekyll again
+          force_orphan: true    # Create a new orphan branch with a single commit containing all changes
 
