@@ -1,0 +1,48 @@
+name: Build and Deploy Jekyll Site
+
+on:
+  push:
+    branches: [ publish, main ]
+  pull_request:
+    branches: [ publish, main ]
+
+# Sets permissions of the GITHUB_TOKEN for security
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+
+      - name: Install dependencies
+        run: bundle install
+
+      - name: Jekyll Build
+        run: JEKYLL_ENV=production bundle exec jekyll build
+
+      - name: List site directory structure (for debugging)
+        run: find _site -type f | sort | head -50
+
+      - name: Deploy to GitHub Pages
+        if: github.event_name != 'pull_request'
+        uses: peaceiris/actions-gh-pages@v3.9.3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          publish_branch: gh-pages
+          force_orphan: true
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
