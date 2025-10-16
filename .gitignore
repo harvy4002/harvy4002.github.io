@@ -4,3 +4,7 @@ _site/
 .jekyll-metadata
 Gemfile.lock
 .vs/
+vendor/
+.bundle/
+.vscode/
+.DS_Store
