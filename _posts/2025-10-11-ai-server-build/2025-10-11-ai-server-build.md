@@ -32,8 +32,6 @@ After plenty of research and part swapping, here's the final configuration:
 
 Here's the completed build - a beautiful beast ready to run local AI workloads. The crowning jewel is that massive RTX 3090 with its 24GB of VRAM, which gives me enough headroom to run multiple models simultaneously.
 
-[![gpu_win.jpg](gpu_win.jpg){: width="500"}](gpu_win.jpg)
-
 As a note here: I wanted to make the rig as quiet as possible, as it would be in a second bedroom and office. If this is running 24/7 then would like to keep the thermals low along with the sound.
 
 # The Build Process
