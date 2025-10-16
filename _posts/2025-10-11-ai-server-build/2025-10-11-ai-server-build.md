@@ -6,14 +6,16 @@ tags: ai hardware server gpu
 
 # 🧠 Why I Built This
 
+[![comfyui.png](comfyui.png){: width="700"}](comfyui.png)
+
 So I decided to build my own AI server. Why? Well, a few reasons.
 1. As part of de-googling and trying to host things away from big corp servers, this seems like the next step as we start using them more for AI services. Keeping data close to you, especially if you start talking to LLMs is worth it, IF you have the right security.
 2. Cost-wise you can't beat the price for the larger models in the cloud (at the moment). But strangely you can do some things that are quite expensive for their cloud versions (see more below)
 3. Plus, who doesn't love a good hardware project? 🤖
 
-[![server_parts.jpg](server_parts.jpg){: width="500"}](server_parts.jpg)
-
 The goal was simple: build a powerful AI inference server that could handle local LLM serving, fine-tuning experiments, and general ML workloads without breaking the bank.
+
+[![server_parts.jpg](server_parts.jpg){: width="500"}](server_parts.jpg)
 
 ## 🧩 Hardware Selection
 
@@ -91,12 +93,11 @@ After these steps, the system finally booted up! But I discovered another issue 
 
 Fortunately, I was able to resolve this by entering the BIOS and disabling the monitor connection requirement. This would allow the server to boot without a display attached, which was crucial for my intended use case.
 
-<!-- Placeholder for first boot image -->
-<!-- [![first_boot.jpg](first_boot.jpg){: width="500"}](first_boot.jpg) -->
-
 Those first few moments when everything finally works are always the most satisfying part of any build.
 
 # ⚙️ Operating System & Software Stack
+
+[![ai-server-portainer.png](ai-server-portainer.png){: width="500"}](ai-server-portainer.png)
 
 The system runs a lightweight Linux environment configured for **containerized AI workloads**.
 
@@ -107,8 +108,6 @@ The system runs a lightweight Linux environment configured for **containerized A
 - **Monitoring:** Netdata + `nvidia-smi` + Portainer dashboard
 
 The containerized approach makes managing the entire stack much simpler and allows for easy updates and modifications.
-
-[![ai-server-portainer.png](ai-server-portainer.png){: width="500"}](ai-server-portainer.png)
 
 ## 🧩 Container Setup
 
@@ -206,7 +205,7 @@ volumes:
 
 What I love about Open WebUI is how it offers a ChatGPT-like interface but for my local models. The setup was quick, and it automatically discovered my Ollama instance thanks to the container networking.
 
-[![webui_interface.png](webui_interface.png){: width="500"}](webui_interface.png)
+[![webui_interface.png](webui_interface.png){: width="700"}](webui_interface.png)
 
 ## Performance Testing
 
@@ -224,9 +223,7 @@ Over time, I've built up a nice collection of models that balance capabilities w
 * **Llama3.2 3B** - Lightweight but surprisingly capable for simple tasks
 * **Qwen3 4B** - Another compact model great for routine interactions
 
-<!-- Placeholder for performance stats image -->
-<!-- [![performance_stats.png](performance_stats.png){: width="500"}](performance_stats.png) -->
-[![single-prompt-netdata.png](single-prompt-netdata.png){: width="500"}](single-prompt-netdata.png)
+[![single-prompt-netdata.png](single-prompt-netdata.png){: width="700"}](single-prompt-netdata.png)
 
 ### Loading Times
 
@@ -242,7 +239,7 @@ What's impressive is being able to run these models without the latency of API c
 
 ## Power Consumption
 
-[![power_meter.png](power_meter.png){: width="500"}](power_meter.png)
+[![power_meter.png](power_meter.png){: width="700"}](power_meter.png)
 
 This thing is hungry. According to my Netdata dashboard, the GPU alone can draw over 400W under full load when running the larger models. The RTX 3090 is definitely power-hungry, but considering the computational work it's doing, it's impressively efficient compared to running these workloads in the cloud.
 
@@ -250,7 +247,7 @@ I've found that different models have different power profiles. For instance, I'
 
 ## Thermal Performance
 
-[![temps.png](temps.png){: width="500"}](temps.png)
+[![temps.png](temps.png){: width="700"}](temps.png)
 
 So far, temperatures are looking good! The combination of large case fans and the substantial cooling solution on the RTX 3090 itself is handling the thermal output effectively. Since the AI workloads I'm running tend to be bursty rather than sustained, the system has plenty of time to cool down between intensive operations.
 
@@ -304,7 +301,7 @@ This is definitely a topic I'll revisit in a future blog post. The ethical consi
 * Local AI is incredibly satisfying when it works
 
 Here's a closer look at those 180° power adapters that saved the day:
-[![surgery_build.jpg](surgery_build.jpg){: width="500"}](surgery_build.jpg)
+[![surgery_build.jpg](surgery_build.jpg){: width="700"}](surgery_build.jpg)
 
 # Cost Analysis
 
