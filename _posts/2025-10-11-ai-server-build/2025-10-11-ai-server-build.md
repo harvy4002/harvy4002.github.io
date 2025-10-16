@@ -241,7 +241,7 @@ What's impressive is being able to run these models without the latency of API c
 
 [![power_meter.png](power_meter.png){: width="700"}](power_meter.png)
 
-This thing is hungry. According to my Netdata dashboard, the GPU alone can draw over 400W under full load when running the larger models. The RTX 3090 is definitely power-hungry, but considering the computational work it's doing, it's impressively efficient compared to running these workloads in the cloud.
+This thing is hungry. According to my Netdata dashboard, the GPU only goes up to 400W under full load when running the larger models. The RTX 3090 is definitely power-hungry, but considering the computational work it's doing, it's impressively efficient compared to running these workloads in the cloud.
 
 I've found that different models have different power profiles. For instance, I'm using Granite specifically for meeting summarization tasks, and it offers a nice balance between power consumption and capability for this specific use case.
 
@@ -249,11 +249,13 @@ I've found that different models have different power profiles. For instance, I'
 
 [![temps.png](temps.png){: width="700"}](temps.png)
 
-So far, temperatures are looking good! The combination of large case fans and the substantial cooling solution on the RTX 3090 itself is handling the thermal output effectively. Since the AI workloads I'm running tend to be bursty rather than sustained, the system has plenty of time to cool down between intensive operations.
+Looking at the temperature dashboard from Netdata, I'm quite pleased with the thermal performance. The RTX 3090 is maintaining around 70°C under load, which is excellent considering its computational power and idle is under 30.
+
+What's particularly interesting in the graph is how the temperature curves follow the GPU utilization pattern. You can see clear ramp up when running inference on larger modelsor just run a model over time, followed by cooling periods where the temperatures quickly normalize. This indicates the cooling solution is effectively dissipating heat rather than allowing it to accumulate over time.
 
 That said, I'm keeping a close eye on temperatures as I continue to use the system. As it transitions to more constant use with multiple models and simultaneous inference tasks, the thermal profile might change. I'll do a follow-up analysis in a future blog post once I have more long-term data on how the cooling solution performs under sustained workloads.
 
-For now, the BeQuiet Pure Rock Pro 3 seems to be a good match for the CPU's thermal needs, and the 3090's built-in cooling is doing its job well.
+For now, the BeQuiet Pure Rock Pro 3 seems to be a good match for the CPU's thermal needs, and the 3090's built-in cooling is doing its job admirably well, even in this compact case setup.
 
 ## Noise Levels
 
