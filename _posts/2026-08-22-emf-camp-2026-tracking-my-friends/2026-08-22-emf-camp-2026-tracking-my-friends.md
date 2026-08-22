@@ -6,17 +6,13 @@ tags: aws serverless data personal
 
 # 🍻 Why I Built This
 
-[![chart_1_drinks_leaderboard.png](chart_1_drinks_leaderboard.png){: width="700"}](chart_1_drinks_leaderboard.png)
+[![Big_EMF_Sign_at_nighttime.jpg](Big_EMF_Sign_at_nighttime.jpg){: width="700"}](Big_EMF_Sign_at_nighttime.jpg)
 
 Quick primer if you don't know what EMF Camp is: it's a UK camping festival for hackers, makers and general nerds, held every couple of years at Eastnor Castle Deer Park out in Herefordshire. Think fields, tents, a few thousand people, some genuinely brilliant talks and art installations, and a lot of soldering irons.
 
 <video src="EMF_overhead_shot.mp4" width="700" controls muted playsinline></video>
 
-That's the whole site from above: main stage, the lake, and a field absolutely rammed with tents.
-
-[![Big_EMF_Sign_at_nighttime.jpg](Big_EMF_Sign_at_nighttime.jpg){: width="700"}](Big_EMF_Sign_at_nighttime.jpg)
-
-It's brilliant, and also exactly the kind of environment where "let's track everyone's drinks on a public dashboard" sounds like a completely reasonable idea at 11pm.
+That's the whole site from above: main stage, the lake, and a field absolutely rammed with tents. It's brilliant, and also exactly the kind of environment where "let's track everyone's drinks on a public dashboard" sounds like a completely reasonable idea at 11pm.
 
 So that's what I did. Four of us went this year: ash, cha, hvy (me) and tin, and I talked everyone into logging drinks, toilet trips, steps, mood, and even bank spending through the festival, all going into a serverless AWS backend I'd built. Everyone agreed to this. Either that says something nice about our friendship, or something concerning about my powers of persuasion.
 
@@ -35,6 +31,7 @@ We rocked up a couple of days early to get camp set up, but EMF proper starts on
 - [Festival Pace](#festival-pace)
 - [Did the Weather Have Anything to Do With It?](#did-the-weather-have-anything-to-do-with-it)
 - [Turns Out People Were Watching](#turns-out-people-were-watching)
+- [Other Hardware Sensors](#other-hardware-sensors)
 - [Lessons Learned](#-lessons-learned)
 - [What's Next for V3](#whats-next-for-v3)
 - [Final Thoughts](#final-thoughts)
@@ -58,11 +55,27 @@ Everyone got a personal QR code printed onto a t-shirt, linking straight to thei
 
 Genuinely one of the better ideas in this whole project, and a good chunk of that walking-billboard effect probably explains the Ledbury visitors later on. Logging itself still happened separately, through the admin portal on your own phone.
 
+Here's what scanning one actually landed you on:
+
+[![public_dashboard_landing_page.png](public_dashboard_landing_page.png){: width="500"}](public_dashboard_landing_page.png)
+
+Worth zooming in on my own button there: "Extra sensors active (T1000, Browan)." Nobody else's button says that. Keep it in mind for the GPS and sensor bullets later, it's the "Harvy exclusive" bug in the wild, screenshotted mid-festival before I even knew it was a bug.
+
+Clicking through gets you an individual dashboard:
+
+[![public_dashbaord_profile.png](public_dashbaord_profile.png){: width="700"}](public_dashbaord_profile.png)
+
+That's mine, mid-reset (drinks and steps both showing 0 for the day), status set to "drunk," sensors politely reporting themselves offline, and the spend log underneath with "srink" sitting there as a typo I apparently never fixed.
+
 # The Drinks
 
 126 drinks logged across the four of us over the week:
 
 [![chart_1_drinks_leaderboard.png](chart_1_drinks_leaderboard.png){: width="600"}](chart_1_drinks_leaderboard.png)
+
+And here's the actual live leaderboard, straight off the dashboard, matching:
+
+[![alltime_drinks_dashboard.png](alltime_drinks_dashboard.png){: width="600"}](alltime_drinks_dashboard.png)
 
 Cha wins with 39. Tin and I are basically tied behind on 33 and 32. Ash comes in a fairly restrained 22. No way to tell if that's good pacing or bad logging.
 
@@ -140,13 +153,27 @@ A few other things stood out digging into it:
 - Average engagement time was only about 55 seconds per visitor. Reads as a "quick glance at the leaderboard, close tab" pattern rather than anyone sitting and watching it live, which tracks for something you'd check between beers.
 - Overwhelmingly mobile: 37 mobile active users vs 8 desktop, mostly Android and iOS. Nobody's opening a laptop at a campsite.
 
+# Other Hardware Sensors
+
+Worth actually explaining what those environmental sensors were, rather than just saying "they never worked."
+
+There were two bits of hardware, both from v1 originally and carried over into v2. A Seeed SenseCAP T1000, which is a small GPS tracker that also reports air temperature, ambient light, and its own battery level. And a Browan TBSL100, a sound-level sensor that reports internal temperature, decibels, and battery. Neither has wifi or a SIM card. They both talk over LoRa, a long-range, low-power radio protocol built for exactly this kind of "small packet, long range, tiny battery" use case.
+
+Here's the part that matters. A LoRa device doesn't talk to the internet directly. It broadcasts a radio packet, and that packet only becomes useful if a LoRaWAN gateway happens to be listening nearby, picks it up, and forwards it on to a network server (in this case, one called ChirpStack) which then hands it off as a plain HTTP request to whatever webhook you've configured, in my case an API Gateway endpoint feeding a Lambda that writes it into DynamoDB. That whole chain, from the sensor in your pocket to a number showing up on the dashboard, depends entirely on step one: some gateway, owned by someone else, being switched on, in range, and correctly configured to forward to my endpoint.
+
+v1 actually had this working, riding on someone else's community-run gateway near the site. v2 just never got that side of things set back up. No gateway registered, nothing configured to receive it, so the sensors were dead from day one this time, not because anything failed mid-festival.
+
+That's the wider problem with LoRa hardware for something like this. Even when it works, you're buying and pairing physical devices, registering them with a network server, keeping batteries charged, and then hoping someone else's gateway happens to be switched on and in range, because you don't own that part of the chain yourself. That's a lot of infrastructure to maintain across two versions of a project for a temperature and a decibel reading.
+
+Which is really the same lesson as the steps and GPS one, just for weather instead of movement. I already proved during the write-up that ambient conditions for the site are just sitting in a free public weather API, no hardware required (see the weather section above). If the goal is "what was the weather actually like at camp," that's solved. The only thing bespoke hardware would still uniquely give you is something hyper-local, like the actual decibel level three feet from a specific tent, and it's worth being honest about whether that's worth chasing versus just pulling the data that already exists.
+
 # 💡 Lessons Learned
 
 Going through this properly meant going through my own commit history mid-write, which was humbling. In rough order of how much they actually mattered:
 
 - **The steps saga** (detailed above). This one actually changed the numbers in this post, not just the story around them.
 - **The GPS trail map.** I built it, then restricted it to my own dashboard, and it never got real coordinates anyway. Two years later, still "Revisit map" from the v1 todo list.
-- **The environmental sensors.** The honest fix here was just hiding the temperature/noise widgets rather than showing stale numbers when the sensors were offline. "Test browan sensor" is still unticked since 2024.
+- **The environmental sensors.** The honest fix here was just hiding the temperature/noise widgets rather than showing stale numbers when the sensors were offline, root cause being the LoRa gateway setup never getting carried over from v1, covered above. "Test browan sensor" is still unticked since 2024.
 - **The all-time drink category breakdown has no fix at all.** It resets with the daily aggregate. I knew about it in the field and meant to patch the data afterwards. This post is that patch.
 - **The spend migration.** Replaced the Monzo integration that never got built with manual entry. Only Tin and I used it, so Ash and Cha's numbers are missing, not zero.
 - The event log's undo handling needed no fix at all. One boring bullet, and I'll take it.
@@ -161,9 +188,11 @@ With that as the theme, the rest falls out fairly directly:
 - **Real Monzo integration**, properly this time. v1 had it working, v2 didn't get there.
 - **One lecture-time mechanism**, not two disagreeing ones.
 - **All-time drink category breakdown as a first-class stored field**, not something I have to rebuild from the event log by hand after the fact.
-- **Decide, properly, whether the custom environmental sensors are worth it at all.** If a watch can give useful data for free, chasing Browan/Sensecap hardware that's never once worked across two versions might just not be worth the effort.
+- **Decide, properly, whether the custom environmental sensors are worth it at all.** A free public weather API already covers "what was it like at camp" (see above). The only thing bespoke hardware still buys you is hyper-local readings, which might just not be worth chasing.
+- **If they are worth it, bring my own LoRaWAN gateway.** v1 rode on someone else's community gateway, v2 never set one up at all. Owning that one box myself, on-site, means it's actually in my control rather than a dependency I forget to configure.
 - **Make the QR codes two-way.** Right now scanning someone's shirt only takes you to their dashboard. Could just as easily let a scan leave a comment, or pose a quick question back ("how's Cha's day going?") and log the answer against them. Same QR code, same no-app-needed flow, just richer than a read-only page.
 - **Actually build this as an app**, not a website you have to remember to open. Gets you real phone sensors and push notifications for free. Two obvious uses: prompt people to log data at regular intervals instead of relying on anyone remembering to, and use location/geofencing to detect when someone's actually sitting in a talk tent and time lecture attendance automatically. That last one alone would kill the whole "two disagreeing lecture trackers" problem from above. No button to forget to press if the app just knows you're in the tent.
+- **A dedicated physical terminal for logging.** An ESP32 with a big physical button on the table, wired straight into the API, no phone required. Press it once, drink counter goes up. Genuinely might get more consistent logging out of a drunk friend than any app ever would.
 
 # Final Thoughts
 
