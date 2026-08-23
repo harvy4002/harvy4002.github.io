@@ -1,0 +1,1490 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-GB"><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://harvinderatwal.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://harvinderatwal.com/" rel="alternate" type="text/html" hreflang="en-GB" /><updated>2026-08-23T11:52:46+01:00</updated><id>https://harvinderatwal.com/feed.xml</id><title type="html">Harvinder Atwal</title><subtitle>Developer by day, hacker by night</subtitle><author><name>Harvinder Atwal</name><email>blog@harvinderatwal.com</email></author><entry><title type="html">Open Emfer - Tracking My Friends at EMF Camp 2026</title><link href="https://harvinderatwal.com/emf-camp-2026-tracking-my-friends/" rel="alternate" type="text/html" title="Open Emfer - Tracking My Friends at EMF Camp 2026" /><published>2026-08-22T00:00:00+01:00</published><updated>2026-08-22T00:00:00+01:00</updated><id>https://harvinderatwal.com/emf-camp-2026-tracking-my-friends</id><content type="html" xml:base="https://harvinderatwal.com/emf-camp-2026-tracking-my-friends/"><![CDATA[<h1 id="-why-i-built-this">🍻 Why I Built This</h1>
+
+<p><a href="Big_EMF_Sign_at_nighttime.jpg"><img src="Big_EMF_Sign_at_nighttime.jpg" alt="Big_EMF_Sign_at_nighttime.jpg" width="700" /></a></p>
+
+<p>Quick primer if you don’t know what EMF Festival is: it’s a UK camping festival for hackers, makers and general nerds, held every couple of years at Eastnor Castle Deer Park out in Herefordshire. Think fields, tents, a few thousand people, some genuinely brilliant talks and art installations, and a lot of soldering irons.</p>
+
+<video src="EMF_overhead_shot.mp4" width="700" controls="" muted="" playsinline=""></video>
+
+<p>That’s the whole site from above: main stage, the lake, and a field absolutely rammed with tents. Exactly the kind of environment where “let’s track everyone’s drinks on a public dashboard” sounds like a completely reasonable idea at 11pm.</p>
+
+<p>So that’s what I did. Four of us went this year: ash, cha, hvy (me) and tin, and I talked everyone into logging drinks, toilet trips, steps, mood, and even bank spending through the festival, all going into a serverless AWS backend I’d built. Either that says something nice about our friendship, or something concerning about my powers of persuasion.</p>
+
+<p>The project is called open-emfer-v2: Python on Lambda, one DynamoDB table, a plain HTML dashboard on S3, Terraform doing the deploys on every push to main. Every action got written as an immutable event as well as updating a “current totals” cache for the live dashboard. That distinction matters later, because the cache lied to us more than once.</p>
+
+<p>The “v2” isn’t just a naming affectation, either. There was a real v1, built back at EMF Camp 2024. Same rough idea (Lambda + DynamoDB backend, beer/toilet/location/status tracking, and a working Monzo API integration polling every 30 minutes), but the dashboard back then was a Grafana Cloud board rather than a custom site, and statuses were shown as Fallout Pip-Boy icons, which I stand by as a good decision. The 2024 README had a running todo list. Two items on it never got ticked off in two years: “Test browan sensor” and “Revisit map.” Keep that in mind for the GPS and sensor issues below.</p>
+
+<p>EMF proper starts on the Thursday, so that’s where the day-by-day numbers below pick up.</p>
+
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+  <li><a href="#how-it-worked">How It Worked</a></li>
+  <li><a href="#the-drinks">The Drinks</a></li>
+  <li><a href="#the-steps">The Steps</a></li>
+  <li><a href="#the-toilet-log">The Toilet Log</a></li>
+  <li><a href="#mood-of-the-camp">Mood of the Camp</a></li>
+  <li><a href="#festival-pace">Festival Pace</a></li>
+  <li><a href="#did-the-weather-have-anything-to-do-with-it">Did the Weather Have Anything to Do With It?</a></li>
+  <li><a href="#turns-out-people-were-watching">Turns Out People Were Watching</a></li>
+  <li><a href="#other-hardware-sensors">Other Hardware Sensors</a></li>
+  <li><a href="#-lessons-learned">Lessons Learned</a></li>
+  <li><a href="#whats-next-for-v3">What’s Next for V3</a></li>
+  <li><a href="#final-thoughts">Final Thoughts</a></li>
+  <li><a href="#get-the-raw-data">Get the Raw Data</a></li>
+</ul>
+
+<h1 id="how-it-worked">How It Worked</h1>
+
+<p>Nothing fancy architecturally, just a lot of small pieces:</p>
+
+<ul>
+  <li><strong>Lambda + API Gateway</strong> for the API</li>
+  <li><strong>DynamoDB</strong>, single table, everything from raw events to cached leaderboards living in the same place</li>
+  <li>Every drink/toilet/status/step/lecture logged as its own timestamped event, never deleted</li>
+  <li>A separate cached “totals” record per person, updated alongside each event, which is what the live dashboard actually reads from</li>
+  <li>Terraform + GitHub Actions redeploying on every push to main</li>
+</ul>
+
+<p>I only really pulled the raw data out of DynamoDB properly after the festival, to write this post. Good thing I did, because it turns out the cache and the raw log didn’t always agree with each other, and untangling that turned into most of the actual work here.</p>
+
+<p>Everyone got a personal QR code printed onto a t-shirt, linking straight to their own public dashboard page, so anyone at camp could scan your back and see how many drinks you were on:</p>
+
+<p><a href="QR_code_on_tshirt.jpg"><img src="QR_code_on_tshirt.jpg" alt="QR_code_on_tshirt.jpg" width="400" /></a></p>
+
+<p>Genuinely one of the better ideas in this whole project, and a good chunk of that walking-billboard effect probably explains the Ledbury visitors later on. Logging itself still happened separately, through the admin portal on your own phone.</p>
+
+<p>Here’s what scanning one actually landed you on:</p>
+
+<p><a href="public_dashboard_landing_page.png"><img src="public_dashboard_landing_page.png" alt="public_dashboard_landing_page.png" width="500" /></a></p>
+
+<p>Worth zooming in on my own button there: “Extra sensors active (T1000, Browan).” I never got them to work.</p>
+
+<p>Clicking through gets you an individual dashboard:</p>
+
+<p><a href="public_dashbaord_profile.png"><img src="public_dashbaord_profile.png" alt="public_dashbaord_profile.png" width="700" /></a></p>
+
+<p>That’s mine, mid-reset (drinks and steps both showing 0 for the day), status set to “drunk,” maybe I was when waking up in the morning. Sensors politely reporting themselves offline, and the spend log underneath with “srink” sitting there as a typo that have been more related to the time it was recorded.</p>
+
+<h1 id="the-drinks">The Drinks</h1>
+
+<p>126 drinks logged across the four of us over the week:</p>
+
+<p><a href="chart_1_drinks_leaderboard.png"><img src="chart_1_drinks_leaderboard.png" alt="chart_1_drinks_leaderboard.png" width="600" /></a></p>
+
+<p>And here’s the actual live leaderboard, straight off the dashboard, matching:</p>
+
+<p><a href="alltime_drinks_dashboard.png"><img src="alltime_drinks_dashboard.png" alt="alltime_drinks_dashboard.png" width="600" /></a></p>
+
+<p>Cha wins with 39. Tin and I are basically tied behind on 33 and 32. Ash comes in a fairly restrained 22. No way to tell if that’s good pacing or bad logging.</p>
+
+<p>Splitting it out by what people actually drank, reconstructed from the raw event log rather than the (broken, see below) cached totals:</p>
+
+<p><a href="chart_3_drink_teams.png"><img src="chart_3_drink_teams.png" alt="chart_3_drink_teams.png" width="700" /></a></p>
+
+<p>Mostly soft drinks and coffee, some beer, a little bit of cocktail chaos. The full list of things logged includes Lager, Cider, BoxWine, BoxPerry, Martini, Negroni, Port, G+T, ClubMate, Coffee, Tea, Water. Negroni. That was me. No regrets. I was spending almost every day updating the drinks list.</p>
+
+<h1 id="the-steps">The Steps</h1>
+
+<p>Right, this section took a rewrite. My first pass through this data had us walking a suspiciously round 138,407 steps between us, and something about Tin’s chart jumping from 6,640 one day to 47,433 the next made me go back and check the raw numbers rather than trust the app’s own cached totals.</p>
+
+<p>Friday lunchtime, I tried to get clever and auto-detect whether a manually typed-in step number was meant as “today’s total” or “steps since forever.” Exactly the kind of thing that sounds smart at a festival and is not. By Saturday I’d apparently given up on being clever and gone the other way entirely: just store the cumulative number in the daily slot. Obviously wrong too, and it’s the one that produced Tin’s day going from 6,640 to 47,433 overnight.</p>
+
+<p>The actual fix didn’t land until Saturday evening: strictly treat whatever gets entered as today’s daily total, mirroring how a smartwatch displays it, and work out the cumulative total separately by adding it to yesterday’s baseline. Good fix. Way too late. By the time it shipped, Thursday through most of Saturday had already been logged under whichever interpretation happened to be live at the time. Sunday’s numbers for Cha and Tin still don’t line up with the raw sync events either. My best guess is a one-off historical rebuild I ran later that day re-derived those two days with the same flawed assumption, though I can’t fully prove that from the data.</p>
+
+<p>This is where event sourcing architecture saved my bacon, as it recorded every event I knew I could re-calculate it how I wanted later.</p>
+
+<p>That’s basically how the whole steps saga went. Fix one thing, another one pops up somewhere else. Practically every fix that week was patching a hole the previous fix had just opened.</p>
+
+<p>Either way, I didn’t trust any of it, and rebuilt each day’s real step count straight from the raw sync events instead:</p>
+
+<p><a href="chart_2_steps_trend.png"><img src="chart_2_steps_trend.png" alt="chart_2_steps_trend.png" width="700" /></a></p>
+
+<p>With that fix, the real total across camp is <strong>186,865 steps</strong>, or about <strong>118 km</strong> collectively (still worked out from steps × stride length, not GPS, more on that below). Cha and Tin come out well ahead of Ash and me across the week. Ash’s line dropping off after the 18th is presumably a phone that stopped syncing, rather than someone camping in one spot for two days straight.</p>
+
+<h1 id="the-toilet-log">The Toilet Log</h1>
+
+<p>We tracked this too, for reasons I no longer fully remember. 59 visits total, 43 pees and 16 poos:</p>
+
+<p><a href="chart_4_toilet_visits.png"><img src="chart_4_toilet_visits.png" alt="chart_4_toilet_visits.png" width="600" /></a></p>
+
+<p>Cha leads here as well, which at least makes the drinks leaderboard internally consistent.</p>
+
+<h1 id="mood-of-the-camp">Mood of the Camp</h1>
+
+<p>Everyone could set a status at any point: Chilling, Drinking, Drunk, Lecture, Sleeping, Tired, Roaming, Eating, Workshop, Coding, and so on. Turning the status changes into rough durations:</p>
+
+<p><a href="chart_5_mood_breakdown.png"><img src="chart_5_mood_breakdown.png" alt="chart_5_mood_breakdown.png" width="700" /></a></p>
+
+<p>Big caveat here: we’re human, and humans forget to press buttons. If someone forgot to switch out of “Lecture” after leaving a talk, that time just keeps accumulating against Lecture until the next status change, so treat these numbers as “roughly how people spent their time” rather than anything precise. My own 72 hours of reported Lecture time in particular is almost certainly inflated by exactly this.</p>
+
+<p>Also worth flagging: there were two separate ways to track time in lectures running at once. A dedicated Start/Stop timer (only Tin and I used it, 3h45m and 1h52m) and this self-reported status (which Ash and Cha used instead, 44h and 17h). Neither is more “correct” than the other. They’re just measuring different things badly in different ways.</p>
+
+<h1 id="festival-pace">Festival Pace</h1>
+
+<p>All events, all types, by day, starting Thursday, when the festival actually started:</p>
+
+<p><a href="chart_6_daily_pace.png"><img src="chart_6_daily_pace.png" alt="chart_6_daily_pace.png" width="700" /></a></p>
+
+<p>Friday and Saturday are clearly peak camp, tailing off through Sunday, and Monday’s two lonely events are just someone remembering to log something on the drive home.</p>
+
+<h1 id="did-the-weather-have-anything-to-do-with-it">Did the Weather Have Anything to Do With It?</h1>
+
+<p>Eastnor was hot and dry all week. Pulled the actual historical weather for the site (from Open-Meteo) out of curiosity:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Day</th>
+      <th>Max temp</th>
+      <th>Rain</th>
+      <th>Drinks logged</th>
+      <th>Toilet visits</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Thu 16</td>
+      <td>26.9°C</td>
+      <td>0mm</td>
+      <td>19</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>Fri 17</td>
+      <td>27.8°C</td>
+      <td>0mm</td>
+      <td>44</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <td>Sat 18</td>
+      <td>22.8°C</td>
+      <td>1.1mm</td>
+      <td>41</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>Sun 19</td>
+      <td>23.1°C</td>
+      <td>0mm</td>
+      <td>22</td>
+      <td>16</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>I went in expecting “hotter = more drinking, more toilet trips” and the data just… doesn’t say that. Friday’s the hottest day and also the busiest, sure, but Saturday’s noticeably cooler and slightly rainy, and toilet visits actually peak there. With four days of data this is really just four numbers, not a trend. Friday and Saturday being peak days is much more obviously explained by “that’s just when the festival was busiest” than by the weather. I looked. Nothing solid here. Moving on.</p>
+
+<h1 id="turns-out-people-were-watching">Turns Out People Were Watching</h1>
+
+<p>The dashboard was public and I’d bolted Google Analytics onto it almost as an afterthought. Checking it after the fact for the festival week: <strong>45 unique visitors across 6 countries</strong>, which is a lot more than the four of us wearing trackers.</p>
+
+<p>Breaking that 45 down by day tells its own story:</p>
+
+<p><a href="chart_7_ga_visitors_by_day.png"><img src="chart_7_ga_visitors_by_day.png" alt="chart_7_ga_visitors_by_day.png" width="700" /></a></p>
+
+<p>Interesting that this one peaks Sunday, the day before we packed up and went home, rather than Friday or Saturday like everything else in this post. Maybe people were catching up on the leaderboard before it disappeared.</p>
+
+<p>A few other things stood out digging into it:</p>
+<ul>
+  <li>305 page views from 83 sessions. Works out to roughly 3-4 views per session, which for what’s basically a single page probably means people were refreshing or flicking between the dashboard and admin views rather than genuinely browsing multiple pages.</li>
+  <li>Average engagement time was only about 55 seconds per visitor. Reads as a “quick glance at the leaderboard, close tab” pattern rather than anyone sitting and watching it live, which tracks for something you’d check between beers.</li>
+  <li>Overwhelmingly mobile: 37 mobile active users vs 8 desktop, mostly Android and iOS. Nobody’s opening a laptop at a campsite.</li>
+</ul>
+
+<h1 id="other-hardware-sensors">Other Hardware Sensors</h1>
+
+<p>There were two bits of other hardware, both from v1 originally and carried over into v2. A Seeed SenseCAP T1000, which is a small GPS tracker that also reports air temperature, ambient light, and its own battery level. And a Browan TBSL100, a sound-level sensor that reports internal temperature, decibels, and battery. Neither has wifi or a SIM card. They both talk over LoRa, a long-range, low-power radio protocol built for exactly this kind of “small packet, long range, tiny battery” use case.</p>
+
+<p>Here’s the part that matters. A LoRa device doesn’t talk to the internet directly. It broadcasts a radio packet, and that packet only becomes useful if a LoRaWAN gateway happens to be listening nearby, picks it up, and forwards it on to a network server (in this case, one called ChirpStack) which then hands it off as a plain HTTP request to whatever webhook you’ve configured, in my case an API Gateway endpoint feeding a Lambda that writes it into DynamoDB. That whole chain, from the sensor in your pocket to a number showing up on the dashboard, depends entirely on step one: some gateway, owned by someone else, being switched on, in range, and correctly configured to forward to my endpoint.</p>
+
+<p>v1 actually had this working, riding on someone else’s community-run gateway near the site. v2 just never got that side of things set back up. No gateway registered, nothing configured to receive it, so the sensors were dead from day one this time, not because anything failed mid-festival.</p>
+
+<p>That’s the wider problem with LoRa hardware for something like this. Even when it works, you’re buying and pairing physical devices, registering them with a network server, keeping batteries charged, and then hoping someone else’s gateway happens to be switched on and in range, because you don’t own that part of the chain yourself. That’s a lot of infrastructure to maintain across two versions of a project for a temperature and a decibel reading.</p>
+
+<p>Which is really the same lesson as the steps and GPS one, just for weather instead of movement. I already proved during the write-up that ambient conditions for the site are just sitting in a free public weather API, no hardware required (see the weather section above). If the goal is “what was the weather actually like at camp,” that’s solved. The only thing bespoke hardware would still uniquely give you is something hyper-local, like the actual decibel level three feet from a specific tent, and it’s worth being honest about whether that’s worth chasing versus just pulling the data that already exists.</p>
+
+<h1 id="-lessons-learned">💡 Lessons Learned</h1>
+
+<p>Going through this properly meant going through my own commit history mid-write, which was humbling. In rough order of how much they actually mattered:</p>
+
+<ul>
+  <li><strong>The steps saga</strong> (detailed above). This one actually changed the numbers in this post, not just the story around them.</li>
+  <li><strong>The GPS trail map.</strong> I built it, then restricted it to my own dashboard, and it never got real coordinates anyway. Two years later, still “Revisit map” from the v1 todo list.</li>
+  <li><strong>The environmental sensors.</strong> The honest fix here was just hiding the temperature/noise widgets rather than showing stale numbers when the sensors were offline, root cause being the LoRa gateway setup never getting carried over from v1, covered above. “Test browan sensor” is still unticked since 2024.</li>
+  <li><strong>The all-time drink category breakdown has no fix at all.</strong> It resets with the daily aggregate. I knew about it in the field and meant to patch the data afterwards.</li>
+  <li><strong>The spend migration.</strong> Replaced the Monzo integration that never got built with manual entry. Only Tin and I used it, so Ash and Cha’s numbers are missing, not zero.</li>
+</ul>
+
+<h1 id="whats-next-for-v3">What’s Next for V3</h1>
+
+<p>The biggest single realisation writing this post: I spent two versions of this project building and trying to use the custom sensor hardware (LoRa GPS trackers, Sensecap and Browan environmental sensors), none of which ever really worked, while all four of us were wearing a smartwatch that already does steps, GPS, and heart rate properly. The real v3 idea isn’t “fix the custom hardware.” It’s “stop building custom hardware and pull data from what people already have on their wrist”: Apple Health, Garmin Connect, Google Fit, whatever. Someone else has already solved GPS and step counting far better than I ever will with a LoRa module and a prayer.</p>
+
+<p>With that as the theme, the rest falls out fairly directly:</p>
+
+<ul>
+  <li><strong>Ingest steps and GPS from people’s own watches</strong> instead of manual entry or bespoke trackers. Kills the steps interpretation bug and the dead GPS map in one move, since it’s just reading a number a watch already computed correctly.</li>
+  <li><strong>Real Monzo or other Open Banking integration</strong>, properly this time. v1 had it working, v2 didn’t get there. It’s gonna be hard but useful.</li>
+  <li><strong>One lecture-time mechanism</strong>, not two disagreeing ones and can I automate it with location information.</li>
+  <li><strong>All-time drink category breakdown as a first-class stored field</strong>, not something I have to rebuild from the event log by hand after the fact.</li>
+  <li><strong>Decide, properly, whether the custom environmental sensors are worth it at all.</strong> A free public weather API already covers “what was it like at camp” (see above). The only thing bespoke hardware still buys you is hyper-local readings, which might just not be worth chasing.</li>
+  <li><strong>If they are worth it, bring my own LoRaWAN gateway.</strong> v1 rode on someone else’s community gateway, v2 never set one up at all. Owning that one box myself, on-site, means it’s actually in my control rather than a dependency I forget to configure.</li>
+  <li><strong>Make the QR codes two-way.</strong> Right now scanning someone’s shirt only takes you to their dashboard. Could just as easily let a scan leave a comment, or pose a quick question back (“how’s Cha’s day going?”) and log the answer against them. Same QR code, same no-app-needed flow, just richer than a read-only page.</li>
+  <li><strong>Actually build this as an app</strong>, not a website you have to remember to open. Gets you real phone sensors and push notifications for free. Two obvious uses: prompt people to log data at regular intervals instead of relying on anyone remembering to, and use location/geofencing to detect when someone’s actually sitting in a talk tent and time lecture attendance automatically. That last one alone would kill the whole “two disagreeing lecture trackers” problem from above. No button to forget to press if the app just knows you’re in the tent.</li>
+  <li><strong>A dedicated physical terminal for logging.</strong> An ESP32 with a big physical button on the table, wired straight into the API, no phone required. Press it once, drink counter goes up. Genuinely might get more consistent logging out of a drunk friend than any app ever would.</li>
+</ul>
+
+<h1 id="final-thoughts">Final Thoughts</h1>
+
+<p>Would I do this again? Maybe. There’s something very funny about turning four friends at a festival into a distributed systems project, and even funnier that someone in Panama apparently cared enough to check in on our toilet habits. (Probably someone at EMF on a VPN)</p>
+
+<p>At the same time could just do something completely different, I guess the real motivation is to get more and more data which then starts to get analysed.</p>
+
+<p>Event sourcing was the one architectural decision that actually paid for itself here. Every wrong number the live dashboard ever showed turned out to be recoverable from the raw log. That’s exactly the property you want from something running unattended on campsite wifi for a week while you’re mostly just trying to have a good time.</p>
+
+<hr />
+
+<p><em>If you were one of the mystery visitors from Panama, Switzerland, or Germany, genuinely, get in touch. I’m curious.</em></p>
+
+<h1 id="get-the-raw-data">Get the Raw Data</h1>
+
+<p>The cleaned event log behind every chart in this post is <a href="emf-camp-2026-raw-data.json">available here</a> (JSON, ~145KB): exactly what came out of the DynamoDB scan. Per-user telemetry events, cached aggregates, device state, and the manually-logged spend records.</p>]]></content><author><name>Harvinder Atwal</name><email>blog@harvinderatwal.com</email></author><category term="aws" /><category term="serverless" /><category term="data" /><category term="personal" /><summary type="html"><![CDATA[🍻 Why I Built This]]></summary></entry><entry><title type="html">Building my AI Server - From Parts to Production</title><link href="https://harvinderatwal.com/ai-server-build/" rel="alternate" type="text/html" title="Building my AI Server - From Parts to Production" /><published>2025-10-11T00:00:00+01:00</published><updated>2025-10-11T00:00:00+01:00</updated><id>https://harvinderatwal.com/ai-server-build</id><content type="html" xml:base="https://harvinderatwal.com/ai-server-build/"><![CDATA[<h1 id="-why-i-built-this">🧠 Why I Built This</h1>
+
+<p><a href="comfyui.png"><img src="comfyui.png" alt="comfyui.png" width="700" /></a></p>
+
+<p>So I decided to build my own AI server. Why? Well, a few reasons.</p>
+<ol>
+  <li>As part of de-googling and trying to host things away from big corp servers, this seems like the next step as we start using them more for AI services. Keeping data close to you, especially if you start talking to LLMs is worth it, IF you have the right security.</li>
+  <li>Cost-wise you can’t beat the price for the larger models in the cloud (at the moment). But strangely you can do some things that are quite expensive for their cloud versions (see more below)</li>
+  <li>Plus, who doesn’t love a good hardware project? 🤖</li>
+</ol>
+
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+  <li><a href="#-hardware-selection">Hardware Selection</a></li>
+  <li><a href="#the-build-process">The Build Process</a></li>
+  <li><a href="#-operating-system--software-stack">Operating System &amp; Software Stack</a></li>
+  <li><a href="#ai-software-stack">AI Software Stack</a></li>
+  <li><a href="#the-reality-check">The Reality Check</a></li>
+  <li><a href="#what-ive-built-so-far">What I’ve Built So Far</a></li>
+  <li><a href="#-lessons-learned">Lessons Learned</a></li>
+  <li><a href="#cost-analysis">Cost Analysis</a></li>
+  <li><a href="#future-plans">Future Plans</a></li>
+  <li><a href="#final-thoughts">Final Thoughts</a></li>
+</ul>
+
+<p>The goal was simple: build a powerful AI inference server that could handle local LLM serving, fine-tuning experiments, and general ML workloads without breaking the bank.</p>
+
+<p><a href="server_parts.jpg"><img src="server_parts.jpg" alt="server_parts.jpg" width="500" /></a></p>
+
+<h2 id="-hardware-selection">🧩 Hardware Selection</h2>
+
+<p>After plenty of research and part swapping, here’s the final configuration:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Component</th>
+      <th>Model</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Case</strong></td>
+      <td>Free case swap</td>
+      <td>Large, quiet, great airflow</td>
+    </tr>
+    <tr>
+      <td><strong>Motherboard</strong></td>
+      <td>ASUS TUF GAMING B650-E WIFI</td>
+      <td>PCIe 5.0 support, excellent VRMs</td>
+    </tr>
+    <tr>
+      <td><strong>CPU</strong></td>
+      <td>AMD Ryzen 7 7800X3D</td>
+      <td>Plenty of cores for mixed workloads</td>
+    </tr>
+    <tr>
+      <td><strong>GPU</strong></td>
+      <td>NVIDIA RTX 3090</td>
+      <td>24GB VRAM, CUDA and TensorRT support</td>
+    </tr>
+    <tr>
+      <td><strong>Memory</strong></td>
+      <td>64GB DDR5</td>
+      <td>Overkill? Maybe. Useful? Definitely.</td>
+    </tr>
+    <tr>
+      <td><strong>Storage</strong></td>
+      <td>2TB NVMe SSD</td>
+      <td>OS + AI model storage</td>
+    </tr>
+    <tr>
+      <td><strong>PSU</strong></td>
+      <td>Corsair RM850x SHIFT</td>
+      <td>Side-mounted connectors made cable routing a pain in the butt</td>
+    </tr>
+    <tr>
+      <td><strong>Cooling</strong></td>
+      <td>BeQuiet Pure Rock Pro 3</td>
+      <td>Keeps temps under control even during heavy inference</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Here’s the completed build - a beautiful beast ready to run local AI workloads. The crowning jewel is that massive RTX 3090 with its 24GB of VRAM, which gives me enough headroom to run multiple models simultaneously.</p>
+
+<p>As a note here: I wanted to make the rig as quiet as possible, as it would be in a second bedroom and office. If this is running 24/7 then would like to keep the thermals low along with the sound.</p>
+
+<h1 id="the-build-process">The Build Process</h1>
+
+<h2 id="day-1-parts-arrival">Day 1: Parts Arrival</h2>
+
+<p>I drove to Scan in Bolton to pick up the components rather than waiting for delivery. There’s something about walking into a computer store and leaving with bags of hardware that online shopping just can’t match.</p>
+
+<!-- Placeholder for unboxing image -->
+<!-- [![unboxing.jpg](unboxing.jpg){: width="500"}](unboxing.jpg) -->
+
+<p>Everything arrived except the GPU, which was coming separately from an eBay purchase. The excitement of unboxing 64GB of DDR5 RAM and that multi-core Ryzen processor was real! However, I quickly realized I’d made a couple of mistakes in my ordering:</p>
+
+<ol>
+  <li>I’d ordered an ATX motherboard instead of microATX, which would make for a tighter fit than intended</li>
+  <li>The refurbished Corsair RM850x SHIFT power supply I’d purchased had side-mounted connectors, which I hadn’t noticed in the listing - this would prove challenging for cable management later</li>
+</ol>
+
+<p>The GPU was still on its way - a 3090 with 24GB VRAM that would not only power AI workloads but also serve as an excellent gaming GPU when needed.</p>
+
+<h2 id="assembly-day">Assembly Day</h2>
+
+<p>I began by laying out all the components and preparing the motherboard. Installing the CPU and cooler was straightforward, though I was careful with the thermal paste application, which didn’t go well as I had to remount the fans, as the RAM wouldn’t fit in afterwards. It seems that is a common issues with the large heatsinks of the BeQuiet CPU cooler solution.</p>
+
+<p><a href="motherboard_build.jpg"><img src="motherboard_build.jpg" alt="motherboard_build.jpg" width="500" /></a></p>
+
+<p>After prepping the motherboard, it was time to mount it in the case. I was using a free case I already had, but it required transplanting all the components from another build to free it up. The extra work was worth it for the additional space and airflow.</p>
+
+<p><a href="motherboard_install.jpg"><img src="motherboard_install.jpg" alt="motherboard_install.jpg" width="500" /></a></p>
+
+<p>The motherboard installation went smoothly, but the real challenge came with mounting the power supply. Due to the side-mounted connectors on the SHIFT PSU, I had to get creative and mount it upside down to be able to bend the cables down the side of the case. I was a bit concerned since this meant the PSU’s exhaust was facing the top of the case rather than having proper ventilation, but sometimes you have to make sacrifices when working with mixed components. I hoped this wouldn’t cause thermal issues later on, especially with a power-hungry GPU in the mix.</p>
+
+<p>When the GPU finally arrived, I quickly realized I had a space problem. The RTX 3090 is absolutely massive compared to the available clearance in my case.</p>
+
+<p><a href="gpu_fail.jpg"><img src="gpu_fail.jpg" alt="gpu_fail.jpg" width="500" /></a></p>
+
+<p>The GPU barely fit! The physical size wasn’t the only challenge – the power requirements for this card are intense, needing multiple power connectors. But the real issue was that even if the card fit in the case, there wasn’t enough clearance for the power cables to connect directly.</p>
+
+<p>Rather than modifying the case itself, I found a more elegant solution: 180° power adapters for the GPU power connectors. These U-turn adapters allowed me to connect the power cables without them jutting straight out into the case wall.</p>
+
+<p><a href="gpu_win.jpg"><img src="gpu_win.jpg" alt="gpu_win.jpg" width="500" /></a></p>
+
+<p>After installing the adapters and some careful cable management, everything fit perfectly. This setup allowed me to maintain the structural integrity of the case while still accommodating this massive GPU.</p>
+
+<p>Here’s a close-up of the “surgery” - installing the 180° power adapters that made it all possible. It’s a bit tight, but this small solution avoided having to modify or replace the entire case.</p>
+
+<p><a href="surgery_build.jpg"><img src="surgery_build.jpg" alt="surgery_build.jpg" width="500" /></a></p>
+
+<h3 id="first-boot">First Boot</h3>
+
+<p>The moment of truth arrived, but it wasn’t smooth sailing initially. When I first pressed the power button, the system didn’t POST. No display, just fans spinning with no other signs of life.</p>
+
+<p>I went through several diagnostic steps:</p>
+<ol>
+  <li>Reseated the RAM modules</li>
+  <li>Double-checked all CPU fan connections</li>
+  <li>Verified all power cables were properly connected</li>
+</ol>
+
+<p>After these steps, the system finally booted up! But I discovered another issue - the system required a monitor connection to boot properly, which was a problem since this was intended to be a headless server.</p>
+
+<p>Fortunately, I was able to resolve this by entering the BIOS and disabling the monitor connection requirement. This would allow the server to boot without a display attached, which was crucial for my intended use case.</p>
+
+<p>Those first few moments when everything finally works are always the most satisfying part of any build.</p>
+
+<h1 id="️-operating-system--software-stack">⚙️ Operating System &amp; Software Stack</h1>
+
+<p><a href="ai-server-portainer.png"><img src="ai-server-portainer.png" alt="ai-server-portainer.png" width="500" /></a></p>
+
+<p>The system runs a lightweight Linux environment configured for <strong>containerized AI workloads</strong>.</p>
+
+<ul>
+  <li><strong>OS:</strong> Ubuntu Server 24.04 LTS</li>
+  <li><strong>Virtualization:</strong> Docker + Portainer Agent</li>
+  <li><strong>GPU Drivers:</strong> NVIDIA CUDA Toolkit + <code class="language-plaintext highlighter-rouge">nvidia-container-toolkit</code></li>
+  <li><strong>AI Stack:</strong> Ollama, Open WebUI, COmfyUI, n8n</li>
+  <li><strong>Monitoring:</strong> Netdata + <code class="language-plaintext highlighter-rouge">nvidia-smi</code> + Portainer dashboard</li>
+</ul>
+
+<p>The containerized approach makes managing the entire stack much simpler and allows for easy updates and modifications.</p>
+
+<h2 id="-container-setup">🧩 Container Setup</h2>
+
+<p>After installing the base Ubuntu Server, the first critical step was installing the NVIDIA drivers natively on the OS. This is absolutely essential before attempting to set up any Docker containers, as the containers need to access the GPU through the host system’s drivers.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>nvidia-driver-535
+<span class="nb">sudo </span>reboot
+</code></pre></div></div>
+
+<p>After rebooting and verifying the drivers were working correctly with <code class="language-plaintext highlighter-rouge">nvidia-smi</code>, I was ready to set up the containerized environment.</p>
+
+<p>I used <strong>Portainer</strong> to manage deployments, starting with a GPU-enabled Docker environment.</p>
+
+<p>Key steps:</p>
+<ol>
+  <li>Installed Docker and NVIDIA runtime</li>
+  <li>Configured permissions for container access</li>
+  <li>Redeployed containers for Ollama and Open WebUI</li>
+  <li>Verified GPU utilization</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> nvidia/cuda:12.5.0-base nvidia-smi
+</code></pre></div></div>
+
+<p>This command confirms that Docker can access the GPU through the NVIDIA container toolkit:</p>
+
+<p><a href="ai-server-nvidia-smi.png"><img src="ai-server-nvidia-smi.png" alt="ai-server-nvidia-smi.png" width="500" /></a></p>
+
+<p>Success! GPU is detected and working.</p>
+
+<h1 id="ai-software-stack">AI Software Stack</h1>
+
+<h2 id="ollama-setup">Ollama Setup</h2>
+
+<p>Installing Ollama was surprisingly straightforward. I set everything up using Portainer and Docker Compose for easy management. My docker-compose.yml was simple but effective:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">version</span><span class="pi">:</span> <span class="s1">'</span><span class="s">3'</span>
+<span class="na">services</span><span class="pi">:</span>
+  <span class="na">ollama</span><span class="pi">:</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">ollama/ollama:latest</span>
+    <span class="na">container_name</span><span class="pi">:</span> <span class="s">ollama</span>
+    <span class="na">restart</span><span class="pi">:</span> <span class="s">unless-stopped</span>
+    <span class="na">ports</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">11434:11434"</span>
+    <span class="na">volumes</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">ollama:/root/.ollama</span>
+    <span class="na">deploy</span><span class="pi">:</span>
+      <span class="na">resources</span><span class="pi">:</span>
+        <span class="na">reservations</span><span class="pi">:</span>
+          <span class="na">devices</span><span class="pi">:</span>
+            <span class="pi">-</span> <span class="na">driver</span><span class="pi">:</span> <span class="s">nvidia</span>
+              <span class="na">count</span><span class="pi">:</span> <span class="m">1</span>
+              <span class="na">capabilities</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">gpu</span><span class="pi">]</span>
+<span class="na">volumes</span><span class="pi">:</span>
+  <span class="na">ollama</span><span class="pi">:</span>
+</code></pre></div></div>
+
+<p>With Portainer, deploying this was just a matter of pasting the config and clicking “Deploy Stack”. The beauty of containerization is that all the dependencies are handled within the container.</p>
+
+<!-- Placeholder for Ollama running image -->
+<!-- [![ollama_running.png](ollama_running.png){: width="500"}](ollama_running.png) -->
+
+<p>With Ollama running, I was ready to pull my first model. I decided to start with DeepSeek 7B - a nice balance between capability and resource requirements. I wanted something small enough to quickly test my GPU setup but still powerful enough to be genuinely useful. The command was simple:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker <span class="nb">exec</span> <span class="nt">-it</span> ollama run deepseek:7b
+</code></pre></div></div>
+
+<p>Watching the model load up for the first time on my own hardware was surprisingly satisfying. No more API rate limits or usage tracking - just pure local AI power!</p>
+
+<h2 id="text-generation-webui">Text Generation WebUI</h2>
+
+<p>For the frontend interface, I went with Open WebUI - a sleek, modern interface for interacting with Ollama models. Just like with Ollama, I used Docker Compose and Portainer for deployment:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">version</span><span class="pi">:</span> <span class="s1">'</span><span class="s">3'</span>
+<span class="na">services</span><span class="pi">:</span>
+  <span class="na">open-webui</span><span class="pi">:</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">ghcr.io/open-webui/open-webui:latest</span>
+    <span class="na">container_name</span><span class="pi">:</span> <span class="s">open-webui</span>
+    <span class="na">restart</span><span class="pi">:</span> <span class="s">unless-stopped</span>
+    <span class="na">ports</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">3000:8080"</span>
+    <span class="na">environment</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">OLLAMA_API_BASE_URL=http://ollama:11434/api</span>
+    <span class="na">volumes</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">open-webui:/app/backend/data</span>
+    <span class="na">depends_on</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">ollama</span>
+    
+<span class="na">volumes</span><span class="pi">:</span>
+  <span class="na">open-webui</span><span class="pi">:</span>
+</code></pre></div></div>
+
+<p>What I love about Open WebUI is how it offers a ChatGPT-like interface but for my local models. The setup was quick, and it automatically discovered my Ollama instance thanks to the container networking.</p>
+
+<p><a href="webui_interface.png"><img src="webui_interface.png" alt="webui_interface.png" width="700" /></a></p>
+
+<h2 id="performance-testing">Performance Testing</h2>
+
+<p>Time to see what this thing can actually do!</p>
+
+<h3 id="my-model-collection">My Model Collection</h3>
+
+<p>Over time, I’ve built up a nice collection of models that balance capabilities with my hardware constraints:</p>
+
+<ul>
+  <li><strong>DeepSeek-R1 7B</strong> - Great for code generation and technical queries</li>
+  <li><strong>DeepSeek-R1 32B</strong> - My go-to for more complex tasks where quality matters</li>
+  <li><strong>Gemma3 27B</strong> - Google’s latest that rivals many larger models</li>
+  <li><strong>GPT-OSS 20B</strong> - An open-source alternative with impressive capabilities</li>
+  <li><strong>Granite3.2 8B</strong> - Newer model with strong reasoning abilities</li>
+  <li><strong>Llama3.2 3B</strong> - Lightweight but surprisingly capable for simple tasks</li>
+  <li><strong>Qwen3 4B</strong> - Another compact model great for routine interactions</li>
+</ul>
+
+<p><a href="single-prompt-netdata.png"><img src="single-prompt-netdata.png" alt="single-prompt-netdata.png" width="700" /></a></p>
+
+<h3 id="loading-times">Loading Times</h3>
+
+<p>Loading times vary significantly between models, with the larger 27B and 32B models taking noticeably longer than their smaller counterparts. The NVMe SSD helps speed up initial loading, but it’s still a good reminder of why I invested in 64GB of RAM - keeping models loaded between sessions makes a huge difference in usability.</p>
+
+<h3 id="inference-speed">Inference Speed</h3>
+
+<p>For real-world performance, I’m getting around 40 tokens per second with Gemma3 27B, which feels incredibly responsive for local inference. The smaller models like Llama3.2 3B and Qwen3 4B run even faster, while the massive DeepSeek-R1 32B is understandably a bit slower but still very usable.</p>
+
+<p>What’s impressive is being able to run these models without the latency of API calls - the responses start generating immediately, which makes the interaction feel much more natural than cloud-based alternatives.</p>
+
+<h1 id="the-reality-check">The Reality Check</h1>
+
+<h2 id="power-consumption">Power Consumption</h2>
+
+<p><a href="power_meter.png"><img src="power_meter.png" alt="power_meter.png" width="700" /></a></p>
+
+<p>This thing is hungry. According to my Netdata dashboard, the GPU only goes up to 400W under full load when running the larger models. The RTX 3090 is definitely power-hungry, but considering the computational work it’s doing, it’s impressively efficient compared to running these workloads in the cloud.</p>
+
+<p>I’ve found that different models have different power profiles. For instance, I’m using Granite specifically for meeting summarization tasks, and it offers a nice balance between power consumption and capability for this specific use case.</p>
+
+<h2 id="thermal-performance">Thermal Performance</h2>
+
+<p><a href="temps.png"><img src="temps.png" alt="temps.png" width="700" /></a></p>
+
+<p>Looking at the temperature dashboard from Netdata, I’m quite pleased with the thermal performance. The RTX 3090 is maintaining around 70°C under load, which is excellent considering its computational power and idle is under 30.</p>
+
+<p>What’s particularly interesting in the graph is how the temperature curves follow the GPU utilization pattern. You can see clear ramp up when running inference on larger modelsor just run a model over time, followed by cooling periods where the temperatures quickly normalize. This indicates the cooling solution is effectively dissipating heat rather than allowing it to accumulate over time.</p>
+
+<p>That said, I’m keeping a close eye on temperatures as I continue to use the system. As it transitions to more constant use with multiple models and simultaneous inference tasks, the thermal profile might change. I’ll do a follow-up analysis in a future blog post once I have more long-term data on how the cooling solution performs under sustained workloads.</p>
+
+<p>For now, the BeQuiet Pure Rock Pro 3 seems to be a good match for the CPU’s thermal needs, and the 3090’s built-in cooling is doing its job admirably well, even in this compact case setup.</p>
+
+<h2 id="noise-levels">Noise Levels</h2>
+
+<p>Noise levels vary dramatically depending on the workload:</p>
+
+<ul>
+  <li>
+    <p><strong>At idle</strong>: The system is practically silent. The large, slow-spinning fans barely make any noise at all. You could easily sleep in the same room.</p>
+  </li>
+  <li>
+    <p><strong>Text generation</strong>: For standard text prompts and chatting with models, there’s a noticeable but gentle increase in fan noise as the GPU wakes up, but it’s not distracting - similar to a desktop PC running a moderate workload.</p>
+  </li>
+  <li>
+    <p><strong>Intensive workloads</strong>: When running sustained operations like image generation, video processing, or long transcriptions, the fans do ramp up significantly as the system heats up. During these periods, it can get quite loud - not server-room loud, but definitely noticeable.</p>
+  </li>
+</ul>
+
+<p>If I end up using the server for more sustained workloads regularly, I’ll likely need to fine-tune the fan profiles to find a better balance between cooling and noise. For now, the occasional noise during intensive tasks is an acceptable tradeoff for the performance.</p>
+
+<h1 id="what-ive-built-so-far">What I’ve Built So Far</h1>
+
+<h2 id="personal-assistant-setup">Personal Assistant Setup</h2>
+
+<p>While I haven’t built a traditional AI assistant yet, I’ve been working on something potentially more powerful: an automation system that combines AI with workflow automation. Using Open WebUI for the AI interface and n8n for workflow automation, I’m implementing the Model Context Protocol (MCP) to create connections between my local AI and various services.</p>
+
+<p>My current project is creating workflows that can:</p>
+<ul>
+  <li>Read my WhatsApp messages and automatically create Google Calendar events when plans are made</li>
+  <li>Summarize long conversations and documents automatically</li>
+  <li>Pull information from multiple sources to create consolidated reports</li>
+</ul>
+
+<p>The beauty of this approach is that everything happens locally on my server - no data going to third-party services, complete privacy, and no API costs. It’s still early days, but the potential for AI-powered automation that respects privacy is huge.</p>
+
+<h2 id="fine-tuning-experiments">Fine-tuning Experiments</h2>
+
+<p>I haven’t dived into fine-tuning yet, though it’s definitely on my radar for future projects. With the hardware I’ve built, I have the capability to run smaller fine-tuning jobs locally, which opens up some interesting possibilities.</p>
+
+<p>I have several use cases in mind that could benefit from custom-tuned models - some more experimental than others. The beauty of running your own AI infrastructure is the freedom to explore applications that might not be possible or practical with commercial APIs.</p>
+
+<p>This is definitely a topic I’ll revisit in a future blog post. The ethical considerations around fine-tuning models for specific purposes is a fascinating area that deserves careful thought and exploration.</p>
+
+<h1 id="-lessons-learned">💡 Lessons Learned</h1>
+
+<ul>
+  <li><strong>Cable management</strong> is trickier than expected with the SHIFT PSU, but worth it.</li>
+  <li><strong>Docker permissions</strong> can block GPU containers if not configured carefully.</li>
+  <li><strong>Thermal management</strong> matters more than peak power — quiet performance beats loud efficiency.</li>
+  <li>Running <strong>AI models locally</strong> is liberating — no more API limits or data privacy worries.</li>
+  <li>Old ATX cases and really long GPUs don’t mix well. The 180° power adapters were a lifesaver</li>
+  <li>Don’t underestimate power requirements - seriously</li>
+  <li>Local AI is incredibly satisfying when it works</li>
+</ul>
+
+<p>Here’s a closer look at those 180° power adapters that saved the day:
+<a href="gpu_win.jpg"><img src="gpu_win.jpg" alt="gpu_win.jpg" width="700" /></a></p>
+
+<h1 id="cost-analysis">Cost Analysis</h1>
+
+<h2 id="hardware-vs-cloud">Hardware vs Cloud</h2>
+
+<p>The true cost analysis of this project is something I’m still gathering data for. A comprehensive breakdown will come in a future post where I’ll include:</p>
+
+<ul>
+  <li>Detailed hardware costs and component breakdown</li>
+  <li>Power consumption measurements for different models and workloads</li>
+  <li>Equivalent cloud GPU time costs for similar workloads</li>
+  <li>Calculated break-even point considering both hardware and energy costs</li>
+</ul>
+
+<p>Initial impressions suggest the server will pay for itself relatively quickly compared to cloud alternatives, especially for my specific usage patterns. But the real value is in having unlimited access to AI computation without usage limits or privacy concerns.</p>
+
+<!-- Placeholder for cost comparison image -->
+<!-- [![cost_comparison.png](cost_comparison.png){: width="500"}](cost_comparison.png) -->
+
+<p>Stay tuned for a detailed cost-benefit analysis in an upcoming post!</p>
+
+<h1 id="future-plans">Future Plans</h1>
+
+<h2 id="hardware-optimizations">Hardware Optimizations</h2>
+
+<ul>
+  <li>
+    <p><strong>Memory Offloading</strong>: I’ve heard it’s possible to offload some of the GPU processing to RAM, which could improve performance with these larger models. With 64GB of DDR5, I should have plenty of headroom to experiment with this technique.</p>
+  </li>
+  <li>
+    <p><strong>Cooling Optimization</strong>: If I continue with more sustained workloads, I might need to revisit the cooling solution to maintain lower noise levels while preserving performance.</p>
+  </li>
+</ul>
+
+<h2 id="expanded-ai-capabilities">Expanded AI Capabilities</h2>
+
+<ul>
+  <li>
+    <p><strong>Image and Video Generation</strong>: I’ve dabbled a bit with image and video generation, but I want to dive deeper into tools like ComfyUI and Stable Diffusion XL to see what’s possible locally.</p>
+  </li>
+  <li>
+    <p><strong>Model Fine-Tuning</strong>: As mentioned earlier, exploring fine-tuning for specific use cases is high on my list. The ethical considerations here will be interesting to explore.</p>
+  </li>
+</ul>
+
+<h2 id="integration-and-automation">Integration and Automation</h2>
+
+<ul>
+  <li>
+    <p><strong>Local IDE Integration</strong>: I want to set up an agent-based AI system that can integrate directly with my code editor, providing assistance and suggestions while running entirely locally.</p>
+  </li>
+  <li>
+    <p><strong>Personal Automation</strong>: Taking the MCP integrations further to automate routine tasks like administrative work, generating initial responses to emails or messages, and handling scheduling.</p>
+  </li>
+  <li>
+    <p><strong>Agent Experiments</strong>: The field of agentAI is fascinating - giving models more autonomy to perform complex, multi-step tasks. I want to explore building specialized agents for different domains of my work.</p>
+  </li>
+</ul>
+
+<h1 id="final-thoughts">Final Thoughts</h1>
+
+<p>If there’s one lesson I learned from this build, it’s <strong>Rule #1: Don’t buy parts late at night.</strong> Make sure you’ve done thorough research before clicking “purchase” - I’m looking at you, SHIFT PSU and wrong-size motherboard.</p>
+
+<p>Was the investment worth it? I’d say definitely yes. I’ve always followed the philosophy of buying more compute than you think you need, because you’ll quickly push to the limits of whatever you have. I’ve seen too many people try to save money on graphics cards only to later complain about compatibility issues or performance bottlenecks because they didn’t go with more mainstream or properly benchmarked GPU models.</p>
+
+<p>That said, I’m still calculating the total cost-effectiveness compared to cloud options. Once I work out the running costs over time, I’ll have a clearer picture of the economics. There’s also the comparison to consider with running models online manually or in a VM - different approaches with different trade-offs.</p>
+
+<p>The unexpected benefit has been the learning experience. Understanding how these models and the surrounding software ecosystem works has been invaluable, and the ability to tweak parameters and experiment freely has deepened my knowledge significantly.</p>
+
+<p>Perhaps the most compelling advantage is privacy. Using MCP to connect these powerful AI capabilities to my private notes, messages, and personal data without sending anything to third-party services has enormous potential if set up correctly.</p>
+
+<p>The best part? No more waiting for cloud GPU availability or watching costs rack up. Everything runs locally, and I can experiment freely.</p>
+
+<p>Would I do it again? Absolutely - but with a bit more research on component compatibility before ordering. The frustrations of the build process fade quickly, but the capabilities of having this much AI power at my fingertips will continue to provide value for years to come.</p>
+
+<hr />
+
+<p><em>If you’re thinking about building your own AI server, feel free to reach out. Happy to share more details about the build process or help troubleshoot similar setups.</em></p>]]></content><author><name>Harvinder Atwal</name><email>blog@harvinderatwal.com</email></author><category term="ai" /><category term="hardware" /><category term="server" /><category term="gpu" /><summary type="html"><![CDATA[🧠 Why I Built This]]></summary></entry><entry><title type="html">Advances in Data Science and AI conference at University of Manchester</title><link href="https://harvinderatwal.com/ai-conf-uom/" rel="alternate" type="text/html" title="Advances in Data Science and AI conference at University of Manchester" /><published>2025-06-09T00:00:00+01:00</published><updated>2025-06-09T00:00:00+01:00</updated><id>https://harvinderatwal.com/ai-conf-uom</id><content type="html" xml:base="https://harvinderatwal.com/ai-conf-uom/"><![CDATA[<h1 id="advances-in-data-science-and-ai-conference-at-university-of-manchester">Advances in Data Science and AI conference at University of Manchester</h1>
+<p><code class="language-plaintext highlighter-rouge">9 Jun 2025 09:12</code></p>
+
+<p>Well this is a bit of a weird one. I’m now back in my alma mata (as the americans say) at a conference on AI that is now hosted by the head of the Institute for Data Science and Artificial Intelligence who used to be my old tutor on my actual AI undergrad course.</p>
+
+<p>Anyway this is a 2 day conference, I’m only here for one due to client commitments. Programme is here:</p>
+
+<p><a href="programme.png"><img src="programme.png" alt="programme.png" /></a></p>
+
+<p>Usual swag but why are they including a power bank still!?!? Probably gonna return that.
+<a href="swag.png"><img src="swag.png" alt="swag" /></a></p>
+
+<p><code class="language-plaintext highlighter-rouge">9 Jun 2025 09:27</code></p>
+<h1 id="sovereign-ai-aim-is-the-model-to-match-the-regulations-and-culture-of-the-target-region">Sovereign AI, aim is the model to match the regulations and culture of the target region</h1>
+<p><a href="sovereign.png"><img src="sovereign.png" alt="sovereign" /></a></p>
+
+<p>Talking about concern on AI development in regard to regulation.</p>
+
+<p>Talk covered: complying with companies request to opt-out. Dealing with multiple languages.
+<a href="outline.png"><img src="outline.png" alt="outline" /></a></p>
+
+<p>Switzerland as an example. 4 official languages, 750 NGOs, 46 International Orgs. Infrastructure set up in hardware and community is ready to go.
+Swiss AI lab to globalise LLMs for sovereign change. 
+Now going into technical details… i.e. robots.txt to demonstrate a backlash against AI crawlers. Findings show that 8% of data will be removed as part of opting out compared to 5 years ago. Data compliance gap has almost no impact on general knowledge understanding (this was normalised across comparative data sets).
+<a href="dcg.png"><img src="dcg.png" alt="dcg" /></a></p>
+
+<p>Using DCG to measure performance loss has shown at the mid-training gap there is a bigger performance drop.</p>
+
+<p>Next up: how to handle multiple languages. Basically we still filter it out unless it’s a “high” resource.The two biggest and worst inputs for multi language training… The bible… and adverts. Swiss AI lab managed to get a 3.2% gain on low resource languages. English wasn’t affected by using multilingual representation.</p>
+
+<p>Hey they’re hiring!</p>
+
+<p>Now on to cultural and global knowledge affecting language. Multilingual benchmarks translated into English showed Western bias 🙄 I guess they had to prove it.</p>
+
+<p>Also they’re hiring!</p>
+
+<p>Q&amp;A
+Language has shown to have biological backgrounds and AI model builders have decided up themselves to work out how languages works.</p>
+
+<p><code class="language-plaintext highlighter-rouge">9 Jun 2025 10:14</code></p>
+
+<h1 id="spotlight-talks">Spotlight talks</h1>
+<p><a href="spotlight-1.png"><img src="spotlight-1.png" alt="spotlight-1" /></a></p>
+
+<p>First talk by an opera director.
+https://alexandrahuangkokina.com/operai/</p>
+
+<p>An interactive opera using plot branching…. Hmm not really AI though.
+Now talking about how to translate music for one set of trio (piano, violin and cello) to Koto, Hichiriki and Sho.Shifting timbre from one set of instruments to another.
+https://neutone.ai/</p>
+
+<p>Next up : Graph domain adaptation 😵‍💫 I’m gonna try and dumb this down.
+Nope, I’m out.</p>
+
+<p><a href="spotlight-2.png"><img src="spotlight-2.png" alt="spotlight-2" /></a></p>
+
+<p><code class="language-plaintext highlighter-rouge">9 Jun 2025 10:50</code></p>
+<h1 id="break">BREAK</h1>
+
+<p><code class="language-plaintext highlighter-rouge">9 Jun 2025 11:14</code></p>
+
+<h1 id="using-synthetic-data-with-privacy-guarantees">Using synthetic data with privacy guarantees.</h1>
+<p><a href="synthetic-data.png"><img src="synthetic-data.png" alt="synthetic-data" /></a></p>
+
+<p>GAN-based approaches that produce synthetic data produce visually similar outputs, therefore risk leaking inputs.</p>
+
+<p>Epsilon and delta set controls on size. ← need to look up what they are.</p>
+
+<p>DP-ImgSyn: Public dataset - Extracts batch norm states from private training data. Then matches the synthetic images with those norms. 
+<a href="https://openreview.net/forum?id=ZHAtvJtJnR">DP-ImgSyn: Dataset Alignment for Obfuscated, Differentially Private Image Synthesis | OpenReview</a></p>
+
+<p>Essentially you can create synthetic data (in this case images) that look similar but don’t leak the original data and they’ve proved it.</p>
+
+<p>And they are still proving it.
+<a href="https://arxiv.org/abs/2402.18726#:~:text=Recent%20research%20has%20shown%20empirical,than%20calculating%20the%20memorization%20score.">[2402.18726] Unveiling Privacy, Memorization, and Input Curvature Links</a>
+<a href="key-takeaways.png"><img src="key-takeaways.png" alt="key-takeaways" /></a></p>
+
+<p>Q&amp;A: How can this be extended out from images?
+They don’t know.</p>
+
+<p><code class="language-plaintext highlighter-rouge">9 Jun 2025 11:46</code></p>
+
+<h1 id="spotlight-ball-based-linear-regression">Spotlight: Ball based Linear Regression</h1>
+<p><a href="ball-based.png"><img src="ball-based.png" alt="ball-based" /></a></p>
+
+<p>So this is an alternative to KNN clustering techniques.</p>
+
+<p>You can have strange data results and regression or kNN isn’t good enough at picking out that weirdness.</p>
+
+<p>Ball based is simple to show but offers a better coefficient fit?
+Hmm question time and it seems if you have multiple balls then past the training data it just assigns the next set of values to the nearest ball and radius… sounds like kNN to me?!?!?</p>
+
+<p><code class="language-plaintext highlighter-rouge">9 Jun 2025 12:00</code></p>
+<h1 id="tokeniser-free-foundation-models">Tokeniser Free Foundation Models</h1>
+<p><a href="adaptive.png"><img src="adaptive.png" alt="adaptive" /></a></p>
+
+<p>Old NLP is dead, apart from the tokeniser. 
+Tokeniser are brittle, due to language constraints. Granularity is fixed. I.e. the tokens.</p>
+
+<p><a href="nlp.png"><img src="nlp.png" alt="nlp" /></a></p>
+
+<p><a href="complexity.png"><img src="complexity.png" alt="complexity" /></a></p>
+
+<p>Removing the tokeniser can remove the bottlenecks.</p>
+
+<p>Hmm just switched to sustainability by making adaptive tokenisers to fix granularity.</p>
+
+<p><a href="granularity.png"><img src="granularity.png" alt="granularity" /></a></p>
+
+<p>Now going into the detail of memory inefficiencies and how to solve them. 
+This can be retro fitted to existing LLMs instead of training them from scratch. This has been benchmarked on llama 2 with a range of scales.
+Something like 16x compression on memory usage on a 70b model.
+This then hits a compute bottleneck and is bound by that instead of memory.</p>
+
+<p>Ooooh even more interesting, can adaptive memory increase context windows? 
+Degradation changes across models.</p>
+
+<p>Inference time scaling = generate longer sequences or sequences in parallel. The assumption is compute budget is token speed. With compression this can improve that significantly. But only works if compressed memory is accurate.</p>
+
+<p>The metric now has to be runtime using memory reads instead of token generation.</p>
+
+<p><a href="hyper-scaling.png"><img src="hyper-scaling.png" alt="hyper-scaling" /></a></p>
+
+<p>Very good performance results.</p>
+
+<p>Part 2: Removing the tokeniser.
+Accept bytes as inputs</p>
+
+<p><a href="distilation.png"><img src="distilation.png" alt="distilation" /></a></p>
+
+<p>Essentially have a teacher LLM that has tokenisation to teach the student LLM to adapt non-tokenised input. You can then do a zero shot method to swap out the tokeniser.</p>
+
+<p>Tokenisers are a bottleneck we need to solve.</p>
+
+<p><code class="language-plaintext highlighter-rouge">9 Jun 2025 12:45</code></p>
+<h1 id="lunch">LUNCH</h1>
+
+<p><code class="language-plaintext highlighter-rouge">9 Jun 2025 14:07</code></p>
+<h1 id="geoai-last-minute-talk-put-in">GeoAI, last minute talk put in</h1>
+<p><a href="dsh.png"><img src="dsh.png" alt="dsh" /></a></p>
+
+<p>Natural Environment Research Council</p>
+
+<p><img src="research.png" alt="research" /></p>
+
+<p>Accessing data held by environmental organisations in the UK.</p>
+
+<p>A lot of organisations want access to this data.
+They focused on user engagement.</p>
+
+<p>GeoAI must be valid, data grounded and ecologically plausible.</p>
+
+<p>Uses AI to help explore datasets where it’s semantically different but can be converted to generic user inputs.</p>
+
+<p>How do we trust that data?</p>
+
+<p>Create a database of the metadata.Uses RAG combined with vector search engineer and a LLM.</p>
+
+<p>Hmmm doesn’t seem like anything fancy here, it’s just trying to cite all the source of info but with accompanying SQL queries.</p>
+
+<p>Geospatial models should be available next year.</p>
+
+<p>Urghhh. Another Q&amp;A and a guess on what the answer is. In this case, can you ask general high level questions and get a list of the datasets needed to answer the question? Only if it has been described in the data or relevant papers.</p>
+
+<p><code class="language-plaintext highlighter-rouge">9 Jun 2025 14:45</code></p>
+<h1 id="spotlight-talk-predicting-time-learning-embeddings-and-generating-synthetic-cells-from-single-cell-gene-expression-time-courses">Spotlight talk: Predicting time, learning embeddings and generating synthetic cells from single cell gene-expression time courses</h1>
+
+<p><code class="language-plaintext highlighter-rouge">9 Jun 2025 14:58</code></p>
+<h1 id="talk-to-discuss-new-robot-bodies">Talk to discuss new robot bodies</h1>
+
+<p><a href="robot.png"><img src="robot.png" alt="robot" /></a></p>
+
+<p>TidyBot - Robot can be given general rules, uses a onboard camera to detect and place objects. Benchmarked with 100 scenarios and 70 unique objects.</p>
+
+<p><a href="table.png"><img src="table.png" alt="table" /></a></p>
+
+<p>It seems that physically scaling up an object is an issue for AI to perform the same operations, so we need equivariance. EquivAct can do it in zero shot.</p>
+
+<p>We can demo a task to the AI and it can run the same or equivalent task, in some cases even without direct examples. It can even perform operations even when there are no examples.</p>
+
+<p>It seems like you can just simulate the action needed and then optimise the movement</p>
+
+<p>Low cost novel sensing solutions, so using magnets to work out sheer force.
+<a href="https://youtu.be/Uzx1js2hOdY">Stanford’s new lab is developing robots to help with chores and medicine</a></p>
+
+<p>Lab is open to engage with industry in Stanford and Cambridge.</p>
+
+<p><code class="language-plaintext highlighter-rouge">9 Jun 2025 15:45</code></p>
+<h1 id="break-1">BREAK</h1>
+
+<p><code class="language-plaintext highlighter-rouge">9 Jun 2025 16:00</code></p>
+<h1 id="panel-discussion">Panel discussion</h1>
+
+<p><a href="panel.png"><img src="panel.png" alt="panel" /></a></p>
+
+<p>Richard Potter - Peak CEO,
+Dr. Markella Mikkelsen - MolMart CEO,
+Prof. Neil Lawrence - Deepmind Professor of Machine Learning Cambridge, Senior AI Fellow, Visiting prof of Machine Learning</p>
+
+<p>“We deliver nothing in terms of what people want from AI in the UK at the moment.” “Universities care more about getting on front cover of Nature than the local newspaper.”</p>
+
+<p>General introduction on why we need AI innovation in UK/Manchester.</p>
+
+<p>BIg issue with startups and the culture of investment risk in the UK.</p>
+
+<p>AI ecosystem in Manchester currently valued at £3 billion.</p>
+
+<p>“Silicon valley has failed on the fundamental values that AI should be solving.” Silicon Valley has become a crutch to stop SMEs from growing here.</p>
+
+<p>What we need is data, ML and AI could stop for now and we just need access to more data in the UK.</p>
+
+<p>Interesting that most students are postering non-LLM projects and it’s traditional DS.</p>
+
+<p>NHS improvement of just 10% would push it into a “surplus” operating cost.</p>]]></content><author><name>Harvinder Atwal</name><email>blog@harvinderatwal.com</email></author><category term="ai" /><summary type="html"><![CDATA[Advances in Data Science and AI conference at University of Manchester 9 Jun 2025 09:12]]></summary></entry><entry><title type="html">Dissecting a pig butcher</title><link href="https://harvinderatwal.com/dissecting-a-pig-butcher/" rel="alternate" type="text/html" title="Dissecting a pig butcher" /><published>2024-07-31T00:00:00+01:00</published><updated>2024-07-31T00:00:00+01:00</updated><id>https://harvinderatwal.com/dissecting-a-pig-butcher</id><content type="html" xml:base="https://harvinderatwal.com/dissecting-a-pig-butcher/"><![CDATA[<h1 id="safety">Safety</h1>
+
+<p>First up: DO NOT ATTEMPT TO DO THIS.</p>
+
+<p>but it was good fun though. 😈</p>
+
+<p>This post seems to contain sensitive information or PII, but it’s all false.</p>
+
+<p>There are also a few images of a medical injuries.</p>
+
+<h3 id="lets-begin">Let’s begin</h3>
+
+<p>It started innocently enough. A kind lady named Nathalie accidently texted the wrong number. I get these all the time and treat them like a scam, so I just run along with it and see what happens. Generally just try to waste their time but as you see I could potentially do a lot more damage.</p>
+
+<p><a href="initial_content.png"><img src="initial_content.png" alt="initial_content.png" width="500" /></a></p>
+
+<p>It follows a certain trope of a genuine mistake but trying to make an opportunity out of it.
+Ok sure lets see what happens. Some nice pleasantries are exchanged. Also they send a photo of “themselves”, an attractive young asian woman.</p>
+
+<p><a href="1_business.png"><img src="1_business.png" alt="1_business.png" width="500" /></a></p>
+
+<p>She explains she is an owner of a heytea franchise (chinese milk tea chain) and tries to be even more inviting.
+The aim here is just introduce casual conversation and work out their target.</p>
+
+<p><a href="2_collecting_the_mark.png"><img src="2_collecting_the_mark.png" alt="2_collecting_the_mark.png" width="500" /></a></p>
+
+<p>At this point they are working out if they can try a romance scam. I shut that angle down. They also check my age, I guess to see how much money I could have or maybe they have some morals around the young or elderly.</p>
+
+<h3 id="the-handoff">The handoff</h3>
+
+<p><a href="3_switch_up.png"><img src="3_switch_up.png" alt="3_switch_up.png" width="500" /></a></p>
+
+<p>Then they need to switch up as this is a business phone.
+This seems to be a triage system where they hand over to another person to carry on with the scam.</p>
+
+<p><a href="4_injury.png"><img src="4_injury.png" alt="4_injury.png" width="500" /></a></p>
+
+<p>On the new number and immediately get a sad story of abuse and even some disturbing images. At this point I know something is up and try to look for the name in the x-rays and research who this woman is. I find a facebook page and instagram, so there is some credibility but the facebook page was created a month before and then soon after it was made private.</p>
+
+<p><a href="5_france.png"><img src="5_france.png" alt="5_france.png" width="500" /></a></p>
+
+<p>I then follow up to see what they can say about their trip to France. They post a picture which doesn’t appear in search engines. Some conversation here but the continuity is lacking. No mention of the tourist attraction I recommended ever comes up again.</p>
+
+<p><a href="6_meeting.png"><img src="6_meeting.png" alt="6_meeting.png" width="500" /></a></p>
+
+<p>I then surprisingly get a video of a meeting, which seems pretty strange but fits the narrative where this person was learning some financial training as part of being a franchisee? or something.</p>
+
+<h3 id="the-turning-point">The turning point</h3>
+
+<p><a href="7_app.png"><img src="7_app.png" alt="7_app.png" width="500" /></a></p>
+
+<p>I then ask about that training but then get a screenshot of some app or website that doesn’t seem to be real. There are no images that match the app and the screenshot doesn’t look like it’s taken on a phone screen.</p>
+
+<p><a href="8_chatgpt.png"><img src="8_chatgpt.png" alt="8_chatgpt.png" width="500" /></a>
+<a href="8a_actual_chatgpt.png"><img src="8a_actual_chatgpt.png" alt="8a_actual_chatgpt.png" width="500" /></a></p>
+
+<p>This was another red flag. The language seems to switch between a person giving responses and then a chatgpt response. I do a comparison between the two and they are eerily similiar.</p>
+
+<p><a href="9_altruistic.png"><img src="9_altruistic.png" alt="9_altruistic.png" width="500" /></a></p>
+
+<p>So I explore more on their motives and surprise, they are an altruistic rich lady. They even go to villages and just give away money, I’m sure that imagery won’t portray colonialist overtones.</p>
+
+<p>I never got the pictures by the way.</p>
+
+<p><a href="10_paris.png"><img src="10_paris.png" alt="10_paris.png" width="500" /></a></p>
+
+<p>I even get pictures of Paris during the olympics, so they are sticking to the narrative and these are obviously recent pictures. I reverse image search these and nothing comes up. It could be they are actually there? I think the problem here is a lot of these images could be behind a social media login wall and probably can’t be scraped.</p>
+
+<p><a href="11_crypto.png"><img src="11_crypto.png" alt="11_crypto.png" width="500" /></a></p>
+
+<p>I then get a strange pivot to the British economy and it’s now bankrupt. Oh noes! I should invest in Tether coin. Well I mean if it’s that bad I guess I should try it out.
+At this point they should be worried that I’m even entertaining it at this point. I report the last few messages to whatsapp but they are not blocked.</p>
+
+<p>At this point there are many red flags.</p>
+
+<p>Let’s go through them:</p>
+<ul>
+  <li>Change in conversational style and tone</li>
+  <li>Inconsistant flow of thought, just straight up ignoring messages and repeating questions. No reference back to the points they bring up</li>
+  <li>These pictures are either of themselves or just stock. Sending a picture straight off the bat with a stranger</li>
+  <li>Screenshots of an app that doesn’t seem to exist</li>
+  <li>Seems to know a lot about crypto but not about other aspects of their life</li>
+</ul>
+
+<p>Also for the record at this point they know my nickname, phone number, which city I live and that’s it. They’ve got no pictures or other identifying information. They voice and video call me but I don’t answer.</p>
+
+<p>Then I talk to a friend about this and learn about the pig butcher scam.</p>
+
+<h3 id="the-pig-butcher-scam">The pig butcher scam</h3>
+
+<p>Jackpot! So <a href="https://www.investopedia.com/pig-butchering-scams-8605501">The pig butcher scam</a> works with the analogy that you fatten the target up by using a combination of the romance and investment scam. The target gains trust by seeing the returns on their investment until you do a rug pull. At this point the target could’ve “invested” £10,000+</p>
+
+<p>There’s a <a href="https://darknetdiaries.com/episode/141/">great podcast on this</a> and a <a href="https://www.youtube.com/watch?v=vu-Y1h9rTUs">youtube video</a></p>
+
+<p>Now I know what it is and how it works, what to do next? Well make money of course ;-)
+Can I just reiterate? DO NOT ATTEMPT TO DO THIS. DO NOT ATTEMPT TO SCAM A SCAMMER.</p>
+
+<p>So they need to show that people can invest and even get money out to gain trust, so with that in mind how much can I get out of them? More on that later.</p>
+
+<p>I test out the theory and lean into the baiting.</p>
+
+<p><a href="12_relationships.png"><img src="12_relationships.png" alt="12_relationships.png" width="500" /></a></p>
+
+<p>So just to see if they would take the bait of turning it into a love scam, I claim that I have a big argument with my girlfriend but they actually try to give me advice. Oh well worth a shot.</p>
+
+<p><a href="13_ghost.png"><img src="13_ghost.png" alt="13_ghost.png" width="500" /></a></p>
+
+<p>I ghost them for a bit to see how they respond, they try a bit of passive-aggressive and I agree to buy some USDT (Tether coin). They want me to buy $100 but I say I’m only going to buy $10.</p>
+
+<p>Data for search engines</p>
+
+<p>Nathalie Chen
++44 7367 443253 - triage scammer
++44 7453 486329 - pig butcher</p>]]></content><author><name>Harvinder Atwal</name><email>blog@harvinderatwal.com</email></author><category term="scam" /><summary type="html"><![CDATA[Safety]]></summary></entry><entry><title type="html">AI UK Conf - Day 2</title><link href="https://harvinderatwal.com/aiuk-conf-day2/" rel="alternate" type="text/html" title="AI UK Conf - Day 2" /><published>2024-03-20T00:00:00+00:00</published><updated>2024-03-20T00:00:00+00:00</updated><id>https://harvinderatwal.com/aiuk-conf-day2</id><content type="html" xml:base="https://harvinderatwal.com/aiuk-conf-day2/"><![CDATA[<h1 id="late-start">Late start</h1>
+
+<p>Back again for Day 2, right next to the glorious Westminster Abbey</p>
+
+<p><a href="westminister.png"><img src="westminister.png" alt="westminister.png" /></a></p>
+
+<h1 id="pitchfest">PitchFest</h1>
+<p><code class="language-plaintext highlighter-rouge">20th March 10:00</code><br />
+<a href="img.png"><img src="img.png" alt="img.png" /></a>
+<a href="img_1.png"><img src="img_1.png" alt="img_1.png" /></a>
+<a href="img_2.png"><img src="img_2.png" alt="img_2.png" /></a>
+<a href="img_3.png"><img src="img_3.png" alt="img_3.png" /></a></p>
+
+<p>Researchers (enrichment students) have 90 seconds to pitch their projects and highlighting its real-world impacts, creativity and innovation. They will be judged.<br />
+We are really trying to get the crowd excited but it’s a tough morning</p>
+
+<p><strong>Pitches</strong></p>
+<ul>
+  <li>A wearable robot tail to support lifting tasks, using AI reinforcement learning to adapt to the body</li>
+  <li>Using language models to write code without errors generate code, explains what is wrong, fix the errors</li>
+  <li>What’s in the box? - XAI describing what rules determine AI models, highlighting auditability and traceability</li>
+  <li><strong>WINNER</strong>: Why facts don’t change minds - belief networks reinforce bad ideas. Use NLP to work out the underlying structure of the belief network to show how irrational beliefs can have rational origins <a href="https://ai-uk.turing.ac.uk/speakers/trisevgeni-papakonstantinou/">Trisevgeni Papakonstantinou</a></li>
+  <li>Tweeting away hate - how to respond to hate on social media</li>
+  <li>Volcano defence - slow and manual to check rock crystals using AI to analyse</li>
+</ul>
+
+<h1 id="stalls">Stalls</h1>
+<p><code class="language-plaintext highlighter-rouge">11:00</code></p>
+
+<p><a href="img_4.png"><img src="img_4.png" alt="img_4.png" /></a>
+<a href="img_5.png"><img src="img_5.png" alt="img_5.png" /></a>
+<a href="img_6.png"><img src="img_6.png" alt="img_6.png" /></a></p>
+
+<h1 id="autonomous-cyber-defense">Autonomous Cyber Defense</h1>
+<p><code class="language-plaintext highlighter-rouge">14:35</code></p>
+
+<p><a href="img_7.png"><img src="img_7.png" alt="img_7.png" /></a></p>
+
+<p>What happens when cyberattacks exceed the capacity for humans to respond?
+Deep Reinforcement Learning is the major tool for cyber security.<br />
+<a href="https://github.com/cage-challenge">CAGE challenge</a></p>
+
+<p>It’s been mainly simulated and not rolled out to real systems or constrained problem space.<br />
+This particular lab is looking to find real attackers on real systems. Having more complex agents.<br />
+Using AI to find vulnerabilities in systems before humans do.<br />
+<a href="https://llama.meta.com/purple-llama/">Purple Llama</a><br />
+<a href="https://aicyberchallenge.com/">AIxCC</a></p>
+
+<p><a href="img_8.png"><img src="img_8.png" alt="img_8.png" /></a>
+How do humans oversee a system that runs faster than them?<br />
+How can we stop them being used against us?</p>
+
+<p>Lots of questions around policy issues
+<a href="img_9.png"><img src="img_9.png" alt="img_9.png" /></a></p>
+
+<p>Questions:
+<strong>How do you counteract bad actors?</strong>
+It’s already an arms race</p>
+
+<p>Good to use lots of small models instead of a generalised model.</p>
+
+<p><strong>DRT how have you defined a reward function in cyber defence?</strong>
+Less concerned about reward and more on real world systems as opposed to simulated. Easy to emulate lots of issues in a simulated env.</p>
+
+<h1 id="ai-and-the-battlefield-of-the-future">AI and the battlefield of the future</h1>
+<p><code class="language-plaintext highlighter-rouge">15:00</code><br />
+<a href="img_10.png"><img src="img_10.png" alt="img_10.png" /></a>
+Military is looking at AI and it crosses every aspect.<br />
+Only 40% of mil are available for deployment at any one time.<br />
+Lots of mil assets ready to be deployed but just waiting and need lot’s of maintenance. Could be an AI problem<br />
+AI Logistics - interoperability is tough. Buying the right tech is hard.<br />
+Weapons review process for new weapons on the ethics of use.</p>
+
+<h1 id="digital-twins-for-the-environment">Digital Twins for the Environment</h1>
+<p><code class="language-plaintext highlighter-rouge">15:30</code>
+<a href="img_11.png"><img src="img_11.png" alt="img_11.png" /></a></p>
+
+<p>Digital replica of a system for forecasting. Difference between that and a simulator? Digital twin can be used by many users and can be continuously updated.<br />
+Most people believe that you need AI to create a digital twin. It needs real time infusion of data, be accessible to all types of users, highly complex.<br />
+Optimising observing systems.</p>
+
+<p>Digital twin is the intersection of modelling and monitoring. As a specialised user you can use a digital twin without having the expertise of various systems/disciplines</p>
+
+<p>Oceanographic institute made a model of a protected area.<br />
+NASA is looking at many prototypes for coastal zones, wildfires. It is also support projects in symbolic AI as they fit the problem space nicely.</p>
+
+<p>NASA is still investing in the infra needed for earth science and AI.</p>
+
+<p><strong>Challenges</strong><br />
+How do we communicate these complex ideas to people? We need to find tools to visualise these ideas to decision makers.<br />
+We would like to use digital twins to predict extreme events.<br />
+Big uncertainty in digital AI systems.</p>
+
+<p>Interoperability should be a requirement for digital twins.</p>
+
+<p><strong>Questions</strong><br />
+We want to be confident about a problem we don’t know about.<br />
+We can expect users to be reasonably smart around uncertainty i.e. weather forecasts how do we make users act the same way with digital twins.<br />
+Twins are realtime and hard to use with AI or really simple but can run 1000x realtime<br />
+Skills to be in a digital twin team needs to be multidisciplinary. Social science, health, hard sciences, essentially mirroring the class of users.<br />
+Call out to AI people to solve environmental systems.<br />
+Components can be built for digital twins.</p>]]></content><author><name>Harvinder Atwal</name><email>blog@harvinderatwal.com</email></author><category term="ai" /><summary type="html"><![CDATA[Late start]]></summary></entry><entry><title type="html">AI UK Conf - Day 1</title><link href="https://harvinderatwal.com/aiuk-conf-day1/" rel="alternate" type="text/html" title="AI UK Conf - Day 1" /><published>2024-03-19T00:00:00+00:00</published><updated>2024-03-19T00:00:00+00:00</updated><id>https://harvinderatwal.com/aiuk-conf-day1</id><content type="html" xml:base="https://harvinderatwal.com/aiuk-conf-day1/"><![CDATA[<h1 id="registration">Registration</h1>
+
+<p>Good morning everyone and welcome to AIUK 2024.</p>
+
+<p><a href="entrance.png"><img src="entrance.png" alt="entrance.png" /></a>
+<a href="westminister.png"><img src="westminister.png" alt="westminister.png" /></a></p>
+
+<h1 id="a-sneak-peek-inside-isambard-ai">A Sneak Peek Inside Isambard-AI</h1>
+<p><code class="language-plaintext highlighter-rouge">19th March 09:20</code></p>
+
+<p>First talk is up on one of the most powerful supercomputers built in the UK
+<a href="isambard1.png"><img src="isambard1.png" alt="isambard1.png" /></a></p>
+
+<p>Outline - How did it start?<br />
+Part of the Uk’s national AI research resource<br />
+Built on ARM processors<br />
+UX is a key measure of success<br />
+Sustainable, accessible,
+It is part of <a href="https://www.ukri.org/news/300-million-to-launch-first-phase-of-new-ai-research-resource/">£300 million to launch first phase of new AI Research Resource – UKRI</a></p>
+
+<p><a href="isambard2.png"><img src="isambard2.png" alt="isambard2.png" /></a></p>
+
+<p>Building work is still underway.<br />
+Very optimised for Power usage effectiveness</p>
+
+<p><strong>What is this supercomputer for?</strong></p>
+
+<p><a href="isambard3.png"><img src="isambard3.png" alt="isambard3.png" /></a></p>
+
+<p>Each blade has 900GBs+ of high bandwidth memory 🤯</p>
+
+<p><a href="isambard4.png"><img src="isambard4.png" alt="isambard4.png" /></a></p>
+
+<p>All these layers will be available to use</p>
+
+<p><a href="isambard5.png"><img src="isambard5.png" alt="isambard5.png" /></a></p>
+
+<p>It will have guardrails for LLMs to stay within boundaries, eliminate bias and lower toxicity.</p>
+
+<p>On to UX?<br />
+SSO and MFA.. ok<br />
+So it’s just AI as a service<br />
+Flexible Consumption rates… so Ai as a service</p>
+
+<p>Phase 1 is already here and it’s being tested.</p>
+
+<p>Great to see the UK investing in AI supercomputers not owned by BigTech. Reference to <a href="https://www.gov.uk/government/publications/ai-safety-summit-2023-the-bletchley-declaration/the-bletchley-declaration-by-countries-attending-the-ai-safety-summit-1-2-november-2023">The Bletchley Declaration by Countries Attending the AI Safety Summit, 1-2 November 2023 - GOV.UK</a></p>
+
+<p>Questions <strong>how do you get user requirements?</strong> Is it just build it and they will come?<br />
+Requirements came from a report and it will be iterated on.</p>
+
+<h1 id="is-agi-imminent">Is AGI imminent?</h1>
+<p><code class="language-plaintext highlighter-rouge">11:05</code><br />
+No. Thanks for coming to my Ted talk.
+<a href="agi1.png"><img src="agi1.png" alt="agi1.png" /></a></p>
+
+<p><strong>What is AGI?</strong>
+Ai is a mirror on ourselves.
+Differentiate between AGI and artificial super intelligence.
+Why are we pursuing AGI as a replication of humans when we should be using them to do the things we don’t/can’t do?</p>
+
+<p><strong>Is the physical world part of AGI?</strong> But robotic AI is behind.
+Could be misleading to think AGI would be fair in education, welfare.</p>
+
+<p>Bias analysis of GPT2 shows a lot of bias due to the datasets involved.
+“LLM is an improv comedy group” 😂
+The bar will keep moving on AI and what good looks like.</p>
+
+<p>Audience Poll: <strong>does AGI need to interact with the physical world?</strong> Answer is no. Approx 300 people
+AI Completeness - if you could solve an AI hard problem then a lot of others are also solved.
+Maybe not as data comes in different forms and will be broken down in a different way.</p>
+
+<p>Causality is another issue to look into for AI.</p>
+
+<p>People are using chatGPT as an advanced search and don’t see past that.</p>
+
+<p><strong>AGI in the world of work</strong>
+Expect low level video/content creation will go.
+Constant retraining. Jobs will only be available to seniors, polarising juniors.
+Ability to write legal documents could go, where it’s a highly skilled profession and they could disappear.
+A symbiotic relationship between AGI to do jobs in a different way. People will lose out to people who do use these AI tools.</p>
+
+<p><strong>What does it mean for the UK?</strong>
+Public vs private sector. Private sector has massive resources compared to public sector. Even with Isembard
+Optimistic and it will be an exciting ride even if the UK is not the biggest player and may not be.
+This tech seems concentrated compared to the early days of the web.
+US vs UK mindset on startups.
+UK could lead on safety in AI. Data is more safe in the UK hands as opposed to private companies.</p>
+
+<p><strong>Audience poll : are you optimistic on AI?</strong> Yes.</p>
+
+<p>Audience questions:
+<strong>Have LLMs peaked? do we need another breakthrough?</strong><br />
+<strong>Should we get insurance against AI models?</strong> Staged insurance policies. It will be very different from what we have now.<br />
+<strong>Are we framing AGI in the wrong type of intelligence model i..e human?</strong> Dishwasher AI<br />
+<strong>Why do we worry about not owning the tech in public sector AI?</strong> Distinction between foundation and frontier models, concern we can’t put that much money in cutting edge models.</p>
+
+<p><strong>Audience poll: AGI is imminent?</strong> No.</p>
+
+<h1 id="lunch">Lunch</h1>
+<p><code class="language-plaintext highlighter-rouge">12:10</code></p>
+
+<h1 id="stalls">Stalls</h1>
+<p><code class="language-plaintext highlighter-rouge">13:00</code></p>
+
+<p><a href="stalls.png"><img src="stalls.png" alt="stalls.png" /></a>
+<a href="stalls1.png"><img src="stalls1.png" alt="stalls1.png" /></a>
+<a href="stalls2.png"><img src="stalls2.png" alt="stalls2.png" /></a></p>
+
+<h1 id="ai-culture-long-table">AI Culture Long table</h1>
+<p><code class="language-plaintext highlighter-rouge">13:30</code></p>
+
+<p><a href="longtable.png"><img src="longtable.png" alt="longtable.png" /></a></p>
+
+<p>Can AI generate something new?<br />
+Can AI be good for art? Turning memories into a poem. Opening up access to an experience that wouldn’t normally be available.<br />
+Making art is more important than the art itself, the effort of making it is important.<br />
+Clicking a button may depersonalise it.<br />
+Intentionality means that kinda makes it ok.<br />
+AI art is the first autonomous tool but we do have examples of primitive tools that could be considered as autonomous.<br />
+Lowering the barrier<br />
+Who is the inspiration if you use AI to start creating art?<br />
+We are terrified of but excited for a computer that can imagine beyond human thought.<br />
+Unintended consequences of for example a 3 hour conversation with your mom compared to talking an LLM that’s trying to be concise.<br />
+Co-designing is important going forward with AI art.<br />
+Drag performances get a rise in economic downturns</p>
+
+<h1 id="data-labour-and-ai">Data, Labour and AI</h1>
+<p><code class="language-plaintext highlighter-rouge">14:40</code><br />
+Strong start: it seems to be about the abuse of labour and knowledge for AI.<br />
+<a href="labour.png"><img src="labour.png" alt="labour.png" /></a></p>
+
+<p>First-hand experience for detoxifying GPT during its training stages.<br />
+Knowledge was stolen from sites (we knew that).<br />
+Same firm that detoxified chatGPT also worked in content moderation for FB. While some was done by AI, the rest was outsourced to third world countries.</p>
+
+<p>We are looking at a global gig economy,<br />
+There is a perception that tech workers are paid well but it’s hidden with low paid workers. Lot’s of low paid workers were used to help build chatGPT.</p>
+
+<p>Gig economy has created back channels that has increased solidarity and could lead to unionisation.
+AI workers or gig workers should have the same protections as perm employees even though they should do.</p>
+
+<p>During training/content moderation they were not told about the work they were about to do, so can be quite jarring and can have side effects. Instead of manual labour being exploited it’s people’s mental health.</p>
+
+<p>There won’t be an AI revolution unless workers embrace it. Our restructuring is dependent on 3rd world country workers to do some of the work. We need to choose what work looks like for all of us, globally.</p>
+
+<p>Equity is not for the benefit of the employee. It’s for executives to get more productivity from workers. How workers get paid globally is a choice.
+Lack of knowledge about working in 3rd world countries means there is heavy exploitation. Got paid 75cents an hour for training chatGPT compared to what it is worth now. Workers are now asking if this work is dignified.</p>
+
+<p>We are creating global experts.<br />
+A different model is emerging where datasets can be resold for training multiple times and that can be used to pay workers more for AI works in 3rd world countries.</p>
+
+<p>Audience questions: <strong>hidden labour, how is hiding it?</strong>
+Employees have to sign NDAs and the company didn’t disclose their clients. Work is siloed and crowdsourced.Essentially it’s built into the system.
+You can tell where the work is being done based on what is being paid.</p>
+
+<p><strong>How is AI exploitation new compared to other manual labour like mining?</strong>
+It’s not new but it’s like care work. Stuff is curated.
+What is new is how the public sees it, we think tech is cushy. How bad can it be to look at a computer all day?
+Government in Kenya has opened the borders to digital labour without regulation.</p>
+
+<p>Algorithmic management needs to be able to be questioned.</p>
+
+<p><strong>What does solidarity look like across the global south?</strong>
+Unions in the south are connecting with each other.</p>
+
+<h1 id="keynote">Keynote</h1>
+<p><code class="language-plaintext highlighter-rouge">16:00</code>
+Angela McLean, Government Chief Scientific advisor.</p>
+
+<p><a href="keynote.png"><img src="keynote.png" alt="keynote.png" /></a></p>
+
+<p>We need a scientific and systems approach to AI.
+Systems approach: AI superpower in 2030</p>
+
+<p>5 critical technologies
+AI,
+Semiconductors,
+Quantum,
+Something something</p>
+
+<p>This framework is a way to go across government departments and unify.</p>
+
+<p><strong>R&amp;D investment update UK</strong><br />
+UK in a good place to be a science superpower.<br />
+£100 million into the Turing institute from UKGov.<br />
+We know we need more compute to bring AI into UK funded research programmes.</p>
+
+<p>70 experts in government to invest in building AI.<br />
+Understand the benefits of AI and the harms.</p>
+
+<p><strong>Scientific approach to AI</strong><br />
+Transparent, Rigour, Reproducibility. Seems obvious but people don’t do it.</p>
+
+<p>Her department has consulted a lot of people.<br />
+Pretty optimistic view on AI with a plan.</p>
+
+<p>Questions:
+<strong>What were the takeaways from the AI safety summit?</strong><br />
+Current set of architectures is not safe. Building a framework to make it safe.</p>
+
+<p><strong>Where does the public voice fit here?</strong><br />
+Looking at a consulting opp but they don’t know. Missing value in number polls, analysis of free text answers is now possible.</p>
+
+<p><strong>How are you advising the higher ups?</strong><br />
+Believe their role is to amplify other scientific advisors. Be optimistic about science</p>
+
+<p><strong>Are you confident we have the talent to be an AI superpower?</strong><br />
+Yes. We are building capability already. Big investments in compute to attract talent. There are visa systems in place.</p>
+
+<p><strong>How do we study the environmental impact?</strong><br />
+Gather data of our energy use and how it is made. While big it could pale in comparison.</p>
+
+<p><strong>How much is bias on your radar in AI (and in government)?</strong><br />
+We know it’s a massive issue. Talked a lot about what you can and can’t do around bias. Make it visible.</p>
+
+<p><strong>Final message</strong><br />
+Be hopeful and it’s exciting. It’s about information on people’s lives and it will help. It’s a once in a generation opportunity.</p>]]></content><author><name>Harvinder Atwal</name><email>blog@harvinderatwal.com</email></author><category term="ai" /><summary type="html"><![CDATA[Registration]]></summary></entry><entry><title type="html">Hamper Extravaganza</title><link href="https://harvinderatwal.com/hamper-extravaganza/" rel="alternate" type="text/html" title="Hamper Extravaganza" /><published>2020-12-18T00:00:00+00:00</published><updated>2020-12-18T00:00:00+00:00</updated><id>https://harvinderatwal.com/hamper-extravaganza</id><content type="html" xml:base="https://harvinderatwal.com/hamper-extravaganza/"><![CDATA[<p>This is a big one, like multiple times too big.</p>
+
+<p><img src="degusta-box.jpg" /></p>
+
+<p>First up let’s start with the classic degusta box</p>
+
+<h5 id="pipers-crisps">Pipers crisps</h5>
+<p>Tina - The cheesy one was nicely cheesy. The thyme and rosemary was rather different, good for a small portion but would eat too many of them.</p>
+
+<h5 id="odysea-aubergine-meze-dip">Odysea Aubergine Meze Dip</h5>
+
+<h5 id="leon-aioli-vegan">Leon Aioli vegan</h5>
+<p>Tina - Despite the vegan, nice taste and good consistency. The jar is a bit tall and getting the last stuff out is tricky but worth it.</p>
+
+<h5 id="brave-roasted-chickpeas">Brave Roasted Chickpeas</h5>
+<p>Tina - Nice and crunchy, good taste.</p>
+
+<h5 id="dash-water">Dash Water</h5>
+
+<h5 id="cocoa-caramel-peanuts">Cocoa caramel peanuts</h5>
+
+<h5 id="club-tropica-ipa">CLUB Tropica IPA</h5>
+<p>Great IPA, I’ve added to my beer app.</p>
+
+<h5 id="good-earth-tea">Good Earth Tea</h5>
+<p>Tina - not tried yet, too much other tea at home</p>
+
+<h5 id="peters-yard-sourdough-bites">Peter’s Yard Sourdough Bites</h5>
+<p>Tina - the Sourdough taste was good but a bit too much on the salty side.</p>
+
+<h5 id="nexba-pineapple-soft">Nexba Pineapple soft</h5>
+<p>Harvy - Was alright. Could have it again, would be a good summer drink.</p>
+
+<h5 id="capsicana-cooking-paste">Capsicana cooking paste</h5>
+<p>Tina - We made it with chicken and it was juicy, fruity and spicy at the same time. Would recommend.</p>
+
+<h5 id="tonys-chocolonely">Tony’s Chocolonely</h5>
+<p>Tina - rather nice and rich taste. I only had a bite but it was a good one.</p>]]></content><author><name>Harvinder Atwal</name><email>blog@harvinderatwal.com</email></author><category term="food" /><summary type="html"><![CDATA[This is a big one, like multiple times too big.]]></summary></entry><entry><title type="html">November box</title><link href="https://harvinderatwal.com/november-box/" rel="alternate" type="text/html" title="November box" /><published>2020-11-18T00:00:00+00:00</published><updated>2020-11-18T00:00:00+00:00</updated><id>https://harvinderatwal.com/november-box</id><content type="html" xml:base="https://harvinderatwal.com/november-box/"><![CDATA[<p>A surprisingly warm november</p>
+
+<p><img src="november-box.jpeg" /></p>
+
+<h5 id="brioche-baguettes">Brioche Baguettes</h5>
+<p>Tina - We made them into oven baguettes and they were surprisingly tasty.</p>
+
+<h5 id="kitkat-christmas">Kitkat Christmas</h5>
+<p>Tina - There was one big one and a bag with much smaller ones. The big ones was a good portion, the smaller one, same taste but really tiny.</p>
+
+<h5 id="wolf-wine">Wolf Wine</h5>
+<p>Tina - Cute little bottles, average taste of chardonnay and cabernet, as far as my uncultured pallet can judge this</p>
+
+<h5 id="hot-chocolate">Hot chocolate</h5>
+<p>Harvy - I think I remember having this but it seems to be just all the other instant hot chocoate out there.</p>
+
+<h5 id="protein-bars">Protein bars</h5>
+<p>Tina - Nice and nutty without getting too dry and crumbly.</p>
+
+<h5 id="stroop-waffles">Stroop waffles</h5>
+<p>Tina - Stroop waffles can’t be bad! EVER!
+Harvy - Agreed.</p>
+
+<h5 id="advent-tea">Advent Tea</h5>
+<p>Tina - Threw it out after many months and several tries as they were all super fruity and weird. Just not my cup of tea.</p>
+
+<h5 id="lindt">Lindt</h5>
+<p>Tina - Rather delicious, both the mint and the orange. 
+Harvy - Had them before, so nothing surprising here. Still very good.</p>
+
+<h5 id="orange-and-cranberry-jaffa-cakes">Orange and Cranberry Jaffa cakes</h5>
+<p>Tina - Quite nice and juicy.</p>
+
+<h5 id="dijon-mustard">Dijon Mustard</h5>
+<p>Tina - It’s mustard. Nicely strong but we had already mustard at home, and how many open mustard jars do you really need.</p>
+
+<h5 id="coriander-and-basil-pesto">Coriander and basil pesto</h5>
+<p>Tina - Not tested it yet.</p>]]></content><author><name>Harvinder Atwal</name><email>blog@harvinderatwal.com</email></author><category term="food" /><summary type="html"><![CDATA[A surprisingly warm november]]></summary></entry><entry><title type="html">Cozy October box</title><link href="https://harvinderatwal.com/october-box/" rel="alternate" type="text/html" title="Cozy October box" /><published>2020-10-18T00:00:00+01:00</published><updated>2020-10-18T00:00:00+01:00</updated><id>https://harvinderatwal.com/october-box</id><content type="html" xml:base="https://harvinderatwal.com/october-box/"><![CDATA[<p>As the summer draws to a close, some cozy treats for october.</p>
+
+<p><img src="october-box.jpg" /></p>
+
+<h5 id="yes-plant-protein-bar">YES. Plant protein bar</h5>
+<p>Surprisingly tasty and crunchy. Would buy again. Had the almond version.</p>
+
+<h5 id="maltesers-instant-hot-chocolate">Maltesers Instant Hot Chocolate</h5>
+<p>It’s hot chocolate, what’s not to love. I ignored their recommendation of using water and it was still good. But I prefer my hot chocolate powder from Lidl.</p>
+
+<h5 id="reeses-peanut-butter-minis">Reese’s Peanut Butter Minis</h5>
+<p>Too good. We devoured them in under 20 min.</p>
+
+<h5 id="flapjack">Flapjack</h5>
+<p>Tina - Good for a lazy snack. But it’s bigger than one thinks, so not for mini-peckish moments</p>
+
+<h5 id="chocolate-crepes">Chocolate crepes</h5>
+<p>Tina - A bit dry and tasteless. Warm they were definitely better but still not great</p>
+
+<h5 id="costa-coffee">Costa Coffee</h5>
+<p>Harvy - Pretty much like millicano, I suspect you can’t improve on nearly-instant coffee anymore.</p>
+
+<h5 id="cashew-and-oat-cookie">Cashew and Oat Cookie</h5>
+<p>Harvy - Great little cookiie, wish it was bigger but then it’s good portion control.</p>
+
+<h5 id="pretzels">Pretzels</h5>
+
+<h5 id="attack-a-snak">Attack a Snak</h5>
+
+<h5 id="kitkat-senses">Kitkat senses</h5>
+
+<h5 id="brioche-burger-buns">Brioche Burger Buns</h5>]]></content><author><name>Harvinder Atwal</name><email>blog@harvinderatwal.com</email></author><category term="food" /><summary type="html"><![CDATA[As the summer draws to a close, some cozy treats for october.]]></summary></entry><entry><title type="html">Simmering September box</title><link href="https://harvinderatwal.com/simmering-september-box/" rel="alternate" type="text/html" title="Simmering September box" /><published>2020-09-18T00:00:00+01:00</published><updated>2020-09-18T00:00:00+01:00</updated><id>https://harvinderatwal.com/simmering-september-box</id><content type="html" xml:base="https://harvinderatwal.com/simmering-september-box/"><![CDATA[<p>September is here.</p>
+
+<p><img src="simmering-september-box.jpg" /></p>
+
+<h5 id="hartleys-jelly-pot">Hartley’s Jelly Pot</h5>
+<p>Tina - “There is always room for Jello” and Bill Murray was right. Nice jello, like all jello.</p>
+
+<p>Harvey - I don’t think I had this</p>
+
+<h5 id="mc-vitiess">Mc Vities’s</h5>
+<p>Normally not a fan of orange flavoured cookies but these were nice. Good mix of crunchiness, gooiness and chocolate taste.</p>
+
+<p>Harvey - Tina have you been eating all these? Pretty sure I didn’t have this either. /whispers I did it was great. Slightly chewy but the taste and texture made up for that.</p>
+
+<h5 id="emily-veg-thins">Emily Veg Thins</h5>
+<p>Interesting alternatives for crisps, crunchy and nice tastes.</p>
+
+<p>Harvey - I stayed away from these.</p>
+
+<h5 id="peters-yard-original-sourdough-crispbread">Peter’s Yard Original Sourdough Crispbread</h5>
+<p>Nice take on the cracker, good with smelly cheese and a drop of sour marmalade. Yum yum.</p>
+
+<h5 id="fulfil-chocolate-hazelnut-whip-bar">FULFIL Chocolate Hazelnut Whip Bar</h5>
+<p>Tina - Nice and smooth, very indulgent and not too bad on the calorie count.</p>
+
+<p>Harvy - Agree very smooth and just the right mix of textures and flavours.</p>
+
+<h5 id="whitworths-chocolate-biscuit--hazelnut-treat-mix">Whitworths Chocolate Biscuit &amp; Hazelnut Treat Mix</h5>
+<p>Tina - The bits and pieces were not bad, but the mix of raisins and nuts and chocolate freaks me out. I want to know if it is crispy, sweet or gooey and salty before i bite on it, even if I chuck them down without looking.</p>
+
+<p>Harvy - Really like the mix of different but complimentary snacks. Just shove a load in your mouth and let it all mix up.</p>
+
+<h5 id="thatchers-cloudy-lemon-cider">Thatchers Cloudy Lemon Cider</h5>
+
+<p>Harvy - Surprisingly a refreshing drink that’s good for the summer days/nights. Reminds me of a bottled <a href="https://germanfoods.org/recipes/radler/">radler from germany</a></p>
+
+<h5 id="chicken-yakisoba">Chicken Yakisoba</h5>
+
+<h5 id="more-maple-syrup-this-time-mini">More Maple syrup, this time mini</h5>
+<p>Did we even use this? It’s probably just disappeared</p>
+
+<h5 id="vegetable-barley-soup">Vegetable Barley soup</h5>
+
+<h5 id="lucozade">Lucozade</h5>]]></content><author><name>Harvinder Atwal</name><email>blog@harvinderatwal.com</email></author><category term="food" /><summary type="html"><![CDATA[September is here.]]></summary></entry></feed>

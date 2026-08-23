@@ -1,0 +1,5615 @@
+[
+  {
+    "payload": {
+      "event": "Status",
+      "type": "Chilling",
+      "user_id": "cha"
+    },
+    "event_type": "Status",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-14T20:22:23.026355Z",
+    "event_id": "45fd03fc-24d7-4f78-b6eb-e8f5b0d6c01b",
+    "type": "event#2026-07-14T20:22:23.026355Z#34d83a41"
+  },
+  {
+    "payload": {
+      "user_id": "cha",
+      "event": "Drinks",
+      "type": "Water",
+      "beer": "",
+      "reverse": false
+    },
+    "event_type": "Drinks",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-15T15:55:13.591683Z",
+    "event_id": "db957fde-ddd5-4570-bd9b-979c30c66596",
+    "type": "event#2026-07-15T15:55:13.591683Z#5e90440e"
+  },
+  {
+    "payload": {
+      "reverse": true,
+      "user_id": "cha",
+      "type": "Water",
+      "event": "Drinks",
+      "beer": ""
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-15T15:55:15.082777Z",
+    "event_id": "60f767c6-74e4-4547-8547-86bf389c2134",
+    "type": "event#2026-07-15T15:55:15.082777Z#e89ab2ea"
+  },
+  {
+    "payload": {
+      "steps": 2464,
+      "user_id": "cha"
+    },
+    "event_type": "steps",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-16T10:54:29.220270Z",
+    "event_id": "2987caf1-345b-490b-a777-13fe31fba0d5",
+    "type": "event#2026-07-16T10:54:29.220270Z#79111c0d"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "user_id": "cha",
+      "reverse": false,
+      "event": "Drinks",
+      "type": "Tea"
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-16T10:54:35.237993Z",
+    "event_id": "a2e0f599-4cee-4e3c-ba1a-4e6080b7b508",
+    "type": "event#2026-07-16T10:54:35.237993Z#3be5730c"
+  },
+  {
+    "payload": {
+      "type": "Tea",
+      "event": "Drinks",
+      "user_id": "cha",
+      "reverse": false,
+      "beer": ""
+    },
+    "event_type": "Drinks",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-16T10:54:37.135486Z",
+    "event_id": "6809f96c-d973-4ac8-ab52-36265729be64",
+    "type": "event#2026-07-16T10:54:37.135486Z#d1580f68"
+  },
+  {
+    "payload": {
+      "event": "Status",
+      "beer": "",
+      "reverse": false,
+      "type": "Chilling",
+      "user_id": "cha"
+    },
+    "event_type": "Status",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-16T10:55:00.692989Z",
+    "event_id": "a1eb66d1-90d9-4a0d-94aa-790becdb09ee",
+    "type": "event#2026-07-16T10:55:00.692989Z#d122f426"
+  },
+  {
+    "payload": {
+      "user_id": "cha",
+      "type": "Pee",
+      "event": "Toilet",
+      "beer": "",
+      "reverse": false
+    },
+    "event_type": "Toilet",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-16T10:55:07.367591Z",
+    "event_id": "10702abf-2785-4e2c-b614-fa30a74dee74",
+    "type": "event#2026-07-16T10:55:07.367591Z#72c7b0ac"
+  },
+  {
+    "payload": {
+      "event": "Toilet",
+      "user_id": "cha",
+      "beer": "",
+      "reverse": false,
+      "type": "Poo"
+    },
+    "event_type": "Toilet",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-16T10:55:08.949963Z",
+    "event_id": "36c2b849-d01e-41cb-83c5-2b0d7ef983a3",
+    "type": "event#2026-07-16T10:55:08.949963Z#25b17fd2"
+  },
+  {
+    "payload": {
+      "user_id": "cha",
+      "steps": 2660
+    },
+    "event_type": "steps",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-16T13:20:43.302335Z",
+    "event_id": "2341d59d-d8da-4a7c-b365-e5538fdbc24f",
+    "type": "event#2026-07-16T13:20:43.302335Z#5995ee9a"
+  },
+  {
+    "payload": {
+      "reverse": false,
+      "beer": "",
+      "type": "Water",
+      "event": "Drinks",
+      "user_id": "cha"
+    },
+    "event_type": "Drinks",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-16T13:20:51.148052Z",
+    "event_id": "9162ba5e-7b82-43d9-90b5-2e06daabcb08",
+    "type": "event#2026-07-16T13:20:51.148052Z#cf5f11cd"
+  },
+  {
+    "payload": {
+      "reverse": false,
+      "event": "Status",
+      "user_id": "cha",
+      "type": "Chilling",
+      "beer": ""
+    },
+    "event_type": "Status",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-16T13:21:09.154478Z",
+    "event_id": "08a523dd-0051-443e-b5eb-c092f08ff2bd",
+    "type": "event#2026-07-16T13:21:09.154478Z#3f55d49c"
+  },
+  {
+    "payload": {
+      "user_id": "cha",
+      "event": "Status",
+      "beer": "",
+      "reverse": false,
+      "type": "Drinking"
+    },
+    "event_type": "Status",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-16T15:56:49.188451Z",
+    "event_id": "80afe541-0fa8-43e5-9b2c-1737b391c889",
+    "type": "event#2026-07-16T15:56:49.188451Z#5c9e5f20"
+  },
+  {
+    "payload": {
+      "beer": "true",
+      "type": "Lager",
+      "reverse": false,
+      "event": "Drinks",
+      "user_id": "cha"
+    },
+    "event_type": "Drinks",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-16T15:56:52.204953Z",
+    "event_id": "8baf97fd-1a3b-41ea-a97c-9759aa99e53b",
+    "type": "event#2026-07-16T15:56:52.204953Z#ea828f7f"
+  },
+  {
+    "payload": {
+      "event": "Toilet",
+      "beer": "",
+      "reverse": false,
+      "type": "Pee",
+      "user_id": "cha"
+    },
+    "event_type": "Toilet",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-16T15:57:34.207587Z",
+    "event_id": "12d73c98-86ca-46ff-9a43-171504b5c486",
+    "type": "event#2026-07-16T15:57:34.207587Z#c3bfe05b"
+  },
+  {
+    "payload": {
+      "steps": 4872,
+      "user_id": "cha"
+    },
+    "event_type": "steps",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-16T15:58:05.409789Z",
+    "event_id": "02202875-4b8b-41fd-a3c5-622a75f040da",
+    "type": "event#2026-07-16T15:58:05.409789Z#7b9a62c4"
+  },
+  {
+    "payload": {
+      "user_id": "cha",
+      "steps": 7998
+    },
+    "event_type": "steps",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-16T18:39:55.544837Z",
+    "event_id": "3e53a765-4856-4b20-a5c5-b44e14794050",
+    "type": "event#2026-07-16T18:39:55.544837Z#5876d9fd"
+  },
+  {
+    "payload": {
+      "user_id": "cha",
+      "event": "Drinks",
+      "beer": "true",
+      "reverse": false,
+      "type": "BoxPerry"
+    },
+    "event_type": "Drinks",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-16T18:43:54.851651Z",
+    "event_id": "c0c4968f-ce2a-43aa-a9a7-7e114bdcbfcc",
+    "type": "event#2026-07-16T18:43:54.851651Z#a7cb95d7"
+  },
+  {
+    "payload": {
+      "user_id": "cha",
+      "steps": 8346
+    },
+    "event_type": "steps",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-16T20:42:58.933148Z",
+    "event_id": "fb25cfe3-74b7-4a38-a723-eabd1de5cc99",
+    "type": "event#2026-07-16T20:42:58.933148Z#342c07a0"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "user_id": "cha",
+      "event": "Drinks",
+      "reverse": false,
+      "type": "Water"
+    },
+    "event_type": "Drinks",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-16T20:42:59.987443Z",
+    "event_id": "7da5908e-f923-42f5-a361-a27576f79e94",
+    "type": "event#2026-07-16T20:42:59.987443Z#e2ea4804"
+  },
+  {
+    "payload": {
+      "user_id": "cha",
+      "event": "Drinks",
+      "beer": "true",
+      "reverse": false,
+      "type": "BoxPerry"
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-16T20:43:06.095662Z",
+    "event_id": "feafa1d8-6bc0-4a2c-b3e3-91e8974e39af",
+    "type": "event#2026-07-16T20:43:06.095662Z#e1c9dcc0"
+  },
+  {
+    "payload": {
+      "type": "BoxWine",
+      "reverse": false,
+      "user_id": "cha",
+      "event": "Drinks",
+      "beer": ""
+    },
+    "event_type": "Drinks",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-16T20:43:09.369065Z",
+    "event_id": "5c32c6a4-1b52-48eb-a02f-0fee7cba2a1b",
+    "type": "event#2026-07-16T20:43:09.369065Z#4b89fe29"
+  },
+  {
+    "payload": {
+      "user_id": "cha",
+      "type": "ResetDay",
+      "event": "Reset"
+    },
+    "event_type": "Reset",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-17T09:03:06.308531Z",
+    "event_id": "0ed7d321-2b5a-4907-88ae-2d9c55880e0c",
+    "type": "event#2026-07-17T09:03:06.308531Z#d84b7375"
+  },
+  {
+    "payload": {
+      "event": "Reset",
+      "beer": "",
+      "reverse": false,
+      "user_id": "cha",
+      "type": "ResetDay"
+    },
+    "event_type": "Reset",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-17T09:03:06.358426Z",
+    "event_id": "db038dcf-5644-41af-b79e-ce5829e3ba8c",
+    "type": "event#2026-07-17T09:03:06.358426Z#2e16939c"
+  },
+  {
+    "payload": {
+      "steps": 2356,
+      "user_id": "cha"
+    },
+    "event_type": "steps",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-17T09:03:18.733975Z",
+    "event_id": "4527a6b1-0d88-4965-b38d-5bff7d18840b",
+    "type": "event#2026-07-17T09:03:18.733975Z#7dac197b"
+  },
+  {
+    "payload": {
+      "type": "Tea",
+      "beer": "",
+      "event": "Drinks",
+      "reverse": false,
+      "user_id": "cha"
+    },
+    "event_type": "Drinks",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-17T09:03:21.576686Z",
+    "event_id": "a36768c7-3980-4dfb-8a6d-02cdb1e6a9ce",
+    "type": "event#2026-07-17T09:03:21.576686Z#b08a6c26"
+  },
+  {
+    "payload": {
+      "user_id": "cha",
+      "type": "Tea",
+      "beer": "",
+      "event": "Drinks",
+      "reverse": false
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-17T09:03:25.555196Z",
+    "event_id": "3ae83dac-6732-4ef5-bbe1-433896c3a7de",
+    "type": "event#2026-07-17T09:03:25.555196Z#245c66dc"
+  },
+  {
+    "payload": {
+      "type": "Lecture",
+      "user_id": "cha",
+      "beer": "",
+      "reverse": false,
+      "event": "Status"
+    },
+    "event_type": "Status",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-17T09:03:33.398031Z",
+    "event_id": "aba286a8-bf3d-4630-9fbc-3eba772f385d",
+    "type": "event#2026-07-17T09:03:33.398031Z#aa26f28c"
+  },
+  {
+    "payload": {
+      "user_id": "cha",
+      "event": "Toilet",
+      "beer": "",
+      "type": "Pee",
+      "reverse": false
+    },
+    "event_type": "Toilet",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-17T09:03:36.044673Z",
+    "event_id": "507f6a5c-4049-4122-8175-3d0857dd9f04",
+    "type": "event#2026-07-17T09:03:36.044673Z#0e53f616"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "reverse": false,
+      "user_id": "cha",
+      "event": "Toilet",
+      "type": "Poo"
+    },
+    "event_type": "Toilet",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-17T09:03:37.354275Z",
+    "event_id": "d2b803a2-a1fe-47d6-9fce-3c60aea76798",
+    "type": "event#2026-07-17T09:03:37.354275Z#86e8ae69"
+  },
+  {
+    "payload": {
+      "reverse": false,
+      "user_id": "cha",
+      "type": "Pee",
+      "event": "Toilet",
+      "beer": ""
+    },
+    "event_type": "Toilet",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-17T11:47:20.100038Z",
+    "event_id": "13d435d0-fcac-45fd-933d-0b04ac94d45b",
+    "type": "event#2026-07-17T11:47:20.100038Z#b0a299bf"
+  },
+  {
+    "payload": {
+      "user_id": "cha",
+      "event": "Status",
+      "type": "Roaming",
+      "reverse": false,
+      "beer": ""
+    },
+    "event_type": "Status",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-17T11:47:27.748914Z",
+    "event_id": "337614fc-aabe-4284-9408-1d79c72caf07",
+    "type": "event#2026-07-17T11:47:27.748914Z#c0247d27"
+  },
+  {
+    "payload": {
+      "event": "Drinks",
+      "reverse": false,
+      "user_id": "cha",
+      "beer": "",
+      "type": "Water"
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-17T11:47:31.695015Z",
+    "event_id": "10fdd504-4c88-417e-98f4-5cbe9a2e8b3b",
+    "type": "event#2026-07-17T11:47:31.695015Z#d38442ae"
+  },
+  {
+    "payload": {
+      "user_id": "cha",
+      "steps": 5271
+    },
+    "event_type": "steps",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-17T11:48:38.872258Z",
+    "event_id": "ff598b18-4618-4246-bb38-45b4d733c52e",
+    "type": "event#2026-07-17T11:48:38.872258Z#65a79487"
+  },
+  {
+    "payload": {
+      "user_id": "cha",
+      "type": "Pee",
+      "event": "Toilet",
+      "beer": "",
+      "reverse": false
+    },
+    "event_type": "Toilet",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-17T13:02:15.260767Z",
+    "event_id": "29dca1b5-33e8-468e-a129-5c54e35b0c3a",
+    "type": "event#2026-07-17T13:02:15.260767Z#a0f6c4b6"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "user_id": "cha",
+      "type": "Roaming",
+      "reverse": false,
+      "event": "Status"
+    },
+    "event_type": "Status",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-17T13:02:23.320009Z",
+    "event_id": "5ee2a9d4-501a-41b0-94b2-99382e2fe84f",
+    "type": "event#2026-07-17T13:02:23.320009Z#785b188a"
+  },
+  {
+    "payload": {
+      "user_id": "cha",
+      "reverse": false,
+      "event": "Drinks",
+      "beer": "",
+      "type": "Water"
+    },
+    "event_type": "Drinks",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-17T16:17:04.574603Z",
+    "event_id": "3b4fc4a2-cadc-4edb-a98a-8ca49d89810c",
+    "type": "event#2026-07-17T16:17:04.574603Z#be0d85cb"
+  },
+  {
+    "payload": {
+      "steps": 10242,
+      "user_id": "cha"
+    },
+    "event_type": "steps",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-17T16:17:13.867347Z",
+    "event_id": "304da621-e4ff-4148-aacc-d6b829bad61d",
+    "type": "event#2026-07-17T16:17:13.867347Z#80795efe"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "reverse": false,
+      "user_id": "cha",
+      "event": "Status",
+      "type": "Chilling"
+    },
+    "event_type": "Status",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-17T16:17:21.257266Z",
+    "event_id": "48b0a5b8-2450-43b6-acbd-c219d5eb1323",
+    "type": "event#2026-07-17T16:17:21.257266Z#96b86bd5"
+  },
+  {
+    "payload": {
+      "type": "Roaming",
+      "event": "Status",
+      "reverse": false,
+      "user_id": "cha",
+      "beer": ""
+    },
+    "event_type": "Status",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-17T18:30:28.693331Z",
+    "event_id": "5b71a75c-6afb-4ec1-948d-7cc640f51933",
+    "type": "event#2026-07-17T18:30:28.693331Z#59d275a8"
+  },
+  {
+    "payload": {
+      "user_id": "cha",
+      "event": "Drinks",
+      "beer": "true",
+      "reverse": false,
+      "type": "Lager"
+    },
+    "event_type": "Drinks",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-17T18:30:36.630032Z",
+    "event_id": "e906377f-8e74-4443-a512-d4b4baeae5db",
+    "type": "event#2026-07-17T18:30:36.630032Z#bbad4e8e"
+  },
+  {
+    "payload": {
+      "type": "Lager",
+      "user_id": "cha",
+      "event": "Drinks",
+      "reverse": false,
+      "beer": "true"
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-17T20:46:18.009610Z",
+    "event_id": "2a61bae9-32ec-4cec-bec9-4a8010ba0380",
+    "type": "event#2026-07-17T20:46:18.009610Z#d24193ea"
+  },
+  {
+    "payload": {
+      "user_id": "cha",
+      "type": "Chilling",
+      "event": "Status",
+      "reverse": false,
+      "beer": ""
+    },
+    "event_type": "Status",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-17T20:46:24.328427Z",
+    "event_id": "42f98879-6257-47ab-a6d1-42af060c4518",
+    "type": "event#2026-07-17T20:46:24.328427Z#cce7367a"
+  },
+  {
+    "payload": {
+      "steps": 13533,
+      "user_id": "cha"
+    },
+    "event_type": "steps",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-17T20:46:34.645185Z",
+    "event_id": "34b8a43b-74ac-4167-9034-279ef3ba9ba3",
+    "type": "event#2026-07-17T20:46:34.645185Z#8626c148"
+  },
+  {
+    "payload": {
+      "user_id": "cha",
+      "event": "Drinks",
+      "beer": "",
+      "type": "Coffee",
+      "reverse": false
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-17T20:46:38.594280Z",
+    "event_id": "527b0631-8ef9-4533-8575-d96c030d12f9",
+    "type": "event#2026-07-17T20:46:38.594280Z#388e0a7d"
+  },
+  {
+    "payload": {
+      "user_id": "cha",
+      "event": "Drinks",
+      "type": "Tea",
+      "beer": "",
+      "reverse": false
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-17T21:06:23.770663Z",
+    "event_id": "3e60c8ca-0527-4bfa-bb01-cfd97f959baf",
+    "type": "event#2026-07-17T21:06:23.770663Z#87d8eb1f"
+  },
+  {
+    "payload": {
+      "user_id": "cha",
+      "steps": 13687
+    },
+    "event_type": "steps",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-17T21:06:59.008956Z",
+    "event_id": "a30544b6-4178-4fb7-9e91-f198a4efd215",
+    "type": "event#2026-07-17T21:06:59.008956Z#b3ad39b9"
+  },
+  {
+    "payload": {
+      "type": "Drinking",
+      "beer": "",
+      "reverse": false,
+      "user_id": "cha",
+      "event": "Status"
+    },
+    "event_type": "Status",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-17T21:08:29.021973Z",
+    "event_id": "767b8473-68f2-4427-8e38-0bc49484da43",
+    "type": "event#2026-07-17T21:08:29.021973Z#335a8b1d"
+  },
+  {
+    "payload": {
+      "event": "Toilet",
+      "reverse": false,
+      "user_id": "cha",
+      "beer": "",
+      "type": "Pee"
+    },
+    "event_type": "Toilet",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-17T21:08:31.676832Z",
+    "event_id": "bb9599ef-ca1b-4c97-9987-87d709f1f128",
+    "type": "event#2026-07-17T21:08:31.676832Z#4b5ea82f"
+  },
+  {
+    "payload": {
+      "event": "Status",
+      "type": "Roaming",
+      "beer": "",
+      "user_id": "cha",
+      "reverse": false
+    },
+    "event_type": "Status",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-17T21:47:18.786144Z",
+    "event_id": "caf6aa1b-d5c1-4a87-acf5-f78cfb841bf5",
+    "type": "event#2026-07-17T21:47:18.786144Z#a6227f21"
+  },
+  {
+    "payload": {
+      "event": "Drinks",
+      "beer": "",
+      "type": "Port",
+      "user_id": "cha",
+      "reverse": false
+    },
+    "event_type": "Drinks",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-17T21:47:21.100779Z",
+    "event_id": "f0ad2573-8bc9-4220-8ae7-f87f5e73d143",
+    "type": "event#2026-07-17T21:47:21.100779Z#90bdad3b"
+  },
+  {
+    "payload": {
+      "steps": 15882,
+      "user_id": "cha"
+    },
+    "event_type": "steps",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-17T23:01:23.619124Z",
+    "event_id": "2339417b-dab9-4b73-abe7-f3436fe92548",
+    "type": "event#2026-07-17T23:01:23.619124Z#ac7c54a3"
+  },
+  {
+    "payload": {
+      "user_id": "cha",
+      "type": "Cider",
+      "beer": "true",
+      "reverse": false,
+      "event": "Drinks"
+    },
+    "event_type": "Drinks",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-17T23:01:28.171000Z",
+    "event_id": "38fcf165-efb5-4b30-8ac5-85bc2b88a03a",
+    "type": "event#2026-07-17T23:01:28.171000Z#c0b97cc7"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "user_id": "cha",
+      "event": "Reset",
+      "type": "ResetDay",
+      "reverse": false
+    },
+    "event_type": "Reset",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-18T00:00:27.133675Z",
+    "event_id": "1de4f2fc-1570-4871-8daa-8649bd749370",
+    "type": "event#2026-07-18T00:00:27.133675Z#0e6233de"
+  },
+  {
+    "payload": {
+      "user_id": "cha",
+      "reverse": false,
+      "event": "Drinks",
+      "type": "Cider",
+      "beer": "true"
+    },
+    "event_type": "Drinks",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-18T00:00:32.653973Z",
+    "event_id": "0a59c0b8-bfde-4269-9be0-9b881e039724",
+    "type": "event#2026-07-18T00:00:32.653973Z#6d5612cd"
+  },
+  {
+    "payload": {
+      "user_id": "cha",
+      "event": "Reset",
+      "type": "ResetDay"
+    },
+    "event_type": "Reset",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-18T07:36:12.044423Z",
+    "event_id": "f4fd8f07-18ff-41f5-90a6-94963feccd32",
+    "type": "event#2026-07-18T07:36:12.044423Z#f3619123"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "event": "Toilet",
+      "user_id": "cha",
+      "type": "Pee",
+      "reverse": false
+    },
+    "event_type": "Toilet",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-18T07:36:12.087548Z",
+    "event_id": "894032f5-d696-4046-af94-1b00d878688c",
+    "type": "event#2026-07-18T07:36:12.087548Z#3ed94d73"
+  },
+  {
+    "payload": {
+      "reverse": false,
+      "event": "Toilet",
+      "beer": "",
+      "type": "Poo",
+      "user_id": "cha"
+    },
+    "event_type": "Toilet",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-18T07:36:13.220350Z",
+    "event_id": "43a8134b-1e0b-4d11-9af7-82b206318a48",
+    "type": "event#2026-07-18T07:36:13.220350Z#b82a7f40"
+  },
+  {
+    "payload": {
+      "user_id": "cha",
+      "steps": 2610
+    },
+    "event_type": "steps",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-18T07:36:24.747604Z",
+    "event_id": "e7dfb2d4-ebf7-446c-bfa7-199617b4f510",
+    "type": "event#2026-07-18T07:36:24.747604Z#d1bf6493"
+  },
+  {
+    "payload": {
+      "reverse": false,
+      "type": "Tea",
+      "user_id": "cha",
+      "beer": "",
+      "event": "Drinks"
+    },
+    "event_type": "Drinks",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-18T07:36:31.397167Z",
+    "event_id": "0f56c4f0-f7bd-4a25-98b7-e05d31cbda18",
+    "type": "event#2026-07-18T07:36:31.397167Z#a3ef9585"
+  },
+  {
+    "payload": {
+      "user_id": "cha",
+      "beer": "",
+      "event": "Drinks",
+      "reverse": false,
+      "type": "Coffee"
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-18T09:08:58.885989Z",
+    "event_id": "288ae346-522e-4a25-986a-99590d892626",
+    "type": "event#2026-07-18T09:08:58.885989Z#57493214"
+  },
+  {
+    "payload": {
+      "event": "Drinks",
+      "beer": "",
+      "reverse": false,
+      "type": "Tea",
+      "user_id": "cha"
+    },
+    "event_type": "Drinks",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-18T09:09:02.061207Z",
+    "event_id": "3b7b2e19-c9f3-42a7-90d3-801d8ba6ccff",
+    "type": "event#2026-07-18T09:09:02.061207Z#bd9421d3"
+  },
+  {
+    "payload": {
+      "event": "Status",
+      "type": "Lecture",
+      "beer": "",
+      "reverse": false,
+      "user_id": "cha"
+    },
+    "event_type": "Status",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-18T09:09:08.373662Z",
+    "event_id": "4372089b-969b-4f71-ad57-2b00c33fedaf",
+    "type": "event#2026-07-18T09:09:08.373662Z#47665626"
+  },
+  {
+    "payload": {
+      "user_id": "cha",
+      "steps": 3514
+    },
+    "event_type": "steps",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-18T09:09:23.145996Z",
+    "event_id": "b33332b4-c1bc-4795-9320-41dbfee09045",
+    "type": "event#2026-07-18T09:09:23.145996Z#061a8337"
+  },
+  {
+    "payload": {
+      "steps": 4683,
+      "user_id": "cha"
+    },
+    "event_type": "steps",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-18T10:07:34.225446Z",
+    "event_id": "95e2ee37-79d7-4649-9fb5-db5821d78cdc",
+    "type": "event#2026-07-18T10:07:34.225446Z#fbce26b8"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "event": "Drinks",
+      "reverse": false,
+      "type": "Water",
+      "user_id": "cha"
+    },
+    "event_type": "Drinks",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-18T10:07:36.987060Z",
+    "event_id": "ab3bcadc-dc98-4608-88fe-a4ee3636f8a1",
+    "type": "event#2026-07-18T10:07:36.987060Z#ebf556e9"
+  },
+  {
+    "payload": {
+      "event": "Status",
+      "beer": "",
+      "user_id": "cha",
+      "type": "Roaming",
+      "reverse": false
+    },
+    "event_type": "Status",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-18T10:07:40.503827Z",
+    "event_id": "6ec40db4-d0a7-4e8d-96c6-bf752620b52c",
+    "type": "event#2026-07-18T10:07:40.503827Z#5bb633b0"
+  },
+  {
+    "payload": {
+      "user_id": "cha",
+      "type": "Pee",
+      "event": "Toilet",
+      "beer": "",
+      "reverse": false
+    },
+    "event_type": "Toilet",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-18T10:07:43.342738Z",
+    "event_id": "2f5a8869-c52b-42ed-b603-b212f39a073a",
+    "type": "event#2026-07-18T10:07:43.342738Z#b91728c4"
+  },
+  {
+    "payload": {
+      "reverse": false,
+      "event": "Status",
+      "beer": "",
+      "type": "Lecture",
+      "user_id": "cha"
+    },
+    "event_type": "Status",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-18T11:01:03.839205Z",
+    "event_id": "fada5e0f-23ac-43bf-a1f3-cc3843b5ac06",
+    "type": "event#2026-07-18T11:01:03.839205Z#2ceacd95"
+  },
+  {
+    "payload": {
+      "type": "Soft",
+      "user_id": "cha",
+      "beer": "",
+      "reverse": false,
+      "event": "Drinks"
+    },
+    "event_type": "Drinks",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-18T11:01:09.943046Z",
+    "event_id": "76db2fe4-1f60-4f8f-9cb8-54b436b72fcb",
+    "type": "event#2026-07-18T11:01:09.943046Z#e899f5da"
+  },
+  {
+    "payload": {
+      "user_id": "cha",
+      "steps": 6380
+    },
+    "event_type": "steps",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-18T11:01:20.180057Z",
+    "event_id": "0054a781-463f-41ab-9d90-03990a621db6",
+    "type": "event#2026-07-18T11:01:20.180057Z#8651c980"
+  },
+  {
+    "payload": {
+      "user_id": "cha",
+      "steps": 6958
+    },
+    "event_type": "steps",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-18T12:07:49.804552Z",
+    "event_id": "4b41ccbe-4d50-4908-9035-d45de1221030",
+    "type": "event#2026-07-18T12:07:49.804552Z#04fa3cc2"
+  },
+  {
+    "payload": {
+      "user_id": "cha",
+      "beer": "",
+      "event": "Drinks",
+      "type": "Tea",
+      "reverse": false
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-18T12:07:52.383333Z",
+    "event_id": "fea71fc2-61ed-4f87-91e6-9a0c00bccac5",
+    "type": "event#2026-07-18T12:07:52.383333Z#37e0ee66"
+  },
+  {
+    "payload": {
+      "event": "Status",
+      "user_id": "cha",
+      "type": "Roaming",
+      "beer": "",
+      "reverse": false
+    },
+    "event_type": "Status",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-18T12:07:55.765998Z",
+    "event_id": "a682c0b6-e7e0-42df-b17f-fbe80eb8ab74",
+    "type": "event#2026-07-18T12:07:55.765998Z#600590ef"
+  },
+  {
+    "payload": {
+      "user_id": "cha",
+      "reverse": false,
+      "type": "Pee",
+      "event": "Toilet",
+      "beer": ""
+    },
+    "event_type": "Toilet",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-18T12:07:58.908080Z",
+    "event_id": "728798e8-2f7f-4a21-8682-44f000dfc150",
+    "type": "event#2026-07-18T12:07:58.908080Z#5b4e082d"
+  },
+  {
+    "payload": {
+      "event": "Status",
+      "reverse": false,
+      "user_id": "cha",
+      "beer": "",
+      "type": "Workshop"
+    },
+    "event_type": "Status",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-18T13:14:55.816107Z",
+    "event_id": "38bd9c48-19d2-4efd-8227-b89e00aee724",
+    "type": "event#2026-07-18T13:14:55.816107Z#56acc365"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "reverse": false,
+      "user_id": "cha",
+      "event": "Status",
+      "type": "Roaming"
+    },
+    "event_type": "Status",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-18T13:55:41.743912Z",
+    "event_id": "63d420ec-c3f7-426f-876a-fb068c089b53",
+    "type": "event#2026-07-18T13:55:41.743912Z#07a5587e"
+  },
+  {
+    "payload": {
+      "beer": "true",
+      "reverse": false,
+      "user_id": "cha",
+      "type": "Cider",
+      "event": "Drinks"
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-18T19:09:28.501355Z",
+    "event_id": "133aa90d-b9ca-4ae9-8fdb-4c44bcba4d04",
+    "type": "event#2026-07-18T19:09:28.501355Z#79529e8b"
+  },
+  {
+    "payload": {
+      "type": "Cider",
+      "user_id": "cha",
+      "reverse": true,
+      "beer": "true",
+      "event": "Drinks"
+    },
+    "event_type": "Drinks",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-18T19:09:30.596354Z",
+    "event_id": "7bcfe854-d0fe-4f77-b6a2-a89761d664f6",
+    "type": "event#2026-07-18T19:09:30.596354Z#10eba39a"
+  },
+  {
+    "payload": {
+      "event": "Drinks",
+      "beer": "true",
+      "type": "BoxPerry",
+      "reverse": false,
+      "user_id": "cha"
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-18T19:09:32.208241Z",
+    "event_id": "2f64e405-176d-4b9a-aac3-9a3388534c42",
+    "type": "event#2026-07-18T19:09:32.208241Z#a4982703"
+  },
+  {
+    "payload": {
+      "user_id": "cha",
+      "reverse": false,
+      "beer": "",
+      "type": "Eating",
+      "event": "Status"
+    },
+    "event_type": "Status",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-18T19:09:41.900597Z",
+    "event_id": "fe4b5b9c-5ea2-4445-b94d-ca20e2dbd41f",
+    "type": "event#2026-07-18T19:09:41.900597Z#ef71e494"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "event": "Toilet",
+      "type": "Pee",
+      "user_id": "cha",
+      "reverse": false
+    },
+    "event_type": "Toilet",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-18T19:09:45.413294Z",
+    "event_id": "875d69ee-cea8-4403-8058-38d36be92972",
+    "type": "event#2026-07-18T19:09:45.413294Z#141f20ce"
+  },
+  {
+    "payload": {
+      "steps": 11311,
+      "user_id": "cha"
+    },
+    "event_type": "steps",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-18T19:10:03.624524Z",
+    "event_id": "2ece35aa-d363-4c03-a3c9-3ffd2ebb7d3c",
+    "type": "event#2026-07-18T19:10:03.624524Z#914cbe23"
+  },
+  {
+    "payload": {
+      "steps": 15926,
+      "user_id": "cha"
+    },
+    "event_type": "steps",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-18T21:44:43.226069Z",
+    "event_id": "09476bde-680d-453e-99cf-c7251a4c34be",
+    "type": "event#2026-07-18T21:44:43.226069Z#8e8830dc"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "user_id": "cha",
+      "type": "Water",
+      "reverse": false,
+      "event": "Drinks"
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-18T21:44:44.284656Z",
+    "event_id": "8095717c-8272-40ea-b069-10a31d67d981",
+    "type": "event#2026-07-18T21:44:44.284656Z#a40e35d0"
+  },
+  {
+    "payload": {
+      "event": "Drinks",
+      "beer": "",
+      "reverse": false,
+      "user_id": "cha",
+      "type": "Water"
+    },
+    "event_type": "Drinks",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-18T21:44:45.218732Z",
+    "event_id": "ccbe828d-609f-43ee-88e0-219fc35eb15a",
+    "type": "event#2026-07-18T21:44:45.218732Z#aa0c106a"
+  },
+  {
+    "payload": {
+      "beer": "true",
+      "reverse": false,
+      "event": "Drinks",
+      "user_id": "cha",
+      "type": "BoxPerry"
+    },
+    "event_type": "Drinks",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-18T21:44:50.545474Z",
+    "event_id": "f7bfb1be-5ad0-46a1-9451-10581b119ebc",
+    "type": "event#2026-07-18T21:44:50.545474Z#bee7d2e3"
+  },
+  {
+    "payload": {
+      "reverse": false,
+      "beer": "",
+      "user_id": "cha",
+      "type": "Drinking",
+      "event": "Status"
+    },
+    "event_type": "Status",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-18T21:44:56.045966Z",
+    "event_id": "a622a9eb-a0a1-4a98-a5d9-7f64e6d08618",
+    "type": "event#2026-07-18T21:44:56.045966Z#97a49cac"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "reverse": false,
+      "user_id": "cha",
+      "type": "Pee",
+      "event": "Toilet"
+    },
+    "event_type": "Toilet",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-18T21:44:58.834064Z",
+    "event_id": "0aed2434-3682-4993-94ca-94c0fea9fa96",
+    "type": "event#2026-07-18T21:44:58.834064Z#b60b01b1"
+  },
+  {
+    "payload": {
+      "user_id": "cha",
+      "type": "Poo",
+      "reverse": false,
+      "event": "Toilet",
+      "beer": ""
+    },
+    "event_type": "Toilet",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-18T21:45:03.218990Z",
+    "event_id": "7f599e4a-0eaf-4a7e-b893-837ec1774ca5",
+    "type": "event#2026-07-18T21:45:03.218990Z#0ff2b3bb"
+  },
+  {
+    "payload": {
+      "type": "Drinking",
+      "event": "Status",
+      "beer": "",
+      "reverse": false,
+      "user_id": "cha"
+    },
+    "event_type": "Status",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-18T22:14:31.887064Z",
+    "event_id": "fca27088-9549-4b95-a33e-b96221499b06",
+    "type": "event#2026-07-18T22:14:31.887064Z#a2a1ed14"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "event": "Drinks",
+      "user_id": "cha",
+      "reverse": false,
+      "type": "Martini"
+    },
+    "event_type": "Drinks",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-18T22:14:35.514606Z",
+    "event_id": "b7742d6a-5ccb-4bc7-ae2c-b605f0336de0",
+    "type": "event#2026-07-18T22:14:35.514606Z#0c1597b4"
+  },
+  {
+    "payload": {
+      "user_id": "cha",
+      "steps": 15948
+    },
+    "event_type": "steps",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-18T22:14:52.449946Z",
+    "event_id": "7b54593e-6887-4e22-bc56-25070861334c",
+    "type": "event#2026-07-18T22:14:52.449946Z#910a66fb"
+  },
+  {
+    "payload": {
+      "event": "Reset",
+      "user_id": "cha",
+      "type": "ResetDay"
+    },
+    "event_type": "Reset",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-19T07:55:03.286491Z",
+    "event_id": "014aebde-e3c2-4e44-a88c-d5d9475e971c",
+    "type": "event#2026-07-19T07:55:03.286491Z#ca23f957"
+  },
+  {
+    "payload": {
+      "reverse": false,
+      "beer": "",
+      "type": "ResetDay",
+      "user_id": "cha",
+      "event": "Reset"
+    },
+    "event_type": "Reset",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-19T07:55:03.347089Z",
+    "event_id": "a5103eb4-1ce9-44b9-b3c7-dda2777d5b0a",
+    "type": "event#2026-07-19T07:55:03.347089Z#452b27a4"
+  },
+  {
+    "payload": {
+      "user_id": "cha",
+      "type": "Eating",
+      "event": "Status",
+      "beer": "",
+      "reverse": false
+    },
+    "event_type": "Status",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-19T07:55:09.146654Z",
+    "event_id": "b5626d7c-3288-4860-8b42-c8fe4adc2c52",
+    "type": "event#2026-07-19T07:55:09.146654Z#aa040f6a"
+  },
+  {
+    "payload": {
+      "user_id": "cha",
+      "steps": 1057
+    },
+    "event_type": "steps",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-19T07:55:20.189723Z",
+    "event_id": "49da6a96-0a42-4f00-b450-23b907140893",
+    "type": "event#2026-07-19T07:55:20.189723Z#4f3364fb"
+  },
+  {
+    "payload": {
+      "steps": 2218,
+      "user_id": "cha"
+    },
+    "event_type": "steps",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-19T08:59:28.349369Z",
+    "event_id": "52bd9060-a653-4c18-b392-c88a3d48dcbe",
+    "type": "event#2026-07-19T08:59:28.349369Z#65fea5ba"
+  },
+  {
+    "payload": {
+      "reverse": false,
+      "user_id": "cha",
+      "event": "Drinks",
+      "beer": "",
+      "type": "Tea"
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-19T08:59:31.268930Z",
+    "event_id": "bc6636b3-a005-45f6-8372-c0d4e178d1c8",
+    "type": "event#2026-07-19T08:59:31.268930Z#1ef5cf96"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "reverse": false,
+      "user_id": "cha",
+      "event": "Drinks",
+      "type": "Tea"
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-19T08:59:32.233324Z",
+    "event_id": "91f4dcf7-9e57-451c-bb78-a1eba0410089",
+    "type": "event#2026-07-19T08:59:32.233324Z#04f62103"
+  },
+  {
+    "payload": {
+      "event": "Status",
+      "beer": "",
+      "reverse": false,
+      "type": "Lecture",
+      "user_id": "cha"
+    },
+    "event_type": "Status",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-19T08:59:36.297981Z",
+    "event_id": "eb169877-ebf2-47f8-853b-537747ae801d",
+    "type": "event#2026-07-19T08:59:36.297981Z#a08fc01f"
+  },
+  {
+    "payload": {
+      "reverse": false,
+      "type": "Pee",
+      "user_id": "cha",
+      "event": "Toilet",
+      "beer": ""
+    },
+    "event_type": "Toilet",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-19T08:59:38.943256Z",
+    "event_id": "f271df01-eb80-4475-abf3-2563f0285157",
+    "type": "event#2026-07-19T08:59:38.943256Z#f1dc7360"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "user_id": "cha",
+      "type": "Poo",
+      "reverse": false,
+      "event": "Toilet"
+    },
+    "event_type": "Toilet",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-19T08:59:41.322977Z",
+    "event_id": "c256cf3b-ac29-4deb-9594-85e50eb85814",
+    "type": "event#2026-07-19T08:59:41.322977Z#e4d9517a"
+  },
+  {
+    "payload": {
+      "steps": 11380,
+      "user_id": "cha"
+    },
+    "event_type": "steps",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-19T18:02:46.599211Z",
+    "event_id": "e468a079-f4a4-469c-9def-70d1f3dcb5f5",
+    "type": "event#2026-07-19T18:02:46.599211Z#6dfa7698"
+  },
+  {
+    "payload": {
+      "type": "Water",
+      "user_id": "cha",
+      "event": "Drinks",
+      "beer": "",
+      "reverse": false
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-19T18:02:48.014297Z",
+    "event_id": "8104ec20-f1ec-416e-8af9-d680a463d969",
+    "type": "event#2026-07-19T18:02:48.014297Z#5375ade1"
+  },
+  {
+    "payload": {
+      "type": "Coffee",
+      "user_id": "cha",
+      "beer": "",
+      "reverse": false,
+      "event": "Drinks"
+    },
+    "event_type": "Drinks",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-19T18:02:49.902148Z",
+    "event_id": "9b2887fc-ff52-4f2e-ac9c-024314ebb497",
+    "type": "event#2026-07-19T18:02:49.902148Z#99b74bd2"
+  },
+  {
+    "payload": {
+      "user_id": "cha",
+      "event": "Drinks",
+      "beer": "",
+      "type": "Tea",
+      "reverse": false
+    },
+    "event_type": "Drinks",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-19T18:02:51.328593Z",
+    "event_id": "956a0dfb-7774-4649-a0ed-7c3b8e8e5691",
+    "type": "event#2026-07-19T18:02:51.328593Z#1f0cb1a5"
+  },
+  {
+    "payload": {
+      "type": "Lager",
+      "user_id": "cha",
+      "event": "Drinks",
+      "beer": "true",
+      "reverse": false
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-19T18:02:53.589324Z",
+    "event_id": "87f17b7b-cd70-4f86-bb2a-956a8a9370fe",
+    "type": "event#2026-07-19T18:02:53.589324Z#d6780806"
+  },
+  {
+    "payload": {
+      "type": "BoxPerry",
+      "user_id": "cha",
+      "beer": "true",
+      "event": "Drinks",
+      "reverse": false
+    },
+    "event_type": "Drinks",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-19T18:02:57.560925Z",
+    "event_id": "313332e4-0918-4690-bec8-aa0fd25ad42e",
+    "type": "event#2026-07-19T18:02:57.560925Z#eba28db1"
+  },
+  {
+    "payload": {
+      "user_id": "cha",
+      "event": "Status",
+      "type": "Lecture",
+      "beer": "",
+      "reverse": false
+    },
+    "event_type": "Status",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-19T18:03:01.809731Z",
+    "event_id": "c4deb074-b866-4c1f-854c-a11154c49543",
+    "type": "event#2026-07-19T18:03:01.809731Z#cde79985"
+  },
+  {
+    "payload": {
+      "user_id": "cha",
+      "type": "Pee",
+      "event": "Toilet",
+      "beer": "",
+      "reverse": false
+    },
+    "event_type": "Toilet",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-19T18:03:04.475391Z",
+    "event_id": "80290198-fa3e-4919-9fde-cbff4e648dff",
+    "type": "event#2026-07-19T18:03:04.475391Z#07d14aca"
+  },
+  {
+    "payload": {
+      "type": "Pee",
+      "beer": "",
+      "event": "Toilet",
+      "reverse": false,
+      "user_id": "cha"
+    },
+    "event_type": "Toilet",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-19T18:03:06.581116Z",
+    "event_id": "bc9673fc-c48f-47d9-8aa9-b0f252f41a2e",
+    "type": "event#2026-07-19T18:03:06.581116Z#6dc69674"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "event": "Toilet",
+      "user_id": "cha",
+      "type": "Poo",
+      "reverse": false
+    },
+    "event_type": "Toilet",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-19T18:03:07.627487Z",
+    "event_id": "e735e128-ff17-4f5a-8457-a4b7f92acee6",
+    "type": "event#2026-07-19T18:03:07.627487Z#d567c7a3"
+  },
+  {
+    "payload": {
+      "steps": 16202,
+      "user_id": "cha"
+    },
+    "event_type": "steps",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-19T21:36:23.056474Z",
+    "event_id": "2cbf1d79-5da2-4edb-9df6-4c9638a1ed96",
+    "type": "event#2026-07-19T21:36:23.056474Z#de0b14c2"
+  },
+  {
+    "payload": {
+      "event": "Drinks",
+      "beer": "",
+      "reverse": false,
+      "user_id": "cha",
+      "type": "Water"
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-19T21:36:37.939399Z",
+    "event_id": "492026ff-7f25-4709-be1d-eb2295e9733b",
+    "type": "event#2026-07-19T21:36:37.939399Z#5382857f"
+  },
+  {
+    "payload": {
+      "type": "Lager",
+      "reverse": false,
+      "user_id": "cha",
+      "event": "Drinks",
+      "beer": "true"
+    },
+    "event_type": "Drinks",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-19T21:36:43.937076Z",
+    "event_id": "9eff1f07-112b-489c-8b0b-d2b1fd5468c5",
+    "type": "event#2026-07-19T21:36:43.937076Z#cadde17a"
+  },
+  {
+    "payload": {
+      "event": "Status",
+      "type": "Tired",
+      "user_id": "cha",
+      "beer": "",
+      "reverse": false
+    },
+    "event_type": "Status",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-19T21:36:53.538287Z",
+    "event_id": "9751cf19-45cc-4208-9a0d-4d84cecd6d7f",
+    "type": "event#2026-07-19T21:36:53.538287Z#ee96c01a"
+  },
+  {
+    "payload": {
+      "event": "Toilet",
+      "reverse": false,
+      "beer": "",
+      "type": "Pee",
+      "user_id": "cha"
+    },
+    "event_type": "Toilet",
+    "user_id": "cha",
+    "event": "camper#events#cha",
+    "timestamp": "2026-07-19T21:36:56.648185Z",
+    "event_id": "dbc9828c-0609-4d26-b281-0d3bf112e658",
+    "type": "event#2026-07-19T21:36:56.648185Z#fe9588cf"
+  },
+  {
+    "payload": {
+      "type": "Poo",
+      "user_id": "cha",
+      "beer": "",
+      "event": "Toilet",
+      "reverse": false
+    },
+    "event_type": "Toilet",
+    "event": "camper#events#cha",
+    "user_id": "cha",
+    "timestamp": "2026-07-19T21:36:57.594474Z",
+    "event_id": "5b79be50-ad0c-4bbd-9e95-3a0867726081",
+    "type": "event#2026-07-19T21:36:57.594474Z#0ce85c4e"
+  },
+  {
+    "event": "device#eui-70b3d57ed0051111#tin",
+    "last_known_latitude": "51.5074",
+    "last_known_timestamp": "2026-07-16T21:45:35.172468Z",
+    "location_history": [],
+    "last_known_longitude": "-0.1278",
+    "cumulative_steps": 47433,
+    "cumulative_distance_km": "29.88279",
+    "type": "state"
+  },
+  {
+    "beer_drinks": 0,
+    "event": "camper#aggregates#hvy",
+    "push_interval_minutes": 1,
+    "push_last_notified_time": "2026-07-17T11:08:07.865817Z",
+    "daily_steps_history": {
+      "2026-07-17": 13966,
+      "2026-07-19": 27942,
+      "2026-07-18": 27942,
+      "2026-07-16": 13966
+    },
+    "status": "normal",
+    "all_time_cumulative_steps": 27942,
+    "transactions": [
+      {
+        "amount_gbp": "-2.4",
+        "timestamp": "2026-07-17T12:33:01.641069Z",
+        "id": "tx_local_1784291581",
+        "description": "Club mate"
+      },
+      {
+        "description": "ice + drinks",
+        "id": "tx_local_1784311947",
+        "timestamp": "2026-07-17T18:12:27.376772Z",
+        "amount_gbp": "-3.76"
+      },
+      {
+        "timestamp": "2026-07-17T18:12:36.060444Z",
+        "amount_gbp": "-17.9",
+        "description": "4 beers",
+        "id": "tx_local_1784311956"
+      },
+      {
+        "id": "tx_local_1784330031",
+        "description": "beers",
+        "amount_gbp": "-7.2",
+        "timestamp": "2026-07-17T23:13:51.370726Z"
+      },
+      {
+        "amount_gbp": "-6.4",
+        "timestamp": "2026-07-19T00:50:31.223287Z",
+        "description": "srink",
+        "id": "tx_local_1784422231"
+      },
+      {
+        "timestamp": "2026-07-19T00:50:41.683208Z",
+        "description": "more drink",
+        "amount_gbp": "-6.5",
+        "id": "tx_local_1784422241"
+      }
+    ],
+    "push_subscription": null,
+    "steps_baseline": 27942,
+    "all_time_total_drinks": 32,
+    "user_id": "hvy",
+    "categories": {},
+    "last_reset_date": "2026-07-20",
+    "total_expenditure_gbp": "44.16",
+    "total_drinks": 0,
+    "type": "totals"
+  },
+  {
+    "beer_drinks": 2,
+    "user_id": "ash",
+    "event": "camper#aggregates#ash",
+    "categories": {
+      "Water": 2,
+      "Pee": 2,
+      "BoxPerry": 2,
+      "Tea": 3,
+      "Poo": 2,
+      "Soft": 1
+    },
+    "daily_steps_history": {
+      "2026-07-16": 11700,
+      "2026-07-17": 15000,
+      "2026-07-18": 15000
+    },
+    "all_time_cumulative_steps": 15000,
+    "status": "lecture",
+    "last_reset_date": "2026-07-18",
+    "total_drinks": 8,
+    "steps_baseline": 15000,
+    "all_time_total_drinks": 22,
+    "type": "totals"
+  },
+  {
+    "payload": {
+      "event": "Status",
+      "beer": "",
+      "type": "Normal",
+      "user_id": "ash",
+      "reverse": false
+    },
+    "event_type": "Status",
+    "event": "camper#events#ash",
+    "user_id": "ash",
+    "timestamp": "2026-07-16T09:00:22.204956Z",
+    "event_id": "2ea82a2a-c9f3-4d0e-a4e3-e2c2fe92403b",
+    "type": "event#2026-07-16T09:00:22.204956Z#e5a1dad5"
+  },
+  {
+    "payload": {
+      "beer": "true",
+      "event": "Drinks",
+      "user_id": "ash",
+      "reverse": false,
+      "type": "Cider"
+    },
+    "event_type": "Drinks",
+    "user_id": "ash",
+    "event": "camper#events#ash",
+    "timestamp": "2026-07-16T15:57:32.011155Z",
+    "event_id": "07567d8a-6619-4dd8-b8a5-e68e7c653177",
+    "type": "event#2026-07-16T15:57:32.011155Z#84be46da"
+  },
+  {
+    "payload": {
+      "user_id": "ash",
+      "type": "Water",
+      "event": "Drinks",
+      "beer": "",
+      "reverse": false
+    },
+    "event_type": "Drinks",
+    "user_id": "ash",
+    "event": "camper#events#ash",
+    "timestamp": "2026-07-16T15:57:36.443785Z",
+    "event_id": "79f92ff8-e292-4c9b-a9dd-04c4d41a584e",
+    "type": "event#2026-07-16T15:57:36.443785Z#09029e06"
+  },
+  {
+    "payload": {
+      "steps": 8522,
+      "user_id": "ash"
+    },
+    "event_type": "steps",
+    "user_id": "ash",
+    "event": "camper#events#ash",
+    "timestamp": "2026-07-16T15:57:56.136044Z",
+    "event_id": "e4d57f42-e31d-49fa-9cc7-b077bf22bad6",
+    "type": "event#2026-07-16T15:57:56.136044Z#8c09cceb"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "type": "Drinking",
+      "user_id": "ash",
+      "event": "Status",
+      "reverse": false
+    },
+    "event_type": "Status",
+    "user_id": "ash",
+    "event": "camper#events#ash",
+    "timestamp": "2026-07-16T15:58:17.195047Z",
+    "event_id": "66166fa4-a86f-4432-9966-ff5df77e9be7",
+    "type": "event#2026-07-16T15:58:17.195047Z#278d4d54"
+  },
+  {
+    "payload": {
+      "user_id": "ash",
+      "event": "Drinks",
+      "reverse": false,
+      "type": "Soft",
+      "beer": ""
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#ash",
+    "user_id": "ash",
+    "timestamp": "2026-07-16T18:33:33.631109Z",
+    "event_id": "9d3ddbcb-e534-44a3-8192-c2049bb33afe",
+    "type": "event#2026-07-16T18:33:33.631109Z#2040e5c9"
+  },
+  {
+    "payload": {
+      "user_id": "ash",
+      "event": "Status",
+      "type": "Chilling",
+      "beer": "",
+      "reverse": false
+    },
+    "event_type": "Status",
+    "user_id": "ash",
+    "event": "camper#events#ash",
+    "timestamp": "2026-07-16T18:33:43.737663Z",
+    "event_id": "331c3fd4-ab55-4212-91a1-b89c01336b4a",
+    "type": "event#2026-07-16T18:33:43.737663Z#94e7c60d"
+  },
+  {
+    "payload": {
+      "user_id": "ash",
+      "beer": "",
+      "reverse": false,
+      "type": "Pee",
+      "event": "Toilet"
+    },
+    "event_type": "Toilet",
+    "event": "camper#events#ash",
+    "user_id": "ash",
+    "timestamp": "2026-07-16T18:33:47.349770Z",
+    "event_id": "3388f002-f2a9-492a-bf94-6a1d845ac0ef",
+    "type": "event#2026-07-16T18:33:47.349770Z#181d8a5b"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "reverse": false,
+      "event": "Drinks",
+      "type": "Water",
+      "user_id": "ash"
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#ash",
+    "user_id": "ash",
+    "timestamp": "2026-07-16T18:34:00.859776Z",
+    "event_id": "9f30e7ea-3adf-48c2-b26d-e7f1a2b9e92b",
+    "type": "event#2026-07-16T18:34:00.859776Z#fee9be16"
+  },
+  {
+    "payload": {
+      "user_id": "ash",
+      "steps": 11700
+    },
+    "event_type": "steps",
+    "user_id": "ash",
+    "event": "camper#events#ash",
+    "timestamp": "2026-07-16T18:42:57.979346Z",
+    "event_id": "325dac15-2d31-490f-bc38-c6e537a77b1b",
+    "type": "event#2026-07-16T18:42:57.979346Z#034aceff"
+  },
+  {
+    "payload": {
+      "event": "Reset",
+      "user_id": "ash",
+      "type": "ResetDay"
+    },
+    "event_type": "Reset",
+    "user_id": "ash",
+    "event": "camper#events#ash",
+    "timestamp": "2026-07-17T09:44:05.145407Z",
+    "event_id": "a63eb064-c02d-48b6-be13-3597c9b20e80",
+    "type": "event#2026-07-17T09:44:05.145407Z#368ebc77"
+  },
+  {
+    "payload": {
+      "reverse": false,
+      "user_id": "ash",
+      "type": "Soft",
+      "beer": "",
+      "event": "Drinks"
+    },
+    "event_type": "Drinks",
+    "user_id": "ash",
+    "event": "camper#events#ash",
+    "timestamp": "2026-07-17T09:44:05.194893Z",
+    "event_id": "66013699-4a2a-4b0f-a112-60e06ce03bd2",
+    "type": "event#2026-07-17T09:44:05.194893Z#6c6e5a58"
+  },
+  {
+    "payload": {
+      "reverse": false,
+      "user_id": "ash",
+      "event": "Drinks",
+      "beer": "",
+      "type": "Water"
+    },
+    "event_type": "Drinks",
+    "user_id": "ash",
+    "event": "camper#events#ash",
+    "timestamp": "2026-07-17T09:44:11.192769Z",
+    "event_id": "b8119ffe-4297-4174-8183-1ec186f65ac4",
+    "type": "event#2026-07-17T09:44:11.192769Z#8d0c903f"
+  },
+  {
+    "payload": {
+      "user_id": "ash",
+      "beer": "",
+      "event": "Toilet",
+      "type": "Pee",
+      "reverse": false
+    },
+    "event_type": "Toilet",
+    "user_id": "ash",
+    "event": "camper#events#ash",
+    "timestamp": "2026-07-17T09:44:18.636724Z",
+    "event_id": "d6e2a59c-d281-49fe-9d78-b7f4432c4878",
+    "type": "event#2026-07-17T09:44:18.636724Z#deb23317"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "user_id": "ash",
+      "reverse": false,
+      "event": "Toilet",
+      "type": "Pee"
+    },
+    "event_type": "Toilet",
+    "user_id": "ash",
+    "event": "camper#events#ash",
+    "timestamp": "2026-07-17T09:44:27.162789Z",
+    "event_id": "51306d8a-070c-4336-8033-f07bdbe3b18e",
+    "type": "event#2026-07-17T09:44:27.162789Z#a26f7cef"
+  },
+  {
+    "payload": {
+      "event": "Toilet",
+      "beer": "",
+      "type": "Poo",
+      "user_id": "ash",
+      "reverse": false
+    },
+    "event_type": "Toilet",
+    "event": "camper#events#ash",
+    "user_id": "ash",
+    "timestamp": "2026-07-17T09:44:28.875680Z",
+    "event_id": "cc9412bd-1005-4366-a9fa-179fcc4fdb8d",
+    "type": "event#2026-07-17T09:44:28.875680Z#1f8846e6"
+  },
+  {
+    "payload": {
+      "reverse": false,
+      "event": "Toilet",
+      "beer": "",
+      "user_id": "ash",
+      "type": "Poo"
+    },
+    "event_type": "Toilet",
+    "user_id": "ash",
+    "event": "camper#events#ash",
+    "timestamp": "2026-07-17T09:44:30.349520Z",
+    "event_id": "4f2fe47f-e21b-4793-b425-269692ff1417",
+    "type": "event#2026-07-17T09:44:30.349520Z#28bc7cf5"
+  },
+  {
+    "payload": {
+      "reverse": false,
+      "beer": "",
+      "user_id": "ash",
+      "event": "Toilet",
+      "type": "Pee"
+    },
+    "event_type": "Toilet",
+    "user_id": "ash",
+    "event": "camper#events#ash",
+    "timestamp": "2026-07-17T09:44:31.513855Z",
+    "event_id": "20504b89-106b-460b-a66c-210a12339ffa",
+    "type": "event#2026-07-17T09:44:31.513855Z#cf4533b8"
+  },
+  {
+    "payload": {
+      "steps": 5606,
+      "user_id": "ash"
+    },
+    "event_type": "steps",
+    "user_id": "ash",
+    "event": "camper#events#ash",
+    "timestamp": "2026-07-17T11:56:21.096203Z",
+    "event_id": "aa632eb3-e92b-412c-88bd-b0cf0584297d",
+    "type": "event#2026-07-17T11:56:21.096203Z#65200c7f"
+  },
+  {
+    "payload": {
+      "user_id": "ash",
+      "event": "Drinks",
+      "reverse": false,
+      "beer": "",
+      "type": "Water"
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#ash",
+    "user_id": "ash",
+    "timestamp": "2026-07-17T11:56:25.311258Z",
+    "event_id": "25c7d596-219d-4310-9338-5ba0ca094d49",
+    "type": "event#2026-07-17T11:56:25.311258Z#81490949"
+  },
+  {
+    "payload": {
+      "type": "Tea",
+      "event": "Drinks",
+      "user_id": "ash",
+      "beer": "",
+      "reverse": false
+    },
+    "event_type": "Drinks",
+    "user_id": "ash",
+    "event": "camper#events#ash",
+    "timestamp": "2026-07-17T11:57:25.714106Z",
+    "event_id": "c1e00273-3912-44e5-9a1e-446b3f590401",
+    "type": "event#2026-07-17T11:57:25.714106Z#0e7e6b7a"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "reverse": false,
+      "type": "Tea",
+      "user_id": "ash",
+      "event": "Drinks"
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#ash",
+    "user_id": "ash",
+    "timestamp": "2026-07-17T11:57:28.133291Z",
+    "event_id": "34e699d7-3fce-47e1-aa72-622444299b75",
+    "type": "event#2026-07-17T11:57:28.133291Z#82ee2646"
+  },
+  {
+    "payload": {
+      "user_id": "ash",
+      "type": "Water",
+      "beer": "",
+      "reverse": false,
+      "event": "Drinks"
+    },
+    "event_type": "Drinks",
+    "user_id": "ash",
+    "event": "camper#events#ash",
+    "timestamp": "2026-07-17T19:01:16.711324Z",
+    "event_id": "e1671013-81e3-41eb-b838-659612c0c4f9",
+    "type": "event#2026-07-17T19:01:16.711324Z#8181e8a5"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "user_id": "ash",
+      "reverse": false,
+      "type": "Water",
+      "event": "Drinks"
+    },
+    "event_type": "Drinks",
+    "user_id": "ash",
+    "event": "camper#events#ash",
+    "timestamp": "2026-07-17T19:01:18.218910Z",
+    "event_id": "88558974-56f7-4094-9d19-4a14127bcbfb",
+    "type": "event#2026-07-17T19:01:18.218910Z#c810d748"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "user_id": "ash",
+      "type": "Soft",
+      "reverse": false,
+      "event": "Drinks"
+    },
+    "event_type": "Drinks",
+    "user_id": "ash",
+    "event": "camper#events#ash",
+    "timestamp": "2026-07-17T19:01:21.497940Z",
+    "event_id": "47e82dc2-27e0-4433-96fd-e829d06d47e2",
+    "type": "event#2026-07-17T19:01:21.497940Z#cd34cd64"
+  },
+  {
+    "payload": {
+      "beer": "true",
+      "event": "Drinks",
+      "user_id": "ash",
+      "reverse": false,
+      "type": "BoxPerry"
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#ash",
+    "user_id": "ash",
+    "timestamp": "2026-07-17T19:01:25.938267Z",
+    "event_id": "a59c75f7-c24c-45dc-858b-b64d18d61c25",
+    "type": "event#2026-07-17T19:01:25.938267Z#60fd4f48"
+  },
+  {
+    "payload": {
+      "reverse": false,
+      "event": "Drinks",
+      "beer": "true",
+      "type": "BoxPerry",
+      "user_id": "ash"
+    },
+    "event_type": "Drinks",
+    "user_id": "ash",
+    "event": "camper#events#ash",
+    "timestamp": "2026-07-17T19:01:28.753630Z",
+    "event_id": "3c28e301-9218-4522-8131-8c461aa304b5",
+    "type": "event#2026-07-17T19:01:28.753630Z#34c6ce27"
+  },
+  {
+    "payload": {
+      "type": "Pee",
+      "event": "Toilet",
+      "user_id": "ash",
+      "beer": "",
+      "reverse": false
+    },
+    "event_type": "Toilet",
+    "user_id": "ash",
+    "event": "camper#events#ash",
+    "timestamp": "2026-07-17T19:01:36.285880Z",
+    "event_id": "b2ba6761-424d-467c-b1c0-9b76252cba3f",
+    "type": "event#2026-07-17T19:01:36.285880Z#89fe27e1"
+  },
+  {
+    "payload": {
+      "user_id": "ash",
+      "steps": 15000
+    },
+    "event_type": "steps",
+    "user_id": "ash",
+    "event": "camper#events#ash",
+    "timestamp": "2026-07-17T19:01:48.644898Z",
+    "event_id": "9f426804-df85-4c33-9ac9-297bfc447d15",
+    "type": "event#2026-07-17T19:01:48.644898Z#5bc58a71"
+  },
+  {
+    "payload": {
+      "type": "ResetDay",
+      "user_id": "ash",
+      "event": "Reset"
+    },
+    "event_type": "Reset",
+    "user_id": "ash",
+    "event": "camper#events#ash",
+    "timestamp": "2026-07-18T11:03:04.123834Z",
+    "event_id": "601c7818-ae85-441e-a096-41bed57c7d10",
+    "type": "event#2026-07-18T11:03:04.123834Z#ef2557d5"
+  },
+  {
+    "payload": {
+      "type": "Poo",
+      "event": "Toilet",
+      "user_id": "ash",
+      "beer": "",
+      "reverse": false
+    },
+    "event_type": "Toilet",
+    "user_id": "ash",
+    "event": "camper#events#ash",
+    "timestamp": "2026-07-18T11:03:04.178798Z",
+    "event_id": "e60781c3-7fad-4b25-8f6b-14c833e04ba3",
+    "type": "event#2026-07-18T11:03:04.178798Z#93acf580"
+  },
+  {
+    "payload": {
+      "event": "Toilet",
+      "type": "Poo",
+      "beer": "",
+      "reverse": false,
+      "user_id": "ash"
+    },
+    "event_type": "Toilet",
+    "user_id": "ash",
+    "event": "camper#events#ash",
+    "timestamp": "2026-07-18T11:03:06.488216Z",
+    "event_id": "3a8bf5f2-179e-4495-b92d-cc456f2bfd3c",
+    "type": "event#2026-07-18T11:03:06.488216Z#23fbcfec"
+  },
+  {
+    "payload": {
+      "event": "Toilet",
+      "type": "Pee",
+      "reverse": false,
+      "user_id": "ash",
+      "beer": ""
+    },
+    "event_type": "Toilet",
+    "user_id": "ash",
+    "event": "camper#events#ash",
+    "timestamp": "2026-07-18T11:03:09.385647Z",
+    "event_id": "cfc0ad03-4537-459e-bbb4-c70f3f2a68de",
+    "type": "event#2026-07-18T11:03:09.385647Z#cc4e6423"
+  },
+  {
+    "payload": {
+      "reverse": false,
+      "user_id": "ash",
+      "beer": "",
+      "type": "Pee",
+      "event": "Toilet"
+    },
+    "event_type": "Toilet",
+    "event": "camper#events#ash",
+    "user_id": "ash",
+    "timestamp": "2026-07-18T11:03:10.437871Z",
+    "event_id": "f8324311-df88-4cba-a733-4424ef17b45e",
+    "type": "event#2026-07-18T11:03:10.437871Z#49413ed6"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "event": "Status",
+      "reverse": false,
+      "user_id": "ash",
+      "type": "Lecture"
+    },
+    "event_type": "Status",
+    "user_id": "ash",
+    "event": "camper#events#ash",
+    "timestamp": "2026-07-18T11:03:14.795431Z",
+    "event_id": "f4abda26-9ccd-4aac-bec7-915d7bfd0b16",
+    "type": "event#2026-07-18T11:03:14.795431Z#dd05cf7c"
+  },
+  {
+    "payload": {
+      "event": "Drinks",
+      "beer": "",
+      "type": "Tea",
+      "reverse": false,
+      "user_id": "ash"
+    },
+    "event_type": "Drinks",
+    "user_id": "ash",
+    "event": "camper#events#ash",
+    "timestamp": "2026-07-18T11:03:32.423951Z",
+    "event_id": "75f3d2e5-a039-4254-b6e8-3733d7d47ac5",
+    "type": "event#2026-07-18T11:03:32.423951Z#1bd5f31e"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "user_id": "ash",
+      "reverse": false,
+      "event": "Drinks",
+      "type": "Tea"
+    },
+    "event_type": "Drinks",
+    "user_id": "ash",
+    "event": "camper#events#ash",
+    "timestamp": "2026-07-18T11:03:34.043085Z",
+    "event_id": "82a86b74-e705-4c7e-8a1a-d40c1f0ccfba",
+    "type": "event#2026-07-18T11:03:34.043085Z#2c65ace4"
+  },
+  {
+    "payload": {
+      "user_id": "ash",
+      "event": "Drinks",
+      "beer": "",
+      "type": "Tea",
+      "reverse": false
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#ash",
+    "user_id": "ash",
+    "timestamp": "2026-07-18T11:03:35.081690Z",
+    "event_id": "98696530-0f98-4f86-996e-fe06b17f9a4e",
+    "type": "event#2026-07-18T11:03:35.081690Z#be8ae88c"
+  },
+  {
+    "payload": {
+      "type": "Water",
+      "user_id": "ash",
+      "reverse": false,
+      "event": "Drinks",
+      "beer": ""
+    },
+    "event_type": "Drinks",
+    "user_id": "ash",
+    "event": "camper#events#ash",
+    "timestamp": "2026-07-18T11:03:36.582841Z",
+    "event_id": "c4a7ca29-2341-4f9b-929d-b58f0e138be1",
+    "type": "event#2026-07-18T11:03:36.582841Z#0e2068ce"
+  },
+  {
+    "payload": {
+      "user_id": "ash",
+      "beer": "",
+      "event": "Drinks",
+      "reverse": false,
+      "type": "Water"
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#ash",
+    "user_id": "ash",
+    "timestamp": "2026-07-18T11:03:38.000373Z",
+    "event_id": "f4bfadae-8e0c-44a0-b937-21b7fb6d48b5",
+    "type": "event#2026-07-18T11:03:38.000373Z#68ee9875"
+  },
+  {
+    "payload": {
+      "user_id": "ash",
+      "beer": "",
+      "event": "Drinks",
+      "reverse": false,
+      "type": "Soft"
+    },
+    "event_type": "Drinks",
+    "user_id": "ash",
+    "event": "camper#events#ash",
+    "timestamp": "2026-07-18T11:03:39.355252Z",
+    "event_id": "4aac91dc-28e3-468f-a8aa-252625e3b3be",
+    "type": "event#2026-07-18T11:03:39.355252Z#83dc0a71"
+  },
+  {
+    "payload": {
+      "event": "Drinks",
+      "type": "BoxPerry",
+      "beer": "true",
+      "reverse": false,
+      "user_id": "ash"
+    },
+    "event_type": "Drinks",
+    "user_id": "ash",
+    "event": "camper#events#ash",
+    "timestamp": "2026-07-18T11:03:42.076211Z",
+    "event_id": "0527363e-dad2-4f02-aceb-b82a97afc0bb",
+    "type": "event#2026-07-18T11:03:42.076211Z#06b6dee1"
+  },
+  {
+    "payload": {
+      "user_id": "ash",
+      "type": "BoxPerry",
+      "reverse": false,
+      "event": "Drinks",
+      "beer": "true"
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#ash",
+    "user_id": "ash",
+    "timestamp": "2026-07-18T11:03:45.521920Z",
+    "event_id": "c6d65a33-1705-4d2a-a161-746bece987fe",
+    "type": "event#2026-07-18T11:03:45.521920Z#8d39027c"
+  },
+  {
+    "payload": {
+      "user_id": "ash",
+      "steps": 5993
+    },
+    "event_type": "steps",
+    "user_id": "ash",
+    "event": "camper#events#ash",
+    "timestamp": "2026-07-18T11:04:46.539119Z",
+    "event_id": "f2b3c65d-5744-4bbe-ba88-52516cb4cac8",
+    "type": "event#2026-07-18T11:04:46.539119Z#5b14d8ba"
+  },
+  {
+    "payload": {
+      "reverse": false,
+      "user_id": "hvy",
+      "event": "Status",
+      "beer": "",
+      "type": "Drinking"
+    },
+    "event_type": "Status",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-14T19:25:38.390613Z",
+    "event_id": "2329c7d4-1fc8-4af4-9ab1-158a5acc4669",
+    "type": "event#2026-07-14T19:25:38.390613Z#05f4dbb9"
+  },
+  {
+    "payload": {
+      "event": "Status",
+      "reverse": false,
+      "beer": "",
+      "type": "Roaming",
+      "user_id": "hvy"
+    },
+    "event_type": "Status",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-14T19:46:30.645716Z",
+    "event_id": "ece9e78d-ea49-482f-aa2b-8dbf7c4fed1e",
+    "type": "event#2026-07-14T19:46:30.645716Z#96709fdd"
+  },
+  {
+    "payload": {
+      "reverse": false,
+      "event": "Drinks",
+      "type": "Lager",
+      "user_id": "hvy",
+      "beer": "true"
+    },
+    "event_type": "Drinks",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-14T19:50:36.133393Z",
+    "event_id": "23617f5f-22ea-4c94-ab86-068b5a127ab2",
+    "type": "event#2026-07-14T19:50:36.133393Z#083698fa"
+  },
+  {
+    "payload": {
+      "event": "Status",
+      "type": "Chilling",
+      "reverse": false,
+      "user_id": "hvy",
+      "beer": ""
+    },
+    "event_type": "Status",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-14T20:26:21.095381Z",
+    "event_id": "b907bd88-5e15-491f-8855-9eef04e8f064",
+    "type": "event#2026-07-14T20:26:21.095381Z#9b26779f"
+  },
+  {
+    "payload": {
+      "user_id": "hvy",
+      "event": "Status",
+      "type": "Chilling",
+      "beer": "",
+      "reverse": false
+    },
+    "event_type": "Status",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-14T20:41:03.529929Z",
+    "event_id": "cc110f79-7f10-4d50-b9ea-942251ffddf1",
+    "type": "event#2026-07-14T20:41:03.529929Z#9ff35f7a"
+  },
+  {
+    "payload": {
+      "reverse": false,
+      "user_id": "hvy",
+      "type": "Coding",
+      "event": "Status",
+      "beer": ""
+    },
+    "event_type": "Status",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-14T21:26:57.827577Z",
+    "event_id": "eef8478a-414a-4b97-8844-6d9c452b3ce2",
+    "type": "event#2026-07-14T21:26:57.827577Z#8862c6a6"
+  },
+  {
+    "payload": {
+      "user_id": "hvy",
+      "beer": "",
+      "type": "Chilling",
+      "reverse": false,
+      "event": "Status"
+    },
+    "event_type": "Status",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-14T21:37:51.068408Z",
+    "event_id": "ade91aea-831d-4650-9ea0-47b289fe4108",
+    "type": "event#2026-07-14T21:37:51.068408Z#03e6b201"
+  },
+  {
+    "payload": {
+      "reverse": false,
+      "event": "Status",
+      "beer": "",
+      "user_id": "hvy",
+      "type": "Chilling"
+    },
+    "event_type": "Status",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-14T21:42:40.857987Z",
+    "event_id": "80207d19-fbf0-41cb-8cf5-abce2d4605ae",
+    "type": "event#2026-07-14T21:42:40.857987Z#549d8d90"
+  },
+  {
+    "payload": {
+      "event": "Status",
+      "reverse": false,
+      "type": "Eating",
+      "user_id": "hvy",
+      "beer": ""
+    },
+    "event_type": "Status",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-14T21:46:05.622606Z",
+    "event_id": "aa5b601f-63e7-48f8-9614-5a14e3a001c6",
+    "type": "event#2026-07-14T21:46:05.622606Z#02d38e77"
+  },
+  {
+    "payload": {
+      "event": "Status",
+      "user_id": "hvy",
+      "type": "Eating"
+    },
+    "event_type": "Status",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-14T21:47:18.086530Z",
+    "event_id": "b86c0a8b-24cf-45ad-9090-849275ffd6c1",
+    "type": "event#2026-07-14T21:47:18.086530Z#77cfe866"
+  },
+  {
+    "payload": {
+      "event": "Status",
+      "type": "Eating",
+      "user_id": "hvy"
+    },
+    "event_type": "Status",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-14T21:52:37.452023Z",
+    "event_id": "13e4d7f5-7215-4256-9d24-76a77fe40a32",
+    "type": "event#2026-07-14T21:52:37.452023Z#4d6c616f"
+  },
+  {
+    "payload": {
+      "event": "Status",
+      "user_id": "hvy",
+      "type": "Eating"
+    },
+    "event_type": "Status",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-14T21:55:08.374070Z",
+    "event_id": "2ba8ad4a-7884-42d4-8c26-792222fa6ed0",
+    "type": "event#2026-07-14T21:55:08.374070Z#bd5a8e2a"
+  },
+  {
+    "payload": {
+      "type": "Roaming",
+      "user_id": "hvy",
+      "event": "Status",
+      "beer": "",
+      "reverse": false
+    },
+    "event_type": "Status",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-14T22:04:35.257209Z",
+    "event_id": "f41d4cb3-5566-4cd2-9fd2-7baa0fe25582",
+    "type": "event#2026-07-14T22:04:35.257209Z#387d43d8"
+  },
+  {
+    "payload": {
+      "user_id": "hvy",
+      "reverse": false,
+      "beer": "",
+      "event": "Status",
+      "type": "Lecture"
+    },
+    "event_type": "Status",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-14T22:04:39.867837Z",
+    "event_id": "2cd3096e-b43c-49ce-812c-b09cf2c2d29e",
+    "type": "event#2026-07-14T22:04:39.867837Z#5c0b9af0"
+  },
+  {
+    "payload": {
+      "reverse": false,
+      "type": "Poo",
+      "event": "Toilet",
+      "user_id": "hvy",
+      "beer": ""
+    },
+    "event_type": "Toilet",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-15T08:11:34.721376Z",
+    "event_id": "a4500f83-5012-4959-a12d-de457d846840",
+    "type": "event#2026-07-15T08:11:34.721376Z#c682fdbb"
+  },
+  {
+    "payload": {
+      "user_id": "hvy",
+      "type": "Coffee",
+      "event": "Drinks",
+      "reverse": false,
+      "beer": ""
+    },
+    "event_type": "Drinks",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-15T15:00:05.446685Z",
+    "event_id": "d6c204f2-909e-4c76-ae5b-e8dfd0841cb6",
+    "type": "event#2026-07-15T15:00:05.446685Z#8e8b50eb"
+  },
+  {
+    "payload": {
+      "user_id": "hvy",
+      "beer": "",
+      "type": "Start",
+      "reverse": false,
+      "event": "Lecture"
+    },
+    "event_type": "Lecture",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-15T21:44:28.603052Z",
+    "event_id": "69f70f20-2525-4722-a67f-e6e2ac6cfd9b",
+    "type": "event#2026-07-15T21:44:28.603052Z#4825101e"
+  },
+  {
+    "payload": {
+      "type": "Stop",
+      "reverse": false,
+      "user_id": "hvy",
+      "beer": "",
+      "event": "Lecture"
+    },
+    "event_type": "Lecture",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-15T21:44:31.258908Z",
+    "event_id": "6846168e-3b94-407b-8d70-f15156696a3b",
+    "type": "event#2026-07-15T21:44:31.258908Z#7770d9e1"
+  },
+  {
+    "payload": {
+      "event": "Drinks",
+      "user_id": "hvy",
+      "beer": "",
+      "type": "Coffee",
+      "reverse": true
+    },
+    "event_type": "Drinks",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-15T22:37:26.089776Z",
+    "event_id": "495df0c2-6c17-486b-95ce-da234a369926",
+    "type": "event#2026-07-15T22:37:26.089776Z#7c1e1c38"
+  },
+  {
+    "payload": {
+      "event": "Reset",
+      "type": "ResetDay",
+      "user_id": "hvy"
+    },
+    "event_type": "Reset",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-16T15:58:19.428606Z",
+    "event_id": "961b1414-ed7b-4099-a280-051e3098da92",
+    "type": "event#2026-07-16T15:58:19.428606Z#c14817bf"
+  },
+  {
+    "payload": {
+      "steps": 6000,
+      "user_id": "hvy"
+    },
+    "event_type": "steps",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-16T15:58:19.475880Z",
+    "event_id": "354c0fe8-c86f-4731-8623-1c0a1b613278",
+    "type": "event#2026-07-16T15:58:19.475880Z#c5c13b47"
+  },
+  {
+    "payload": {
+      "user_id": "hvy",
+      "steps": 1
+    },
+    "event_type": "steps",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-16T15:58:22.634056Z",
+    "event_id": "f0839cfe-8dfb-4547-83c1-521423e738d9",
+    "type": "event#2026-07-16T15:58:22.634056Z#a132c4b3"
+  },
+  {
+    "payload": {
+      "user_id": "hvy",
+      "steps": 6000
+    },
+    "event_type": "steps",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-16T15:58:25.837229Z",
+    "event_id": "b908f2bc-256d-42af-bcbb-9c32ba8bcc6b",
+    "type": "event#2026-07-16T15:58:25.837229Z#aa59f842"
+  },
+  {
+    "payload": {
+      "type": "Cider",
+      "beer": "true",
+      "reverse": false,
+      "event": "Drinks",
+      "user_id": "hvy"
+    },
+    "event_type": "Drinks",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-16T15:58:29.882847Z",
+    "event_id": "a8e24a07-dbdc-4d0d-9587-81017bab72d8",
+    "type": "event#2026-07-16T15:58:29.882847Z#c08c7df1"
+  },
+  {
+    "payload": {
+      "reverse": false,
+      "type": "Chilling",
+      "beer": "",
+      "user_id": "hvy",
+      "event": "Status"
+    },
+    "event_type": "Status",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-16T18:10:45.280261Z",
+    "event_id": "b9aff68d-a846-4224-8a09-e81ae334f508",
+    "type": "event#2026-07-16T18:10:45.280261Z#9ce9c7d8"
+  },
+  {
+    "payload": {
+      "type": "Water",
+      "beer": "",
+      "event": "Drinks",
+      "user_id": "hvy",
+      "reverse": false
+    },
+    "event_type": "Drinks",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-16T18:10:47.826752Z",
+    "event_id": "b636cf9f-5313-4c2f-b97e-ebb0eaef22f2",
+    "type": "event#2026-07-16T18:10:47.826752Z#1eec89d8"
+  },
+  {
+    "payload": {
+      "beer": "true",
+      "type": "BoxPerry",
+      "event": "Drinks",
+      "user_id": "hvy",
+      "reverse": false
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-16T18:39:53.125473Z",
+    "event_id": "ccfc7519-0499-4d64-9bae-8994670dfdae",
+    "type": "event#2026-07-16T18:39:53.125473Z#cbd07341"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "type": "ClubMate",
+      "user_id": "hvy",
+      "reverse": false,
+      "event": "Drinks"
+    },
+    "event_type": "Drinks",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-16T18:49:35.649023Z",
+    "event_id": "f0474d8e-ab37-4600-836a-87a2bf2515b0",
+    "type": "event#2026-07-16T18:49:35.649023Z#35e5ecde"
+  },
+  {
+    "payload": {
+      "steps": 10518,
+      "user_id": "hvy"
+    },
+    "event_type": "steps",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-16T18:49:53.130971Z",
+    "event_id": "208791f1-d819-4250-8b9e-9c17c5d716e9",
+    "type": "event#2026-07-16T18:49:53.130971Z#5fd68e53"
+  },
+  {
+    "payload": {
+      "user_id": "hvy",
+      "steps": 13966
+    },
+    "event_type": "steps",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-16T23:23:02.744351Z",
+    "event_id": "56221cb9-07ac-4d3b-b028-9598ee02cfb7",
+    "type": "event#2026-07-16T23:23:02.744351Z#ec37169b"
+  },
+  {
+    "payload": {
+      "reverse": false,
+      "type": "Water",
+      "user_id": "hvy",
+      "event": "Drinks",
+      "beer": ""
+    },
+    "event_type": "Drinks",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-16T23:23:09.311795Z",
+    "event_id": "9e25d9c5-1910-4fdc-86c5-c57b7fa01a63",
+    "type": "event#2026-07-16T23:23:09.311795Z#5cd53d7b"
+  },
+  {
+    "payload": {
+      "reverse": false,
+      "beer": "",
+      "user_id": "hvy",
+      "event": "Toilet",
+      "type": "Pee"
+    },
+    "event_type": "Toilet",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-16T23:23:30.473472Z",
+    "event_id": "481ced1e-f901-480f-af35-592354e7349c",
+    "type": "event#2026-07-16T23:23:30.473472Z#9d7a478a"
+  },
+  {
+    "payload": {
+      "reverse": false,
+      "user_id": "hvy",
+      "beer": "",
+      "type": "BoxWine",
+      "event": "Drinks"
+    },
+    "event_type": "Drinks",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-16T23:23:41.369045Z",
+    "event_id": "f2662763-f530-4a1a-a1fd-da41b17dfd92",
+    "type": "event#2026-07-16T23:23:41.369045Z#0b699ff4"
+  },
+  {
+    "payload": {
+      "type": "BoxPerry",
+      "event": "Drinks",
+      "reverse": false,
+      "user_id": "hvy",
+      "beer": "true"
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-16T23:23:45.329252Z",
+    "event_id": "d8c09838-1aac-449c-9f96-556e3ad2dee5",
+    "type": "event#2026-07-16T23:23:45.329252Z#c8b03625"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "reverse": false,
+      "type": "BoxWine",
+      "event": "Drinks",
+      "user_id": "hvy"
+    },
+    "event_type": "Drinks",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-16T23:23:47.874281Z",
+    "event_id": "0b0e71f7-4d5e-4bd1-ad33-6ed2f4328ade",
+    "type": "event#2026-07-16T23:23:47.874281Z#f517e274"
+  },
+  {
+    "payload": {
+      "event": "Reset",
+      "type": "ResetDay",
+      "user_id": "hvy"
+    },
+    "event_type": "Reset",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-17T08:41:37.650443Z",
+    "event_id": "ab8837ac-254c-4977-8130-6c94c3ad377c",
+    "type": "event#2026-07-17T08:41:37.650443Z#7737ce70"
+  },
+  {
+    "payload": {
+      "event": "Reset",
+      "reverse": false,
+      "type": "ResetDay",
+      "user_id": "hvy",
+      "beer": ""
+    },
+    "event_type": "Reset",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-17T08:41:37.689393Z",
+    "event_id": "5c12c0b3-b457-43e7-909d-71053fb05179",
+    "type": "event#2026-07-17T08:41:37.689393Z#91627a90"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "event": "Drinks",
+      "user_id": "hvy",
+      "type": "Coffee",
+      "reverse": false
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-17T08:42:20.511042Z",
+    "event_id": "257e7821-a42c-4a52-be4d-b0abe9f40ac7",
+    "type": "event#2026-07-17T08:42:20.511042Z#341d9a8c"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "user_id": "hvy",
+      "event": "Drinks",
+      "reverse": false,
+      "type": "Water"
+    },
+    "event_type": "Drinks",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-17T08:42:26.079994Z",
+    "event_id": "eba30a76-c095-4bce-9410-b3160e8b0e5d",
+    "type": "event#2026-07-17T08:42:26.079994Z#ef91fcc1"
+  },
+  {
+    "payload": {
+      "steps": 1520,
+      "user_id": "hvy"
+    },
+    "event_type": "steps",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-17T08:42:32.572374Z",
+    "event_id": "01880a37-45fc-4dd2-a0b7-7072c22d2560",
+    "type": "event#2026-07-17T08:42:32.572374Z#84d90c96"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "reverse": false,
+      "user_id": "hvy",
+      "type": "Chilling",
+      "event": "Status"
+    },
+    "event_type": "Status",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-17T08:42:41.116157Z",
+    "event_id": "0b3ca55b-625a-454c-b929-744e67a1af66",
+    "type": "event#2026-07-17T08:42:41.116157Z#3b3bedf9"
+  },
+  {
+    "payload": {
+      "user_id": "hvy",
+      "beer": "",
+      "reverse": false,
+      "event": "Toilet",
+      "type": "Pee"
+    },
+    "event_type": "Toilet",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-17T08:42:48.253227Z",
+    "event_id": "ac5b1a68-8c8c-464f-ad0f-161cff04acdf",
+    "type": "event#2026-07-17T08:42:48.253227Z#f92fee7b"
+  },
+  {
+    "payload": {
+      "event": "Status",
+      "beer": "",
+      "reverse": false,
+      "type": "Lecture",
+      "user_id": "hvy"
+    },
+    "event_type": "Status",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-17T08:59:17.065128Z",
+    "event_id": "aa11aca3-08ad-4ff9-b610-2444817b2549",
+    "type": "event#2026-07-17T08:59:17.065128Z#010acd00"
+  },
+  {
+    "payload": {
+      "reverse": false,
+      "user_id": "hvy",
+      "event": "Lecture",
+      "type": "Start",
+      "beer": ""
+    },
+    "event_type": "Lecture",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-17T08:59:23.466376Z",
+    "event_id": "91ed3b54-f9dd-46a1-b78e-4aea941a323d",
+    "type": "event#2026-07-17T08:59:23.466376Z#4f0de3fb"
+  },
+  {
+    "payload": {
+      "user_id": "hvy",
+      "reverse": false,
+      "beer": "",
+      "event": "Status",
+      "type": "Wet"
+    },
+    "event_type": "Status",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-17T10:51:47.918259Z",
+    "event_id": "87d12d27-5b24-40e9-9ff3-025adab5c087",
+    "type": "event#2026-07-17T10:51:47.918259Z#dbd82b5c"
+  },
+  {
+    "payload": {
+      "type": "Stop",
+      "beer": "",
+      "event": "Lecture",
+      "reverse": false,
+      "user_id": "hvy"
+    },
+    "event_type": "Lecture",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-17T10:51:49.027768Z",
+    "event_id": "a9d48afc-7c28-4bb9-8807-9ed75c3c56af",
+    "type": "event#2026-07-17T10:51:49.027768Z#b53ee8ac"
+  },
+  {
+    "payload": {
+      "steps": 4239,
+      "user_id": "hvy"
+    },
+    "event_type": "steps",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-17T10:56:00.561152Z",
+    "event_id": "3f6b6765-104a-4f69-8bf4-1d97a43cc0f6",
+    "type": "event#2026-07-17T10:56:00.561152Z#b6fdd255"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "type": "Water",
+      "user_id": "hvy",
+      "reverse": false,
+      "event": "Drinks"
+    },
+    "event_type": "Drinks",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-17T11:07:29.954526Z",
+    "event_id": "cfb85db9-7961-410f-b327-3ead90f69588",
+    "type": "event#2026-07-17T11:07:29.954526Z#7814a061"
+  },
+  {
+    "payload": {
+      "event": "Status",
+      "beer": "",
+      "type": "Lecture",
+      "user_id": "hvy",
+      "reverse": false
+    },
+    "event_type": "Status",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-17T11:07:35.545202Z",
+    "event_id": "fb456819-465b-4fe0-b2a9-22fcb9f0d8e0",
+    "type": "event#2026-07-17T11:07:35.545202Z#c92d8e5d"
+  },
+  {
+    "payload": {
+      "user_id": "hvy",
+      "steps": 4559
+    },
+    "event_type": "steps",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-17T11:07:54.787510Z",
+    "event_id": "e357dda8-49c5-4a95-aa74-f68f3f473f16",
+    "type": "event#2026-07-17T11:07:54.787510Z#d93aab08"
+  },
+  {
+    "payload": {
+      "user_id": "hvy",
+      "steps": 4559
+    },
+    "event_type": "steps",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-17T11:08:29.174961Z",
+    "event_id": "98b0b8d8-b488-4bf2-a677-00f299d74fe6",
+    "type": "event#2026-07-17T11:08:29.174961Z#405024a6"
+  },
+  {
+    "payload": {
+      "reverse": false,
+      "beer": "",
+      "user_id": "hvy",
+      "event": "Status",
+      "type": "Workshop"
+    },
+    "event_type": "Status",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-17T11:26:39.761389Z",
+    "event_id": "d73a2334-44cd-46c8-8646-dbb46ebe47ce",
+    "type": "event#2026-07-17T11:26:39.761389Z#62fa7f4e"
+  },
+  {
+    "payload": {
+      "user_id": "hvy",
+      "reverse": false,
+      "beer": "",
+      "type": "Roaming",
+      "event": "Status"
+    },
+    "event_type": "Status",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-17T11:26:41.860149Z",
+    "event_id": "be51336d-ec55-4849-a560-153302792438",
+    "type": "event#2026-07-17T11:26:41.860149Z#a35eb218"
+  },
+  {
+    "payload": {
+      "reverse": false,
+      "user_id": "hvy",
+      "type": "Roaming",
+      "event": "Status",
+      "beer": ""
+    },
+    "event_type": "Status",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-17T11:26:47.700083Z",
+    "event_id": "b3e4d33b-9521-4d6b-825d-6b948370a2c3",
+    "type": "event#2026-07-17T11:26:47.700083Z#0e417a85"
+  },
+  {
+    "payload": {
+      "user_id": "hvy",
+      "reverse": false,
+      "type": "Water",
+      "beer": "",
+      "event": "Drinks"
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-17T11:40:28.579804Z",
+    "event_id": "ea78d49c-9a47-494f-acc2-8be9598daa1a",
+    "type": "event#2026-07-17T11:40:28.579804Z#cf03e184"
+  },
+  {
+    "payload": {
+      "user_id": "hvy",
+      "steps": 5443
+    },
+    "event_type": "steps",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-17T11:42:11.821176Z",
+    "event_id": "cd501a59-cda5-4de6-a5e6-3e226c9a19e1",
+    "type": "event#2026-07-17T11:42:11.821176Z#0f1cc9a2"
+  },
+  {
+    "payload": {
+      "user_id": "hvy",
+      "steps": 5443
+    },
+    "event_type": "steps",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-17T11:46:29.876034Z",
+    "event_id": "66856baa-1a60-42cf-aeeb-06303d305c78",
+    "type": "event#2026-07-17T11:46:29.876034Z#bdffda56"
+  },
+  {
+    "payload": {
+      "amount": "-2.4",
+      "user_id": "hvy",
+      "merchant": "Club mate"
+    },
+    "event_type": "monzo",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-17T12:33:01.634754Z",
+    "event_id": "12d931d0-139c-4865-bd4b-39e11301b90e",
+    "type": "event#2026-07-17T12:33:01.634754Z#be130216"
+  },
+  {
+    "payload": {
+      "type": "Water",
+      "event": "Drinks",
+      "reverse": false,
+      "user_id": "hvy",
+      "beer": ""
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-17T16:42:08.222131Z",
+    "event_id": "55d8a4b8-2183-4bda-b67e-72bb629c2560",
+    "type": "event#2026-07-17T16:42:08.222131Z#92083c28"
+  },
+  {
+    "payload": {
+      "type": "Water",
+      "beer": "",
+      "reverse": false,
+      "user_id": "hvy",
+      "event": "Drinks"
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-17T16:42:09.154262Z",
+    "event_id": "1b8670a4-33b0-4bc6-9377-7934f0b352de",
+    "type": "event#2026-07-17T16:42:09.154262Z#63425e65"
+  },
+  {
+    "payload": {
+      "user_id": "hvy",
+      "event": "Drinks",
+      "type": "ClubMate",
+      "reverse": false,
+      "beer": ""
+    },
+    "event_type": "Drinks",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-17T16:42:12.528829Z",
+    "event_id": "a614021e-13a6-42ce-92c8-31807e6f4e8f",
+    "type": "event#2026-07-17T16:42:12.528829Z#a009a485"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "event": "Drinks",
+      "type": "Coffee",
+      "reverse": false,
+      "user_id": "hvy"
+    },
+    "event_type": "Drinks",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-17T16:42:16.704816Z",
+    "event_id": "52103754-9647-411e-b70a-274c5cd0895a",
+    "type": "event#2026-07-17T16:42:16.704816Z#463392ac"
+  },
+  {
+    "payload": {
+      "user_id": "hvy",
+      "event": "Status",
+      "type": "Lecture",
+      "beer": "",
+      "reverse": false
+    },
+    "event_type": "Status",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-17T16:42:29.886998Z",
+    "event_id": "e379b3d5-c338-4405-a084-f4f4d79dba59",
+    "type": "event#2026-07-17T16:42:29.886998Z#13110951"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "type": "Lecture",
+      "event": "Status",
+      "user_id": "hvy",
+      "reverse": false
+    },
+    "event_type": "Status",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-17T17:25:46.436114Z",
+    "event_id": "4ab86431-7c9d-4a74-81b7-ec2a0e11a898",
+    "type": "event#2026-07-17T17:25:46.436114Z#37ed95ef"
+  },
+  {
+    "payload": {
+      "amount": "-17.9",
+      "merchant": "4 beers",
+      "user_id": "hvy"
+    },
+    "event_type": "monzo",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-17T18:12:36.053993Z",
+    "event_id": "6e4edff9-f913-407b-a944-91895576df12",
+    "type": "event#2026-07-17T18:12:36.053993Z#708f74b3"
+  },
+  {
+    "payload": {
+      "type": "Cider",
+      "event": "Drinks",
+      "user_id": "hvy",
+      "beer": "true",
+      "reverse": false
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-17T18:12:54.648091Z",
+    "event_id": "fb84831b-b567-48d2-8546-bd0eeaea8f56",
+    "type": "event#2026-07-17T18:12:54.648091Z#f9b9e0bb"
+  },
+  {
+    "payload": {
+      "user_id": "hvy",
+      "steps": 8781
+    },
+    "event_type": "steps",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-17T18:15:04.263340Z",
+    "event_id": "25ef346b-0dee-46c3-bcf0-a4e414d3d0a1",
+    "type": "event#2026-07-17T18:15:04.263340Z#b5f5866e"
+  },
+  {
+    "payload": {
+      "type": "BoxPerry",
+      "reverse": false,
+      "event": "Drinks",
+      "beer": "true",
+      "user_id": "hvy"
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-17T20:45:38.347983Z",
+    "event_id": "e204c75f-75bf-4302-9d58-1cccd75a8383",
+    "type": "event#2026-07-17T20:45:38.347983Z#fdf20c37"
+  },
+  {
+    "payload": {
+      "user_id": "hvy",
+      "reverse": false,
+      "event": "Drinks",
+      "type": "BoxPerry",
+      "beer": "true"
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-17T21:16:21.517880Z",
+    "event_id": "f066c0a3-9d92-442f-b595-4edce5cc0126",
+    "type": "event#2026-07-17T21:16:21.517880Z#3876d072"
+  },
+  {
+    "payload": {
+      "user_id": "hvy",
+      "steps": 11862
+    },
+    "event_type": "steps",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-17T22:30:49.994238Z",
+    "event_id": "b2b38fcd-a869-44c7-a09a-f4645ce69c13",
+    "type": "event#2026-07-17T22:30:49.994238Z#f1c35705"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "type": "ResetDay",
+      "reverse": false,
+      "event": "Reset",
+      "user_id": "hvy"
+    },
+    "event_type": "Reset",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-18T00:00:26.882665Z",
+    "event_id": "01ce5d99-2f79-414d-ad1a-02efa0dd6158",
+    "type": "event#2026-07-18T00:00:26.882665Z#5be184a1"
+  },
+  {
+    "payload": {
+      "type": "Lager",
+      "user_id": "hvy",
+      "beer": "true",
+      "reverse": false,
+      "event": "Drinks"
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-18T00:08:32.703007Z",
+    "event_id": "854bb289-093f-46da-b68e-4d1459afede4",
+    "type": "event#2026-07-18T00:08:32.703007Z#e28f67e7"
+  },
+  {
+    "payload": {
+      "reverse": false,
+      "beer": "true",
+      "event": "Drinks",
+      "type": "Lager",
+      "user_id": "hvy"
+    },
+    "event_type": "Drinks",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-18T00:08:34.202496Z",
+    "event_id": "debcec55-7542-4454-b1c3-dfb83764f475",
+    "type": "event#2026-07-18T00:08:34.202496Z#ed461529"
+  },
+  {
+    "payload": {
+      "user_id": "hvy",
+      "event": "Reset",
+      "type": "ResetDay"
+    },
+    "event_type": "Reset",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-18T09:35:33.085352Z",
+    "event_id": "d3526bee-85f1-486b-af5a-133e3293078b",
+    "type": "event#2026-07-18T09:35:33.085352Z#ec3f9a2a"
+  },
+  {
+    "payload": {
+      "type": "ResetDay",
+      "beer": "",
+      "user_id": "hvy",
+      "reverse": false,
+      "event": "Reset"
+    },
+    "event_type": "Reset",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-18T09:35:33.132909Z",
+    "event_id": "ecf23460-a006-44d9-becd-056febb23700",
+    "type": "event#2026-07-18T09:35:33.132909Z#ff62dbb1"
+  },
+  {
+    "payload": {
+      "steps": 2537,
+      "user_id": "hvy"
+    },
+    "event_type": "steps",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-18T09:35:42.154629Z",
+    "event_id": "1c80613d-76cc-48cf-a7e5-52781653abaf",
+    "type": "event#2026-07-18T09:35:42.154629Z#388ae5a2"
+  },
+  {
+    "payload": {
+      "user_id": "hvy",
+      "event": "Drinks",
+      "type": "Water",
+      "reverse": false,
+      "beer": ""
+    },
+    "event_type": "Drinks",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-18T09:38:19.045839Z",
+    "event_id": "e2f4a3bc-e7f1-4148-b3c3-56b87d5c820a",
+    "type": "event#2026-07-18T09:38:19.045839Z#966fb767"
+  },
+  {
+    "payload": {
+      "user_id": "hvy",
+      "event": "Status",
+      "type": "Lecture",
+      "beer": "",
+      "reverse": false
+    },
+    "event_type": "Status",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-18T09:48:46.382277Z",
+    "event_id": "15135321-63c7-4f62-ac0f-804b623766c5",
+    "type": "event#2026-07-18T09:48:46.382277Z#9b346318"
+  },
+  {
+    "payload": {
+      "type": "Coffee",
+      "beer": "",
+      "reverse": false,
+      "event": "Drinks",
+      "user_id": "hvy"
+    },
+    "event_type": "Drinks",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-18T09:48:48.340793Z",
+    "event_id": "211cdac6-3e7d-4b31-a1bb-bd79f7913c19",
+    "type": "event#2026-07-18T09:48:48.340793Z#ee910df3"
+  },
+  {
+    "payload": {
+      "user_id": "hvy",
+      "reverse": false,
+      "event": "Drinks",
+      "beer": "",
+      "type": "Coffee"
+    },
+    "event_type": "Drinks",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-18T09:48:49.379185Z",
+    "event_id": "8df1db60-c7d0-47f3-bf8b-559ee9421de8",
+    "type": "event#2026-07-18T09:48:49.379185Z#b51ec04b"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "reverse": false,
+      "user_id": "hvy",
+      "event": "Toilet",
+      "type": "Pee"
+    },
+    "event_type": "Toilet",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-18T09:48:56.938789Z",
+    "event_id": "2149ca72-770a-487f-89c9-de6920a23dde",
+    "type": "event#2026-07-18T09:48:56.938789Z#c52ea339"
+  },
+  {
+    "payload": {
+      "type": "Pee",
+      "reverse": false,
+      "event": "Toilet",
+      "user_id": "hvy",
+      "beer": ""
+    },
+    "event_type": "Toilet",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-18T09:49:01.978918Z",
+    "event_id": "a4fb206d-8e89-449f-88c8-89aa16436ce1",
+    "type": "event#2026-07-18T09:49:01.978918Z#466b0ecd"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "reverse": false,
+      "event": "Drinks",
+      "user_id": "hvy",
+      "type": "Water"
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-18T10:36:49.974121Z",
+    "event_id": "59d6c0fb-4fe8-42a6-b6fa-2ac3651a892b",
+    "type": "event#2026-07-18T10:36:49.974121Z#3137cc42"
+  },
+  {
+    "payload": {
+      "event": "Status",
+      "user_id": "hvy",
+      "beer": "",
+      "reverse": false,
+      "type": "Chilling"
+    },
+    "event_type": "Status",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-18T10:36:58.882267Z",
+    "event_id": "0d5b9b89-02b9-43e1-8c0a-627ada512eac",
+    "type": "event#2026-07-18T10:36:58.882267Z#b144a9da"
+  },
+  {
+    "payload": {
+      "reverse": false,
+      "beer": "",
+      "event": "Toilet",
+      "user_id": "hvy",
+      "type": "Poo"
+    },
+    "event_type": "Toilet",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-18T10:37:06.284121Z",
+    "event_id": "30f091ad-947b-438b-8539-71de9c846d44",
+    "type": "event#2026-07-18T10:37:06.284121Z#cc86e051"
+  },
+  {
+    "payload": {
+      "event": "Drinks",
+      "reverse": false,
+      "type": "Lager",
+      "user_id": "hvy",
+      "beer": "true"
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-18T13:55:03.773150Z",
+    "event_id": "8f64f3b1-3dc4-4308-aed5-143bdf5e001f",
+    "type": "event#2026-07-18T13:55:03.773150Z#77e4d864"
+  },
+  {
+    "payload": {
+      "event": "Status",
+      "type": "Lecture",
+      "user_id": "hvy",
+      "reverse": false,
+      "beer": ""
+    },
+    "event_type": "Status",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-18T13:55:06.372716Z",
+    "event_id": "87d0253e-686b-4be3-a204-69a3ab991037",
+    "type": "event#2026-07-18T13:55:06.372716Z#a9ecca06"
+  },
+  {
+    "payload": {
+      "user_id": "hvy",
+      "event": "Drinks",
+      "type": "BoxPerry",
+      "beer": "true",
+      "reverse": false
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-18T21:39:11.591039Z",
+    "event_id": "3ecbef1c-4354-4d84-bb58-da2403f15b6b",
+    "type": "event#2026-07-18T21:39:11.591039Z#9a7632d6"
+  },
+  {
+    "payload": {
+      "user_id": "hvy",
+      "event": "Drinks",
+      "type": "BoxPerry",
+      "beer": "true",
+      "reverse": false
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-18T21:39:12.494009Z",
+    "event_id": "710e8dbd-ac6a-4e8a-91d5-f494ca85eb8f",
+    "type": "event#2026-07-18T21:39:12.494009Z#f9461f1d"
+  },
+  {
+    "payload": {
+      "reverse": false,
+      "event": "Status",
+      "beer": "",
+      "type": "Chilling",
+      "user_id": "hvy"
+    },
+    "event_type": "Status",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-18T21:39:18.072544Z",
+    "event_id": "a11119a2-a657-40f3-bfba-9b6382832682",
+    "type": "event#2026-07-18T21:39:18.072544Z#f2b1001d"
+  },
+  {
+    "payload": {
+      "steps": 15301,
+      "user_id": "hvy"
+    },
+    "event_type": "steps",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-18T21:39:31.967984Z",
+    "event_id": "87468289-f8fb-492e-a9d2-0cc9fe0ed56e",
+    "type": "event#2026-07-18T21:39:31.967984Z#4f639bb3"
+  },
+  {
+    "payload": {
+      "event": "Drinks",
+      "type": "Martini",
+      "beer": "",
+      "user_id": "hvy",
+      "reverse": false
+    },
+    "event_type": "Drinks",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-18T22:14:26.992630Z",
+    "event_id": "2fae37ca-dc73-4177-9b49-6d744fbd84d1",
+    "type": "event#2026-07-18T22:14:26.992630Z#b89b0dbf"
+  },
+  {
+    "payload": {
+      "type": "Pee",
+      "beer": "",
+      "event": "Toilet",
+      "reverse": false,
+      "user_id": "hvy"
+    },
+    "event_type": "Toilet",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-18T22:14:31.726502Z",
+    "event_id": "0701d934-0727-4993-8bd3-3c67d6af010a",
+    "type": "event#2026-07-18T22:14:31.726502Z#ebda4b4c"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "type": "Drinking",
+      "user_id": "hvy",
+      "event": "Status",
+      "reverse": false
+    },
+    "event_type": "Status",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-18T22:14:39.774390Z",
+    "event_id": "abb3bf7e-9556-4ae2-a55b-c33b26a38f3c",
+    "type": "event#2026-07-18T22:14:39.774390Z#c10a43b6"
+  },
+  {
+    "payload": {
+      "type": "Cider",
+      "beer": "true",
+      "event": "Drinks",
+      "reverse": false,
+      "user_id": "hvy"
+    },
+    "event_type": "Drinks",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-18T23:41:35.082386Z",
+    "event_id": "4b9ef8cb-af4e-4a3c-8112-3a96b3f4eda7",
+    "type": "event#2026-07-18T23:41:35.082386Z#27aa64b4"
+  },
+  {
+    "payload": {
+      "reverse": false,
+      "user_id": "hvy",
+      "event": "Status",
+      "type": "Drunk",
+      "beer": ""
+    },
+    "event_type": "Status",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-18T23:41:53.400427Z",
+    "event_id": "9cc53704-48a8-42a6-935a-aa6e8997c1ac",
+    "type": "event#2026-07-18T23:41:53.400427Z#2c6270b7"
+  },
+  {
+    "payload": {
+      "event": "Drinks",
+      "user_id": "hvy",
+      "beer": "",
+      "reverse": false,
+      "type": "G+T"
+    },
+    "event_type": "Drinks",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-18T23:41:59.243558Z",
+    "event_id": "ef9167ce-6885-47d8-991d-84e5c4d74540",
+    "type": "event#2026-07-18T23:41:59.243558Z#9699320b"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "user_id": "hvy",
+      "event": "Drinks",
+      "type": "Negroni",
+      "reverse": false
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-18T23:42:10.428832Z",
+    "event_id": "3973e92a-e5bd-498e-9a5c-9bcfc29a37a8",
+    "type": "event#2026-07-18T23:42:10.428832Z#61228bfa"
+  },
+  {
+    "payload": {
+      "user_id": "hvy",
+      "steps": 16080
+    },
+    "event_type": "steps",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-18T23:55:35.558075Z",
+    "event_id": "2a6c80f2-44fc-4bf3-86e4-752eb72ac5ef",
+    "type": "event#2026-07-18T23:55:35.558075Z#d31b0f26"
+  },
+  {
+    "payload": {
+      "user_id": "hvy",
+      "amount": "-6.4",
+      "merchant": "srink"
+    },
+    "event_type": "expenditure",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-19T00:50:31.206410Z",
+    "event_id": "6ca4b11a-83e2-4dfb-8516-07145716afe3",
+    "type": "event#2026-07-19T00:50:31.206410Z#8728c5ce"
+  },
+  {
+    "payload": {
+      "merchant": "more drink",
+      "user_id": "hvy",
+      "amount": "-6.5"
+    },
+    "event_type": "expenditure",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-19T00:50:41.665001Z",
+    "event_id": "81ca966e-0b77-4dd1-9879-b410cc8aa97f",
+    "type": "event#2026-07-19T00:50:41.665001Z#b7ffe643"
+  },
+  {
+    "payload": {
+      "user_id": "hvy",
+      "event": "Reset",
+      "type": "ResetDay"
+    },
+    "event_type": "Reset",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-19T08:02:17.812794Z",
+    "event_id": "cdf6058d-e6f5-493a-9f69-64436b5e550b",
+    "type": "event#2026-07-19T08:02:17.812794Z#d09f1fba"
+  },
+  {
+    "payload": {
+      "user_id": "hvy",
+      "reverse": false,
+      "event": "Toilet",
+      "type": "Pee",
+      "beer": ""
+    },
+    "event_type": "Toilet",
+    "event": "camper#events#hvy",
+    "user_id": "hvy",
+    "timestamp": "2026-07-19T08:02:17.868835Z",
+    "event_id": "fc4d5f07-3c09-4028-bce7-9ceabea3d69a",
+    "type": "event#2026-07-19T08:02:17.868835Z#dbfc745a"
+  },
+  {
+    "payload": {
+      "type": "ResetDay",
+      "event": "Reset",
+      "beer": "",
+      "reverse": false,
+      "user_id": "hvy"
+    },
+    "event_type": "Reset",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-19T08:02:21.428414Z",
+    "event_id": "39313368-0fa1-4845-925e-1485a3ea4e67",
+    "type": "event#2026-07-19T08:02:21.428414Z#fff653dc"
+  },
+  {
+    "payload": {
+      "user_id": "hvy",
+      "event": "Reset",
+      "type": "ResetDay"
+    },
+    "event_type": "Reset",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-20T07:29:22.508150Z",
+    "event_id": "f25590f7-74a7-41f3-8a87-d11ac5d49f9c",
+    "type": "event#2026-07-20T07:29:22.508150Z#e83a621e"
+  },
+  {
+    "payload": {
+      "type": "ResetDay",
+      "event": "Reset",
+      "reverse": false,
+      "beer": "",
+      "user_id": "hvy"
+    },
+    "event_type": "Reset",
+    "user_id": "hvy",
+    "event": "camper#events#hvy",
+    "timestamp": "2026-07-20T07:29:22.566099Z",
+    "event_id": "93987996-fc47-43c0-ab4e-53a12feb83e4",
+    "type": "event#2026-07-20T07:29:22.566099Z#18e5798c"
+  },
+  {
+    "last_known_latitude": "51.5074",
+    "event": "device#eui-70b3d57ed0051111#hvy",
+    "last_known_timestamp": "2026-07-16T15:58:19.475841Z",
+    "last_known_longitude": "-0.1278",
+    "location_history": [],
+    "cumulative_steps": 27942,
+    "cumulative_distance_km": "17.603460000000002",
+    "type": "state"
+  },
+  {
+    "last_known_latitude": "51.5074",
+    "event": "device#eui-70b3d57ed0051111#cha",
+    "last_known_timestamp": "2026-07-16T10:54:29.220202Z",
+    "last_known_longitude": "-0.1278",
+    "location_history": [],
+    "cumulative_steps": 48032,
+    "cumulative_distance_km": "30.260160000000003",
+    "type": "state"
+  },
+  {
+    "event": "device#eui-70b3d57ed0051111#ash",
+    "last_known_latitude": "51.5074",
+    "location_history": [],
+    "last_known_timestamp": "2026-07-16T15:57:56.136005Z",
+    "last_known_longitude": "-0.1278",
+    "cumulative_steps": 15000,
+    "cumulative_distance_km": "9.450000000000001",
+    "type": "state"
+  },
+  {
+    "beer_drinks": 0,
+    "user_id": "combined",
+    "event": "camper#aggregates#combined",
+    "categories": {},
+    "status": "normal",
+    "total_drinks": 0,
+    "leaderboard": [
+      {
+        "user_id": "cha",
+        "total_drinks": 39,
+        "display_name": "Cha"
+      },
+      {
+        "display_name": "Tin",
+        "total_drinks": 33,
+        "user_id": "tin"
+      },
+      {
+        "total_drinks": 32,
+        "display_name": "Hvy",
+        "user_id": "hvy"
+      },
+      {
+        "total_drinks": 22,
+        "display_name": "Ash",
+        "user_id": "ash"
+      }
+    ],
+    "steps_leaderboard": [
+      {
+        "all_time_steps": 48032,
+        "user_id": "cha",
+        "display_name": "Cha"
+      },
+      {
+        "user_id": "tin",
+        "display_name": "Tin",
+        "all_time_steps": 47433
+      },
+      {
+        "display_name": "Hvy",
+        "all_time_steps": 27942,
+        "user_id": "hvy"
+      },
+      {
+        "display_name": "Ash",
+        "user_id": "ash",
+        "all_time_steps": 15000
+      }
+    ],
+    "type": "totals"
+  },
+  {
+    "beer_drinks": 4,
+    "event": "camper#aggregates#tin",
+    "daily_steps_history": {
+      "2026-07-17": 6640,
+      "2026-07-19": 47433,
+      "2026-07-18": 27393
+    },
+    "all_time_cumulative_steps": 47433,
+    "status": "drunk",
+    "transactions": [
+      {
+        "timestamp": "2026-07-18T14:04:24.047913Z",
+        "id": "tx_local_1784383464",
+        "amount_gbp": "-3.0",
+        "description": "ice cream"
+      }
+    ],
+    "steps_baseline": 27393,
+    "all_time_total_drinks": 33,
+    "user_id": "tin",
+    "categories": {
+      "Pee": 6,
+      "Tea": 3,
+      "Water": 3,
+      "Lager": 4,
+      "Poo": 2
+    },
+    "last_reset_date": "2026-07-19",
+    "total_expenditure_gbp": "3.0",
+    "total_drinks": 10,
+    "type": "totals"
+  },
+  {
+    "payload": {
+      "user_id": "tin",
+      "type": "Water",
+      "reverse": false,
+      "beer": "",
+      "event": "Drinks"
+    },
+    "event_type": "Drinks",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-16T21:44:44.817776Z",
+    "event_id": "c341ecc4-5356-4ee1-9be9-2463e68dc852",
+    "type": "event#2026-07-16T21:44:44.817776Z#a2370aa4"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "reverse": false,
+      "user_id": "tin",
+      "type": "Water",
+      "event": "Drinks"
+    },
+    "event_type": "Drinks",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-16T21:44:46.287743Z",
+    "event_id": "aeb29e03-0316-4fad-9c3b-a79b87950b41",
+    "type": "event#2026-07-16T21:44:46.287743Z#9485e46d"
+  },
+  {
+    "payload": {
+      "event": "Drinks",
+      "beer": "",
+      "reverse": false,
+      "type": "Water",
+      "user_id": "tin"
+    },
+    "event_type": "Drinks",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-16T21:44:47.744577Z",
+    "event_id": "ea63a95e-bc8c-40c4-9f75-67ee3882476a",
+    "type": "event#2026-07-16T21:44:47.744577Z#b9d71bf4"
+  },
+  {
+    "payload": {
+      "user_id": "tin",
+      "event": "Toilet",
+      "beer": "",
+      "reverse": false,
+      "type": "Pee"
+    },
+    "event_type": "Toilet",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-16T21:45:07.276970Z",
+    "event_id": "f7407e5a-17d5-415e-9ed2-0bd8ee5a9110",
+    "type": "event#2026-07-16T21:45:07.276970Z#c10e0dee"
+  },
+  {
+    "payload": {
+      "type": "Pee",
+      "beer": "",
+      "reverse": false,
+      "event": "Toilet",
+      "user_id": "tin"
+    },
+    "event_type": "Toilet",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-16T21:45:08.866283Z",
+    "event_id": "b9829d9c-fddd-4e99-998d-25fe6cba1e19",
+    "type": "event#2026-07-16T21:45:08.866283Z#549c19ab"
+  },
+  {
+    "payload": {
+      "user_id": "tin",
+      "steps": 8453
+    },
+    "event_type": "steps",
+    "event": "camper#events#tin",
+    "user_id": "tin",
+    "timestamp": "2026-07-16T21:45:35.172501Z",
+    "event_id": "39feb0a0-1aa0-4c93-880c-2b33376e7cab",
+    "type": "event#2026-07-16T21:45:35.172501Z#9442c5f5"
+  },
+  {
+    "payload": {
+      "type": "ResetDay",
+      "user_id": "tin",
+      "event": "Reset"
+    },
+    "event_type": "Reset",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-17T07:21:40.053729Z",
+    "event_id": "21e9ca86-a3c3-4032-bb0b-365d13467849",
+    "type": "event#2026-07-17T07:21:40.053729Z#38670bf9"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "type": "Water",
+      "user_id": "tin",
+      "reverse": false,
+      "event": "Drinks"
+    },
+    "event_type": "Drinks",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-17T07:21:40.106647Z",
+    "event_id": "eb4588da-20b7-45b4-9586-4d10e49fa7bf",
+    "type": "event#2026-07-17T07:21:40.106647Z#c08bf3e8"
+  },
+  {
+    "payload": {
+      "event": "Status",
+      "user_id": "tin",
+      "type": "Roaming",
+      "beer": "",
+      "reverse": false
+    },
+    "event_type": "Status",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-17T07:21:55.190312Z",
+    "event_id": "d0fff226-a1a6-484a-9c13-de4091cfba13",
+    "type": "event#2026-07-17T07:21:55.190312Z#51a0c4c4"
+  },
+  {
+    "payload": {
+      "steps": 11078,
+      "user_id": "tin"
+    },
+    "event_type": "steps",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-17T08:22:00.176726Z",
+    "event_id": "95227282-54cb-4f26-8bce-e1b4644a5fad",
+    "type": "event#2026-07-17T08:22:00.176726Z#fa6d25ce"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "reverse": false,
+      "type": "Water",
+      "event": "Drinks",
+      "user_id": "tin"
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#tin",
+    "user_id": "tin",
+    "timestamp": "2026-07-17T11:38:54.784715Z",
+    "event_id": "00fcb2eb-85a7-47d5-be4b-f43897d699c3",
+    "type": "event#2026-07-17T11:38:54.784715Z#f445051a"
+  },
+  {
+    "payload": {
+      "reverse": false,
+      "event": "Status",
+      "user_id": "tin",
+      "beer": "",
+      "type": "Roaming"
+    },
+    "event_type": "Status",
+    "event": "camper#events#tin",
+    "user_id": "tin",
+    "timestamp": "2026-07-17T11:39:03.753148Z",
+    "event_id": "bf12e814-1d3f-4b3b-ac4e-f872e6ac099b",
+    "type": "event#2026-07-17T11:39:03.753148Z#4bf8bec2"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "user_id": "tin",
+      "type": "Normal",
+      "event": "Status",
+      "reverse": false
+    },
+    "event_type": "Status",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-17T11:39:34.002685Z",
+    "event_id": "8b45f778-749b-4a39-84e9-b055bf9d5555",
+    "type": "event#2026-07-17T11:39:34.002685Z#df848878"
+  },
+  {
+    "payload": {
+      "event": "Toilet",
+      "beer": "",
+      "reverse": false,
+      "user_id": "tin",
+      "type": "Pee"
+    },
+    "event_type": "Toilet",
+    "event": "camper#events#tin",
+    "user_id": "tin",
+    "timestamp": "2026-07-17T14:03:13.424408Z",
+    "event_id": "664992d1-49dd-4dcc-aff5-8561fb00e9eb",
+    "type": "event#2026-07-17T14:03:13.424408Z#c9da7dfd"
+  },
+  {
+    "payload": {
+      "user_id": "tin",
+      "beer": "",
+      "type": "Pee",
+      "event": "Toilet",
+      "reverse": false
+    },
+    "event_type": "Toilet",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-17T14:03:15.235094Z",
+    "event_id": "b5e062a3-f8db-44db-a5df-db77e7e26cf3",
+    "type": "event#2026-07-17T14:03:15.235094Z#538f3e82"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "reverse": false,
+      "user_id": "tin",
+      "event": "Lecture",
+      "type": "Start"
+    },
+    "event_type": "Lecture",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-17T14:03:24.326759Z",
+    "event_id": "26026772-07aa-4dd7-9dfc-b4b52ae5082d",
+    "type": "event#2026-07-17T14:03:24.326759Z#139024b2"
+  },
+  {
+    "payload": {
+      "type": "Lecture",
+      "user_id": "tin",
+      "beer": "",
+      "reverse": false,
+      "event": "Status"
+    },
+    "event_type": "Status",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-17T14:03:28.627543Z",
+    "event_id": "efc4787e-34a6-43b4-8adb-156ea6f58486",
+    "type": "event#2026-07-17T14:03:28.627543Z#325a8b71"
+  },
+  {
+    "payload": {
+      "user_id": "tin",
+      "steps": 7083
+    },
+    "event_type": "steps",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-17T14:04:55.229414Z",
+    "event_id": "693c008c-3dab-473b-9e77-8998e3dddb45",
+    "type": "event#2026-07-17T14:04:55.229414Z#ce5d2748"
+  },
+  {
+    "payload": {
+      "reverse": false,
+      "user_id": "tin",
+      "event": "Lecture",
+      "type": "Start",
+      "beer": ""
+    },
+    "event_type": "Lecture",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-17T15:30:57.964272Z",
+    "event_id": "3fb0def2-0dd7-4a3e-875a-243e98e1b4c0",
+    "type": "event#2026-07-17T15:30:57.964272Z#b9942304"
+  },
+  {
+    "payload": {
+      "reverse": false,
+      "event": "Lecture",
+      "type": "Start",
+      "beer": "",
+      "user_id": "tin"
+    },
+    "event_type": "Lecture",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-17T15:31:06.181623Z",
+    "event_id": "dad21b43-5822-41a3-9d1c-143f77186fd1",
+    "type": "event#2026-07-17T15:31:06.181623Z#345ba236"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "event": "Status",
+      "user_id": "tin",
+      "reverse": false,
+      "type": "Lecture"
+    },
+    "event_type": "Status",
+    "event": "camper#events#tin",
+    "user_id": "tin",
+    "timestamp": "2026-07-17T15:31:11.397159Z",
+    "event_id": "087c5116-2cc1-455a-b559-f624d7310472",
+    "type": "event#2026-07-17T15:31:11.397159Z#4a0db2eb"
+  },
+  {
+    "payload": {
+      "reverse": false,
+      "type": "Water",
+      "event": "Drinks",
+      "user_id": "tin",
+      "beer": ""
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#tin",
+    "user_id": "tin",
+    "timestamp": "2026-07-17T15:31:16.441615Z",
+    "event_id": "0da32cbf-7041-471f-8643-94a9b3faa7c2",
+    "type": "event#2026-07-17T15:31:16.441615Z#d6c27946"
+  },
+  {
+    "payload": {
+      "reverse": false,
+      "beer": "",
+      "type": "Water",
+      "user_id": "tin",
+      "event": "Drinks"
+    },
+    "event_type": "Drinks",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-17T15:31:17.775864Z",
+    "event_id": "9bd6f299-2f58-494b-bac5-f92ff6289b72",
+    "type": "event#2026-07-17T15:31:17.775864Z#fe3016c1"
+  },
+  {
+    "payload": {
+      "user_id": "tin",
+      "beer": "",
+      "event": "Lecture",
+      "type": "Stop",
+      "reverse": false
+    },
+    "event_type": "Lecture",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-17T15:44:30.905337Z",
+    "event_id": "68e83cf4-1d17-412d-911f-9f3970f93b1f",
+    "type": "event#2026-07-17T15:44:30.905337Z#29f5f62b"
+  },
+  {
+    "payload": {
+      "user_id": "tin",
+      "type": "Start",
+      "event": "Lecture",
+      "beer": "",
+      "reverse": false
+    },
+    "event_type": "Lecture",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-17T15:44:33.673957Z",
+    "event_id": "1c3dbc7a-1982-4d7b-b04d-798235327043",
+    "type": "event#2026-07-17T15:44:33.673957Z#0fc3e79f"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "reverse": false,
+      "type": "Water",
+      "user_id": "tin",
+      "event": "Drinks"
+    },
+    "event_type": "Drinks",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-17T15:44:40.634911Z",
+    "event_id": "e6afc30d-8eaf-4e8c-9a4e-8f0f9c3eaa13",
+    "type": "event#2026-07-17T15:44:40.634911Z#7ef21985"
+  },
+  {
+    "payload": {
+      "user_id": "tin",
+      "steps": 10128
+    },
+    "event_type": "steps",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-17T16:27:56.352572Z",
+    "event_id": "a94824e4-4d12-41ba-80dd-730279f44541",
+    "type": "event#2026-07-17T16:27:56.352572Z#8c1f8bca"
+  },
+  {
+    "payload": {
+      "event": "Lecture",
+      "beer": "",
+      "user_id": "tin",
+      "reverse": false,
+      "type": "Stop"
+    },
+    "event_type": "Lecture",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-17T16:31:52.750978Z",
+    "event_id": "c480eb5a-c1fa-4da0-9d6a-95a08f352f53",
+    "type": "event#2026-07-17T16:31:52.750978Z#2e5db6a7"
+  },
+  {
+    "payload": {
+      "user_id": "tin",
+      "type": "Stop",
+      "beer": "",
+      "event": "Lecture",
+      "reverse": false
+    },
+    "event_type": "Lecture",
+    "event": "camper#events#tin",
+    "user_id": "tin",
+    "timestamp": "2026-07-17T17:04:46.365202Z",
+    "event_id": "35843efe-3582-4e81-82f3-3e1dc75a2a87",
+    "type": "event#2026-07-17T17:04:46.365202Z#953335ed"
+  },
+  {
+    "payload": {
+      "reverse": false,
+      "event": "Lecture",
+      "type": "Start",
+      "user_id": "tin",
+      "beer": ""
+    },
+    "event_type": "Lecture",
+    "event": "camper#events#tin",
+    "user_id": "tin",
+    "timestamp": "2026-07-17T17:11:28.807235Z",
+    "event_id": "034015ce-7bf3-44d7-b9a0-3638e1174b42",
+    "type": "event#2026-07-17T17:11:28.807235Z#6067e593"
+  },
+  {
+    "payload": {
+      "reverse": false,
+      "event": "Toilet",
+      "user_id": "tin",
+      "type": "Pee",
+      "beer": ""
+    },
+    "event_type": "Toilet",
+    "event": "camper#events#tin",
+    "user_id": "tin",
+    "timestamp": "2026-07-17T17:11:44.810632Z",
+    "event_id": "6ffe190a-31d8-440b-84e5-4078b40c7a07",
+    "type": "event#2026-07-17T17:11:44.810632Z#f0208509"
+  },
+  {
+    "payload": {
+      "user_id": "tin",
+      "beer": "",
+      "event": "Toilet",
+      "type": "Pee",
+      "reverse": true
+    },
+    "event_type": "Toilet",
+    "event": "camper#events#tin",
+    "user_id": "tin",
+    "timestamp": "2026-07-17T17:11:45.977307Z",
+    "event_id": "0b8286d9-a651-4404-a059-ad70ba8ec9a5",
+    "type": "event#2026-07-17T17:11:45.977307Z#78d59bad"
+  },
+  {
+    "payload": {
+      "user_id": "tin",
+      "beer": "",
+      "reverse": false,
+      "type": "Water",
+      "event": "Drinks"
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#tin",
+    "user_id": "tin",
+    "timestamp": "2026-07-17T17:11:49.798308Z",
+    "event_id": "ca23a7b7-b707-4d3e-bae0-da302e99cca9",
+    "type": "event#2026-07-17T17:11:49.798308Z#b4d2c68a"
+  },
+  {
+    "payload": {
+      "user_id": "tin",
+      "merchant": "ice + drinks",
+      "amount": "-3.76"
+    },
+    "event_type": "monzo",
+    "event": "camper#events#tin",
+    "user_id": "tin",
+    "timestamp": "2026-07-17T18:12:27.339371Z",
+    "event_id": "937237b9-402c-42fa-966e-074821aee9c6",
+    "type": "event#2026-07-17T18:12:27.339371Z#76e48ba1"
+  },
+  {
+    "payload": {
+      "user_id": "tin",
+      "type": "Start",
+      "event": "Lecture",
+      "beer": "",
+      "reverse": false
+    },
+    "event_type": "Lecture",
+    "event": "camper#events#tin",
+    "user_id": "tin",
+    "timestamp": "2026-07-17T18:12:30.479051Z",
+    "event_id": "bc070df9-5f92-4f51-8721-a4ce76b5ff35",
+    "type": "event#2026-07-17T18:12:30.479051Z#8b21e568"
+  },
+  {
+    "payload": {
+      "beer": "true",
+      "type": "Lager",
+      "user_id": "tin",
+      "reverse": false,
+      "event": "Drinks"
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#tin",
+    "user_id": "tin",
+    "timestamp": "2026-07-17T18:12:39.874583Z",
+    "event_id": "ec49074a-9f46-4f68-959f-c0217906f422",
+    "type": "event#2026-07-17T18:12:39.874583Z#72c0fe9a"
+  },
+  {
+    "payload": {
+      "user_id": "tin",
+      "steps": 10979
+    },
+    "event_type": "steps",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-17T18:15:21.240463Z",
+    "event_id": "892379d9-132a-49ac-a566-b78db8e6771a",
+    "type": "event#2026-07-17T18:15:21.240463Z#89b4315f"
+  },
+  {
+    "payload": {
+      "user_id": "tin",
+      "reverse": false,
+      "event": "Drinks",
+      "beer": "true",
+      "type": "Lager"
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#tin",
+    "user_id": "tin",
+    "timestamp": "2026-07-17T19:23:13.778434Z",
+    "event_id": "0ae20603-63db-4ef7-a2b7-034c95e46c65",
+    "type": "event#2026-07-17T19:23:13.778434Z#f71c3221"
+  },
+  {
+    "payload": {
+      "user_id": "tin",
+      "type": "Eating",
+      "event": "Status",
+      "beer": "",
+      "reverse": false
+    },
+    "event_type": "Status",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-17T19:23:21.349989Z",
+    "event_id": "8c6b54e4-8153-4a72-86d6-fd57bdf6b8bc",
+    "type": "event#2026-07-17T19:23:21.349989Z#0ed5521a"
+  },
+  {
+    "payload": {
+      "event": "Toilet",
+      "beer": "",
+      "reverse": false,
+      "type": "Pee",
+      "user_id": "tin"
+    },
+    "event_type": "Toilet",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-17T19:23:24.521859Z",
+    "event_id": "3f18852f-6fda-4a59-b410-8d2de7e9dd92",
+    "type": "event#2026-07-17T19:23:24.521859Z#bfd0fabb"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "reverse": false,
+      "user_id": "tin",
+      "event": "Lecture",
+      "type": "Stop"
+    },
+    "event_type": "Lecture",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-17T19:23:26.394549Z",
+    "event_id": "9b6f0579-5ade-4487-995a-1b1a0579b938",
+    "type": "event#2026-07-17T19:23:26.394549Z#8a9c4951"
+  },
+  {
+    "payload": {
+      "user_id": "tin",
+      "event": "Status",
+      "type": "Chilling",
+      "beer": "",
+      "reverse": false
+    },
+    "event_type": "Status",
+    "event": "camper#events#tin",
+    "user_id": "tin",
+    "timestamp": "2026-07-17T21:14:17.420618Z",
+    "event_id": "7d53199d-1dd7-49d1-9e26-3f43e40f7a93",
+    "type": "event#2026-07-17T21:14:17.420618Z#0b7b8426"
+  },
+  {
+    "payload": {
+      "reverse": false,
+      "event": "Drinks",
+      "type": "Port",
+      "user_id": "tin",
+      "beer": ""
+    },
+    "event_type": "Drinks",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-17T21:47:49.702519Z",
+    "event_id": "f729e651-3455-4570-a7d7-a3d209dd81f7",
+    "type": "event#2026-07-17T21:47:49.702519Z#1f54b783"
+  },
+  {
+    "payload": {
+      "event": "Drinks",
+      "type": "Lager",
+      "reverse": false,
+      "beer": "true",
+      "user_id": "tin"
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#tin",
+    "user_id": "tin",
+    "timestamp": "2026-07-17T22:30:21.138397Z",
+    "event_id": "24e758cc-11be-4834-ad88-ae9d737e2c7b",
+    "type": "event#2026-07-17T22:30:21.138397Z#0f7c5f5c"
+  },
+  {
+    "payload": {
+      "steps": 15093,
+      "user_id": "tin"
+    },
+    "event_type": "steps",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-17T22:31:45.574699Z",
+    "event_id": "c7e8c5d8-ef09-45e6-99f3-509b32f23513",
+    "type": "event#2026-07-17T22:31:45.574699Z#d9ac173b"
+  },
+  {
+    "payload": {
+      "user_id": "tin",
+      "reverse": false,
+      "type": "Sleeping",
+      "event": "Status",
+      "beer": ""
+    },
+    "event_type": "Status",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-17T23:13:17.661120Z",
+    "event_id": "a5ac5a72-bb0c-4be8-b9ea-9d353565ea83",
+    "type": "event#2026-07-17T23:13:17.661120Z#8733395e"
+  },
+  {
+    "payload": {
+      "amount": "-7.2",
+      "merchant": "beers",
+      "user_id": "tin"
+    },
+    "event_type": "monzo",
+    "event": "camper#events#tin",
+    "user_id": "tin",
+    "timestamp": "2026-07-17T23:13:51.359557Z",
+    "event_id": "d003fb86-2eec-45d2-94e1-55b485e7af73",
+    "type": "event#2026-07-17T23:13:51.359557Z#760787f8"
+  },
+  {
+    "payload": {
+      "user_id": "tin",
+      "event": "Reset",
+      "type": "ResetDay"
+    },
+    "event_type": "Reset",
+    "event": "camper#events#tin",
+    "user_id": "tin",
+    "timestamp": "2026-07-18T10:28:02.285662Z",
+    "event_id": "5bf7bdc2-2e07-4447-afd3-559774e84d3c",
+    "type": "event#2026-07-18T10:28:02.285662Z#835fdf2b"
+  },
+  {
+    "payload": {
+      "event": "Drinks",
+      "type": "Water",
+      "reverse": false,
+      "beer": "",
+      "user_id": "tin"
+    },
+    "event_type": "Drinks",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-18T10:28:02.336427Z",
+    "event_id": "14b3a602-0577-4637-9e8b-9315dd07defd",
+    "type": "event#2026-07-18T10:28:02.336427Z#d2e3b974"
+  },
+  {
+    "payload": {
+      "reverse": false,
+      "event": "Drinks",
+      "user_id": "tin",
+      "beer": "",
+      "type": "Tea"
+    },
+    "event_type": "Drinks",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-18T10:28:04.968886Z",
+    "event_id": "b6299285-86b7-4dc1-814f-0f7f7da22ac8",
+    "type": "event#2026-07-18T10:28:04.968886Z#3d3dee55"
+  },
+  {
+    "payload": {
+      "type": "Workshop",
+      "user_id": "tin",
+      "beer": "",
+      "reverse": false,
+      "event": "Status"
+    },
+    "event_type": "Status",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-18T10:28:12.264079Z",
+    "event_id": "e8a8e8e4-3c3a-44cb-a807-778bbe7bdbfe",
+    "type": "event#2026-07-18T10:28:12.264079Z#a532d51b"
+  },
+  {
+    "payload": {
+      "user_id": "tin",
+      "beer": "",
+      "reverse": false,
+      "type": "Pee",
+      "event": "Toilet"
+    },
+    "event_type": "Toilet",
+    "event": "camper#events#tin",
+    "user_id": "tin",
+    "timestamp": "2026-07-18T10:28:17.156768Z",
+    "event_id": "5fb2daf3-b547-4146-921e-27b4f4c99ca3",
+    "type": "event#2026-07-18T10:28:17.156768Z#613c1b7e"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "reverse": false,
+      "type": "Poo",
+      "user_id": "tin",
+      "event": "Toilet"
+    },
+    "event_type": "Toilet",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-18T10:28:18.114838Z",
+    "event_id": "7337270c-7347-46e8-850b-c3c6278c1f97",
+    "type": "event#2026-07-18T10:28:18.114838Z#143c7ff2"
+  },
+  {
+    "payload": {
+      "user_id": "tin",
+      "steps": 3095
+    },
+    "event_type": "steps",
+    "event": "camper#events#tin",
+    "user_id": "tin",
+    "timestamp": "2026-07-18T11:29:02.807594Z",
+    "event_id": "3803e6ee-1be2-4f60-822a-655f62a2089a",
+    "type": "event#2026-07-18T11:29:02.807594Z#ad1ca676"
+  },
+  {
+    "payload": {
+      "event": "Status",
+      "type": "Chilling",
+      "reverse": false,
+      "beer": "",
+      "user_id": "tin"
+    },
+    "event_type": "Status",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-18T11:29:46.039778Z",
+    "event_id": "f32d4079-bea6-4620-9fa5-41c70a77cd2e",
+    "type": "event#2026-07-18T11:29:46.039778Z#fa84de4a"
+  },
+  {
+    "payload": {
+      "reverse": false,
+      "event": "Drinks",
+      "user_id": "tin",
+      "beer": "",
+      "type": "Water"
+    },
+    "event_type": "Drinks",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-18T11:55:33.411906Z",
+    "event_id": "809d1e20-410f-43b4-8329-2d623e83ef0d",
+    "type": "event#2026-07-18T11:55:33.411906Z#d421d8c4"
+  },
+  {
+    "payload": {
+      "event": "Drinks",
+      "user_id": "tin",
+      "beer": "",
+      "reverse": false,
+      "type": "Water"
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#tin",
+    "user_id": "tin",
+    "timestamp": "2026-07-18T11:55:38.083636Z",
+    "event_id": "00da3053-c968-4de0-9840-3dd95acffbe9",
+    "type": "event#2026-07-18T11:55:38.083636Z#2389627c"
+  },
+  {
+    "payload": {
+      "user_id": "tin",
+      "type": "Water",
+      "event": "Drinks",
+      "beer": "",
+      "reverse": false
+    },
+    "event_type": "Drinks",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-18T12:36:51.806823Z",
+    "event_id": "fee2fd9e-48a9-4310-8cd7-03d4b6c8a82f",
+    "type": "event#2026-07-18T12:36:51.806823Z#714687ba"
+  },
+  {
+    "payload": {
+      "user_id": "tin",
+      "event": "Status",
+      "type": "Chilling",
+      "beer": "",
+      "reverse": false
+    },
+    "event_type": "Status",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-18T12:36:58.580340Z",
+    "event_id": "a7ed40e3-fb1b-4e24-a0a6-4817a2e5c625",
+    "type": "event#2026-07-18T12:36:58.580340Z#ef6f7a79"
+  },
+  {
+    "payload": {
+      "reverse": false,
+      "user_id": "tin",
+      "event": "Toilet",
+      "beer": "",
+      "type": "Pee"
+    },
+    "event_type": "Toilet",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-18T12:37:02.227912Z",
+    "event_id": "621940bf-b568-4fba-a0a9-388897ebf056",
+    "type": "event#2026-07-18T12:37:02.227912Z#c5bb6501"
+  },
+  {
+    "payload": {
+      "user_id": "tin",
+      "steps": 4012
+    },
+    "event_type": "steps",
+    "event": "camper#events#tin",
+    "user_id": "tin",
+    "timestamp": "2026-07-18T12:37:15.546059Z",
+    "event_id": "a7d8ee20-e84d-4781-9019-b243d3842d32",
+    "type": "event#2026-07-18T12:37:15.546059Z#c73cda59"
+  },
+  {
+    "payload": {
+      "user_id": "tin",
+      "steps": 4714
+    },
+    "event_type": "steps",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-18T14:03:39.806224Z",
+    "event_id": "931a0c69-9f5b-482e-91e1-5116014487eb",
+    "type": "event#2026-07-18T14:03:39.806224Z#57bf60d5"
+  },
+  {
+    "payload": {
+      "type": "Water",
+      "reverse": false,
+      "beer": "",
+      "event": "Drinks",
+      "user_id": "tin"
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#tin",
+    "user_id": "tin",
+    "timestamp": "2026-07-18T14:03:45.999294Z",
+    "event_id": "c44b7752-b324-4dcd-9e19-1b051f7fb506",
+    "type": "event#2026-07-18T14:03:45.999294Z#2149162f"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "type": "Eating",
+      "user_id": "tin",
+      "event": "Status",
+      "reverse": false
+    },
+    "event_type": "Status",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-18T14:04:00.739822Z",
+    "event_id": "685c0d10-5b09-4e92-8b2e-337d0070d63c",
+    "type": "event#2026-07-18T14:04:00.739822Z#7ef350b2"
+  },
+  {
+    "payload": {
+      "amount": -3,
+      "user_id": "tin",
+      "merchant": "ice cream"
+    },
+    "event_type": "expenditure",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-18T14:04:24.030037Z",
+    "event_id": "53867f6d-c3f2-40c8-9d97-38de2b19c4bc",
+    "type": "event#2026-07-18T14:04:24.030037Z#cc0d2d44"
+  },
+  {
+    "payload": {
+      "user_id": "tin",
+      "beer": "true",
+      "reverse": false,
+      "event": "Drinks",
+      "type": "Lager"
+    },
+    "event_type": "Drinks",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-18T17:51:48.824652Z",
+    "event_id": "e67b01f2-540e-4f3c-af64-8e87c7c3b1a0",
+    "type": "event#2026-07-18T17:51:48.824652Z#23c6a63f"
+  },
+  {
+    "payload": {
+      "event": "Status",
+      "type": "Chilling",
+      "user_id": "tin",
+      "beer": "",
+      "reverse": false
+    },
+    "event_type": "Status",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-18T17:51:52.186645Z",
+    "event_id": "48e872db-d734-4157-a005-1a5a8c92854a",
+    "type": "event#2026-07-18T17:51:52.186645Z#c2e56f75"
+  },
+  {
+    "payload": {
+      "reverse": false,
+      "user_id": "tin",
+      "event": "Toilet",
+      "type": "Pee",
+      "beer": ""
+    },
+    "event_type": "Toilet",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-18T19:10:53.219281Z",
+    "event_id": "fbb64f3b-c354-4a63-8c30-49261708ede2",
+    "type": "event#2026-07-18T19:10:53.219281Z#581036c1"
+  },
+  {
+    "payload": {
+      "event": "Status",
+      "beer": "",
+      "type": "Eating",
+      "user_id": "tin",
+      "reverse": false
+    },
+    "event_type": "Status",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-18T19:11:07.138399Z",
+    "event_id": "8dc2364f-47fc-4f4f-adfa-aa7cbfa6dbc8",
+    "type": "event#2026-07-18T19:11:07.138399Z#32f12156"
+  },
+  {
+    "payload": {
+      "user_id": "tin",
+      "steps": 7292
+    },
+    "event_type": "steps",
+    "event": "camper#events#tin",
+    "user_id": "tin",
+    "timestamp": "2026-07-18T19:11:30.540993Z",
+    "event_id": "858c6db5-aeec-4430-a6a8-fa1fca161800",
+    "type": "event#2026-07-18T19:11:30.540993Z#905a06dc"
+  },
+  {
+    "payload": {
+      "user_id": "tin",
+      "steps": 12300
+    },
+    "event_type": "steps",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-18T22:13:24.173506Z",
+    "event_id": "be71ff15-d5de-45bd-a9f9-7f5ec077eb8b",
+    "type": "event#2026-07-18T22:13:24.173506Z#27492ae7"
+  },
+  {
+    "payload": {
+      "event": "Drinks",
+      "type": "Port",
+      "beer": "",
+      "user_id": "tin",
+      "reverse": false
+    },
+    "event_type": "Drinks",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-18T22:13:31.734553Z",
+    "event_id": "bb17e5c8-8212-4686-8532-7f3a8a2d1901",
+    "type": "event#2026-07-18T22:13:31.734553Z#e270b2d2"
+  },
+  {
+    "payload": {
+      "user_id": "tin",
+      "event": "Status",
+      "beer": "",
+      "reverse": false,
+      "type": "Drinking"
+    },
+    "event_type": "Status",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-18T22:13:50.165224Z",
+    "event_id": "ea7db39b-5b70-42fa-89cc-d6adc6361e15",
+    "type": "event#2026-07-18T22:13:50.165224Z#1b6f8c84"
+  },
+  {
+    "payload": {
+      "event": "Toilet",
+      "beer": "",
+      "user_id": "tin",
+      "type": "Pee",
+      "reverse": false
+    },
+    "event_type": "Toilet",
+    "event": "camper#events#tin",
+    "user_id": "tin",
+    "timestamp": "2026-07-18T22:13:56.994236Z",
+    "event_id": "28f17b5e-1006-4cbc-b15e-2b4798254dad",
+    "type": "event#2026-07-18T22:13:56.994236Z#91fd7ec1"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "user_id": "tin",
+      "reverse": false,
+      "type": "Port",
+      "event": "Drinks"
+    },
+    "event_type": "Drinks",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-18T22:28:03.854650Z",
+    "event_id": "0054e563-333a-4c3e-9d99-3fa0208087c9",
+    "type": "event#2026-07-18T22:28:03.854650Z#5d11bb59"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "reverse": false,
+      "type": "Port",
+      "event": "Drinks",
+      "user_id": "tin"
+    },
+    "event_type": "Drinks",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-18T22:28:05.511961Z",
+    "event_id": "ea503328-c732-4f90-955e-924f43a2c2b4",
+    "type": "event#2026-07-18T22:28:05.511961Z#e87e707c"
+  },
+  {
+    "payload": {
+      "type": "ResetDay",
+      "user_id": "tin",
+      "event": "Reset"
+    },
+    "event_type": "Reset",
+    "event": "camper#events#tin",
+    "user_id": "tin",
+    "timestamp": "2026-07-19T08:07:37.103138Z",
+    "event_id": "d132bb7f-40e7-431c-9f3f-e577bf84bb0e",
+    "type": "event#2026-07-19T08:07:37.103138Z#d5515809"
+  },
+  {
+    "payload": {
+      "reverse": false,
+      "event": "Toilet",
+      "type": "Pee",
+      "user_id": "tin",
+      "beer": ""
+    },
+    "event_type": "Toilet",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-19T08:07:37.150037Z",
+    "event_id": "17043551-d1af-4b18-982b-392c8b7dd0ca",
+    "type": "event#2026-07-19T08:07:37.150037Z#ba660367"
+  },
+  {
+    "payload": {
+      "reverse": false,
+      "event": "Toilet",
+      "type": "Poo",
+      "user_id": "tin",
+      "beer": ""
+    },
+    "event_type": "Toilet",
+    "event": "camper#events#tin",
+    "user_id": "tin",
+    "timestamp": "2026-07-19T08:07:40.072155Z",
+    "event_id": "d4279e65-af4f-4efd-be68-aecd7dee8708",
+    "type": "event#2026-07-19T08:07:40.072155Z#e6021c48"
+  },
+  {
+    "payload": {
+      "reverse": false,
+      "user_id": "tin",
+      "beer": "",
+      "type": "Water",
+      "event": "Drinks"
+    },
+    "event_type": "Drinks",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-19T08:07:45.028561Z",
+    "event_id": "205eef1d-568c-4762-b567-596f90a95009",
+    "type": "event#2026-07-19T08:07:45.028561Z#876d3508"
+  },
+  {
+    "payload": {
+      "user_id": "tin",
+      "event": "Drinks",
+      "beer": "",
+      "type": "Tea",
+      "reverse": false
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#tin",
+    "user_id": "tin",
+    "timestamp": "2026-07-19T08:07:46.447412Z",
+    "event_id": "5c1e35cb-7f25-4f3f-ad98-953bbf4c88d2",
+    "type": "event#2026-07-19T08:07:46.447412Z#892cdff3"
+  },
+  {
+    "payload": {
+      "event": "Drinks",
+      "type": "Tea",
+      "beer": "",
+      "user_id": "tin",
+      "reverse": false
+    },
+    "event_type": "Drinks",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-19T08:07:47.463577Z",
+    "event_id": "5b3278df-3389-41b8-b152-2a688bcbb119",
+    "type": "event#2026-07-19T08:07:47.463577Z#6c519f33"
+  },
+  {
+    "payload": {
+      "event": "Status",
+      "beer": "",
+      "reverse": false,
+      "user_id": "tin",
+      "type": "Workshop"
+    },
+    "event_type": "Status",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-19T08:08:36.074847Z",
+    "event_id": "81e1d128-94be-4539-a5f4-40f07f63d0ef",
+    "type": "event#2026-07-19T08:08:36.074847Z#5d322e86"
+  },
+  {
+    "payload": {
+      "event": "Status",
+      "user_id": "tin",
+      "type": "Lecture",
+      "reverse": false,
+      "beer": ""
+    },
+    "event_type": "Status",
+    "event": "camper#events#tin",
+    "user_id": "tin",
+    "timestamp": "2026-07-19T10:38:59.394800Z",
+    "event_id": "0f3cc676-adc3-4209-8747-ceda54c43193",
+    "type": "event#2026-07-19T10:38:59.394800Z#6bd65842"
+  },
+  {
+    "payload": {
+      "type": "Pee",
+      "user_id": "tin",
+      "event": "Toilet",
+      "reverse": false,
+      "beer": ""
+    },
+    "event_type": "Toilet",
+    "event": "camper#events#tin",
+    "user_id": "tin",
+    "timestamp": "2026-07-19T10:39:02.848250Z",
+    "event_id": "62b13a46-8099-4cd7-88c8-10b1defbc603",
+    "type": "event#2026-07-19T10:39:02.848250Z#e804e1f8"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "user_id": "tin",
+      "reverse": false,
+      "event": "Drinks",
+      "type": "Tea"
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#tin",
+    "user_id": "tin",
+    "timestamp": "2026-07-19T10:39:13.403748Z",
+    "event_id": "3986560c-20e3-41bd-96e3-990f572ee0cb",
+    "type": "event#2026-07-19T10:39:13.403748Z#72dcf9ff"
+  },
+  {
+    "payload": {
+      "user_id": "tin",
+      "steps": 7360
+    },
+    "event_type": "steps",
+    "event": "camper#events#tin",
+    "user_id": "tin",
+    "timestamp": "2026-07-19T10:39:44.234149Z",
+    "event_id": "55cbf931-5631-4242-a805-3a7c62c24e8a",
+    "type": "event#2026-07-19T10:39:44.234149Z#2ac2f07f"
+  },
+  {
+    "payload": {
+      "user_id": "tin",
+      "steps": 14500
+    },
+    "event_type": "steps",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-19T16:38:19.996010Z",
+    "event_id": "b3708941-a7c4-4864-8af0-d13f4587e21d",
+    "type": "event#2026-07-19T16:38:19.996010Z#b16a7e8b"
+  },
+  {
+    "payload": {
+      "event": "Drinks",
+      "beer": "true",
+      "user_id": "tin",
+      "type": "Lager",
+      "reverse": false
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#tin",
+    "user_id": "tin",
+    "timestamp": "2026-07-19T16:38:26.066772Z",
+    "event_id": "d0fc945e-c3ce-442d-a566-1e2e4845fe20",
+    "type": "event#2026-07-19T16:38:26.066772Z#518759f4"
+  },
+  {
+    "payload": {
+      "type": "Water",
+      "user_id": "tin",
+      "event": "Drinks",
+      "beer": "",
+      "reverse": false
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#tin",
+    "user_id": "tin",
+    "timestamp": "2026-07-19T16:38:29.821324Z",
+    "event_id": "6b18bf97-5d3f-48bf-8fb1-d65be478535e",
+    "type": "event#2026-07-19T16:38:29.821324Z#99718fc6"
+  },
+  {
+    "payload": {
+      "user_id": "tin",
+      "type": "Water",
+      "event": "Drinks",
+      "beer": "",
+      "reverse": false
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#tin",
+    "user_id": "tin",
+    "timestamp": "2026-07-19T16:38:31.602477Z",
+    "event_id": "b81cffce-6f39-4467-983c-949c3d0f92e7",
+    "type": "event#2026-07-19T16:38:31.602477Z#a57e44f6"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "type": "Drinking",
+      "event": "Status",
+      "reverse": false,
+      "user_id": "tin"
+    },
+    "event_type": "Status",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-19T16:38:52.286261Z",
+    "event_id": "7ca81db8-53c1-4d7c-b118-559dcfbb8415",
+    "type": "event#2026-07-19T16:38:52.286261Z#53828c21"
+  },
+  {
+    "payload": {
+      "reverse": false,
+      "user_id": "tin",
+      "beer": "",
+      "type": "Pee",
+      "event": "Toilet"
+    },
+    "event_type": "Toilet",
+    "event": "camper#events#tin",
+    "user_id": "tin",
+    "timestamp": "2026-07-19T16:38:56.505055Z",
+    "event_id": "003ea3c9-0022-41ee-af1f-877bffcaf0b0",
+    "type": "event#2026-07-19T16:38:56.505055Z#2a455dcb"
+  },
+  {
+    "payload": {
+      "reverse": false,
+      "event": "Toilet",
+      "user_id": "tin",
+      "type": "Pee",
+      "beer": ""
+    },
+    "event_type": "Toilet",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-19T20:52:54.555527Z",
+    "event_id": "e6ffea0e-ad66-494a-9a1d-f2f42a4a115a",
+    "type": "event#2026-07-19T20:52:54.555527Z#0699bd77"
+  },
+  {
+    "payload": {
+      "event": "Toilet",
+      "user_id": "tin",
+      "type": "Pee",
+      "beer": "",
+      "reverse": false
+    },
+    "event_type": "Toilet",
+    "event": "camper#events#tin",
+    "user_id": "tin",
+    "timestamp": "2026-07-19T20:52:55.783667Z",
+    "event_id": "062535e7-e8ed-4061-b53d-c3590e3a2f57",
+    "type": "event#2026-07-19T20:52:55.783667Z#9ea1cb57"
+  },
+  {
+    "payload": {
+      "type": "Pee",
+      "beer": "",
+      "event": "Toilet",
+      "reverse": false,
+      "user_id": "tin"
+    },
+    "event_type": "Toilet",
+    "event": "camper#events#tin",
+    "user_id": "tin",
+    "timestamp": "2026-07-19T20:52:56.856564Z",
+    "event_id": "ce6b6348-9b68-457e-9f88-64b88fdc9b11",
+    "type": "event#2026-07-19T20:52:56.856564Z#39fd99a5"
+  },
+  {
+    "payload": {
+      "beer": "",
+      "reverse": false,
+      "user_id": "tin",
+      "event": "Toilet",
+      "type": "Poo"
+    },
+    "event_type": "Toilet",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-19T20:53:00.238157Z",
+    "event_id": "d60a8f0b-4be7-4f6f-be99-12d83766cf75",
+    "type": "event#2026-07-19T20:53:00.238157Z#297f6dcf"
+  },
+  {
+    "payload": {
+      "event": "Status",
+      "beer": "",
+      "user_id": "tin",
+      "reverse": false,
+      "type": "Drunk"
+    },
+    "event_type": "Status",
+    "event": "camper#events#tin",
+    "user_id": "tin",
+    "timestamp": "2026-07-19T20:53:10.641304Z",
+    "event_id": "a3ae485b-1524-4411-8560-bec623d9c597",
+    "type": "event#2026-07-19T20:53:10.641304Z#8b2dbce8"
+  },
+  {
+    "payload": {
+      "user_id": "tin",
+      "type": "Lager",
+      "event": "Drinks",
+      "beer": "true",
+      "reverse": false
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#tin",
+    "user_id": "tin",
+    "timestamp": "2026-07-19T20:53:17.091667Z",
+    "event_id": "c7b8cc6c-15a3-436c-b356-16f20b67abcd",
+    "type": "event#2026-07-19T20:53:17.091667Z#d1ff7524"
+  },
+  {
+    "payload": {
+      "event": "Drinks",
+      "reverse": false,
+      "user_id": "tin",
+      "beer": "true",
+      "type": "Lager"
+    },
+    "event_type": "Drinks",
+    "event": "camper#events#tin",
+    "user_id": "tin",
+    "timestamp": "2026-07-19T20:53:19.437914Z",
+    "event_id": "b9a7f6d2-31af-4a89-92f2-c76fe279838d",
+    "type": "event#2026-07-19T20:53:19.437914Z#c171ec63"
+  },
+  {
+    "payload": {
+      "event": "Drinks",
+      "user_id": "tin",
+      "type": "Lager",
+      "reverse": false,
+      "beer": "true"
+    },
+    "event_type": "Drinks",
+    "user_id": "tin",
+    "event": "camper#events#tin",
+    "timestamp": "2026-07-19T20:53:21.227528Z",
+    "event_id": "a699525f-8d32-42bb-98e4-c0d48ed85af3",
+    "type": "event#2026-07-19T20:53:21.227528Z#341fc166"
+  },
+  {
+    "payload": {
+      "user_id": "tin",
+      "steps": 20040
+    },
+    "event_type": "steps",
+    "event": "camper#events#tin",
+    "user_id": "tin",
+    "timestamp": "2026-07-19T20:53:41.871188Z",
+    "event_id": "81cd8ae2-c528-4f1e-a489-a5af381eba2e",
+    "type": "event#2026-07-19T20:53:41.871188Z#a45baf9d"
+  },
+  {
+    "beer_drinks": 3,
+    "event": "camper#aggregates#cha",
+    "user_id": "cha",
+    "categories": {
+      "BoxPerry": 1,
+      "Coffee": 1,
+      "Water": 2,
+      "Poo": 3,
+      "Pee": 4,
+      "Lager": 2,
+      "Tea": 3
+    },
+    "daily_steps_history": {
+      "2026-07-19": 48032,
+      "2026-07-17": 15882,
+      "2026-07-18": 31830,
+      "2026-07-16": 8346
+    },
+    "last_reset_date": "2026-07-19",
+    "all_time_cumulative_steps": 48032,
+    "status": "tired",
+    "total_drinks": 9,
+    "steps_baseline": 31830,
+    "all_time_total_drinks": 39,
+    "type": "totals"
+  },
+  {
+    "total_expenditure_gbp": "31.259999999999998",
+    "event": "monzo#transactions",
+    "transactions": [
+      {
+        "amount_gbp": "-2.4",
+        "id": "tx_local_1784291581",
+        "description": "Club mate",
+        "timestamp": "2026-07-17T12:33:01.641069Z"
+      },
+      {
+        "amount_gbp": "-3.76",
+        "id": "tx_local_1784311947",
+        "timestamp": "2026-07-17T18:12:27.376772Z",
+        "description": "ice + drinks"
+      },
+      {
+        "id": "tx_local_1784311956",
+        "timestamp": "2026-07-17T18:12:36.060444Z",
+        "description": "4 beers",
+        "amount_gbp": "-17.9"
+      },
+      {
+        "id": "tx_local_1784330031",
+        "description": "beers",
+        "amount_gbp": "-7.2",
+        "timestamp": "2026-07-17T23:13:51.370726Z"
+      }
+    ],
+    "type": "latest"
+  }
+]
