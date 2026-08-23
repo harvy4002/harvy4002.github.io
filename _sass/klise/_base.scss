@@ -128,18 +128,13 @@ figcaption {
 
 // List
 ul {
-  list-style: none;
+  list-style: disc;
   li {
     display: list-item;
     text-align: -webkit-match-parent;
-  }
-  li::before {
-    content: "\03BB";
-    display: inline-block;
-    width: 1em;
-    position: relative;
-    margin-left: -1em;
-    font-weight: $bold-weight;
+    &::marker {
+      color: $gray;
+    }
   }
 }
 
